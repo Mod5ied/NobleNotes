@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Light-theme</title>
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<link rel="stylesheet" href="./css/lightstyle.css" id="theme">
+</head>
+<body>
+<header>
+	<div class="topnav" id="myTopnav">
+		<div class="dropdown active">
+			<button class="dropbtn">Dept. Notes
+				<i class="fa fa-caret-down"></i>
+			</button>
+		<div class="dropdown-content">
+			<a href="#">COS201</a>
+			<a href="#">COS203</a>
+			<a href="#">COS231</a>
+		</div></div>
+		<div>
+			<a href="#homepage.html">Home</a>
+			<a href="#facultynotes.html">Faculty Notes</a>
+			<a href="#generalnotes.html">General Notes</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+<!--Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon-->
+<script type="text/javascript">
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+		x.className += " responsive";
+		} else {
+		x.className = "topnav";
+		}
+		}
+
+		function switchSheet() {
+		let theme = document.getElementById("theme");
+		
+		if (theme.getAttribute("href") == "./css/darkstyle.css") {
+		theme.href = "./css/lightstyle.css";
+		} else {
+		theme.href = "./css/darkstyle.css";
+		}
+		}
+</script>
+</header>
+<div>
+	<button id="modebutton" onclick="switchSheet()"> SwitchTheme </button>
+</div>
+<br>
+	<div class="intro">
+		<h2> Its easy to miss a note..We make it easy to catch-up</h2>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3>COS 201</h3>
+				<p>02-July-2020<br>
+				Topic:   <small>Java Programming</small>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3> COS 201 </h3>
+			    <p>03-July-2020<br>
+			    Topic:   <small>Java Spring Framework</small>
+			    </p>
+			</a>
+		</div>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3>COS 201</h3>
+				<p>06-July-2020<br>
+				Topic:   <small>Java Encapsulation</small>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3>COS 201</h3>
+				<p>08-July-2020<br>
+				Topic:   <small>Polymorphism in Java</small>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3>COS 201</h3>
+				<p>10-July-2020<br>
+				Topic:   <small>OOP in Java Programming</small>
+				</p>
+			</a>
+		</div>
+	</div>
+	<div class="floatbox">
+		<div class="floatbox-text">
+			<a href="#">
+				<h3>COS 201</h3>
+				<p>15-July-2020<br>
+				Topic:   <small>Structured Java Programming</small>
+				</p>
+			</a>
+		</div>	
+	</div>
+</header>
+<br><br>
+<footer class="footer">
+	<p> Noble-Notes Services</p>
+	<p> Contact NNS: <a href="#"><i> noblenotes@gmail.com </i></a></p>
+	<p> &copy; NNS 2020</p>
+</footer>
+</body>
+</html>
