@@ -7,7 +7,20 @@ body {
     background-color: #fff;
     /*background-size: contain;*/
 }
-
+#modebutton{
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
+    max-width: 100%;
+    background: rgba(38, 99, 212, 0.644);
+    color: rgba(54, 54, 54, 0.884);
+    transition: all 0.2s ease-in-out;
+}
+#modebutton:hover{
+    cursor: pointer;
+    transform: scale(0.99);
+    opacity: 0.7;
+} 
 /* Add a blue background color to the top navigation */
 .topnav {
 /*background-color: #227a9c;*/
@@ -29,6 +42,11 @@ font-size: 15px;
 font-weight: bold;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 margin: 25px 10px 0px;
+transition: all 0.4s ease-in;
+}
+.topnav a:hover{
+opacity: 0.7;
+transform: scale(0.98);
 }
 
 /* Add an active class to highlight the current page */
@@ -63,8 +81,12 @@ font-size: 17px;
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 color: #000;
 margin: 0px;
+transition: all 0.3s ease-in-out;
 }
-
+.dropdown .dropbtn:hover{
+transform: scale(0.98);
+color: #2a2a2a;
+}
 /* Style the dropdown content (hidden by default) */
  /* More of the container for the desktop view */
 .dropdown-content {
@@ -199,16 +221,20 @@ display: block;
     50% {color: #135bbf;}
     }
 .footer {
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    margin-top: 15vh;
     background-color: rgba(54, 127, 196, 0.308);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #252525;
-    display: flexbox;
-    margin-bottom: -5px;
+}
+.footer > p{
     padding: 16px;
-    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #252525;
 }
 .footer a {
     text-decoration: none;
     color: rgba(46, 59, 248, 0.61);
-    font-size: 14px
+    font-size: 13px
 }

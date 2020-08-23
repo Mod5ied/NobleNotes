@@ -9,13 +9,22 @@ body{
 #modebutton{
     border: none;
     border-radius: 3px;
-    max-width: 14px;
+    padding: 2px;
+    max-width: 100%;
+    background: rgba(59, 59, 59, 0.452);
+    color: hsla(45, 60%, 50%, 0.726);
+    transition: all 0.2s ease-in-out;
+}
+#modebutton:hover{
+    cursor: pointer;
+    transform: scale(0.99);
+    opacity: 0.7;
 }
 /* Add a black background color to the top navigation */
 .topnav {
 /*background-color: #1a1a1a;*/
-  background: url("../images/darkImg.jpg") repeat-x center;
-  background-size: contain;
+background: url("../images/darkImg.jpg") repeat-x center;
+background-size: contain;
 height: 270px;
 overflow: hidden;
 /*margin: 0px 0px 0px -3px;*/
@@ -33,6 +42,11 @@ font-size: 15px;
 font-weight: lighter;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 margin: 25px 10px 0px;
+transition: all 0.4s ease-in;
+}
+.topnav a:hover{
+opacity: 0.5;
+transform: scale(0.98);
 }
 
 /* Add an active class to highlight the current page */
@@ -67,8 +81,12 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 font-size: 17px;
 color: black;
 margin-top: 20px;
+transition: all 0.3s ease-in-out;
 }
-
+.dropdown .dropbtn:hover{
+transform: scale(0.98);
+color: #2a2a2a;
+}
 /* Style the dropdown content (hidden by default) */
  /* More of the container for the desktop view */
 .dropdown-content {
@@ -174,7 +192,7 @@ text-align: left;
     background-color: #070303;
     background-origin: border-box;
     display: inline-block;
-    border-radius: 12px;
+    border-radius: 10px;
     width: 320px;
     height: 170px;
     margin: 5px;
@@ -202,17 +220,21 @@ text-align: left;
     @keyframes mymove {
     50% {color: #cca634;}
     }
-.footer {
+.footer { 
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    margin-top: 15vh;
     background-color: #0a0808;
+}
+.footer > p{
+    padding: auto;
+    font-size: 12px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #868585;
-    display: flexbox;
-    margin-bottom: -5px;
-    padding: 14px;	
-    font-size: 13px;
 }
 .footer a {
     text-decoration: none;
     color: #b38600;
-    font-size: 14px;
+    font-size: 13px;
 }
