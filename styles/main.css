@@ -1,3 +1,66 @@
-*{
-    border: 1px solid red !important;
+* {
+  border: 1px solid red !important;*/
+}
+
+/*
+    The order of styling for Mobile-first inludes:
+        1. The Body sections
+        2. The pseudo-class designs
+        3. Special designs for input fields
+        4. The Header 
+        5. The Footer
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(0, 0%, 97%);
+}
+/*Style the main header section*/
+.main1{
+  display: flex;
+  flex-direction: column;
+  background: hsl(0, 0%, 100%);
+}
+.main1 > h2,
+.main2 > h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: url(/images/pens\ and\ paint.jpg) center;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*Style for the input fields*/
+#report,
+#report2{
+  height: 1.4rem;
+  width: 40vw;
+  background: hsla(0, 0%, 99%, 0.973);
+}
+#report2{
+  width: auto;
+  height: 1.65rem;
+}
+/*Style the section1*/
+.section1{
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+/*Style the section cards*/
+.cards-bg{
+  display: flex;
+  flex-direction: row;
+}
+/*Style the main2 header section*/
+.main2{
+  display: flex;
+  flex-direction: column;
+}
+/*Style for the section2*/
+.section2{
+  display: flex;
+  flex-direction: column;
 }
