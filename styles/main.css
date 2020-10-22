@@ -1,5 +1,6 @@
 * {
-  border: 1px solid red !important;*/
+  order: 1px solid red !important;
+  box-sizing: border-box;
 }
 
 /*
@@ -10,57 +11,122 @@
         4. The Header 
         5. The Footer
 */
+:root{
+  --input-color: rgb(52, 56, 56);
+  --input-back:  hsla(0, 0%, 99%, 0.973);
+}
 body {
   margin: 0;
   padding: 0;
   background: hsl(0, 0%, 97%);
+  
 }
 /*Style the main header section*/
 .main1{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: .4rem;
   background: hsl(0, 0%, 100%);
 }
 .main1 > h2,
 .main2 > h2{
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 900;
   background: url(/images/pens\ and\ paint.jpg) center;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 900;
   color: transparent;
 }
 /*Style for the input fields*/
-#report,
-#report2{
-  height: 1.4rem;
-  width: 40vw;
-  background: hsla(0, 0%, 99%, 0.973);
+.input-field{
+  display: flex;
+  margin-left: auto;
+}
+#report{
+  height: 1.6rem;
+  width: 30vh;
+  border: 1px solid var(--input-color);
+  border-top-left-radius: .3rem;
+  border-bottom-left-radius: .3rem;
+  background: var(--input-back);
 }
 #report2{
   width: auto;
-  height: 1.65rem;
+  border: 1px solid var(--input-color);
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
 }
+
 /*Style the section1*/
 .section1{
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  align-items: center;
+  padding: 4rem 2rem;
 }
+
 /*Style the section cards*/
 .cards-bg{
   display: flex;
   flex-direction: row;
+  gap: 1rem;
 }
+.cards-content{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  min-width: 12.4rem;
+  gap: 2rem;
+  border: 1px solid rgb(52, 56, 56);
+  border-top: 4px solid rgb(3, 22, 52);
+  border-radius: .4rem;
+  background-color: rgb(233, 242, 249);
+
+}
+.month-cards{
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  height: 2rem;
+  min-width: 4.7rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: 1px solid rgb(52, 56, 56);
+}
+/*Style the card contents*/
+.one{
+  height: ;
+  border-radius: ;
+  background-color: ;
+  font-size: ;
+}
+.two{
+  max-width: 50%;
+}
+.three{
+
+}
+.four{
+  height: ;
+  width: ;
+  background-color: ;
+}
+
 /*Style the main2 header section*/
 .main2{
   display: flex;
   flex-direction: column;
+  padding: .3rem;
+  background-color: hsl(0, 0%, 100%);
 }
+
 /*Style for the section2*/
 .section2{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 4em 2em;
 }
