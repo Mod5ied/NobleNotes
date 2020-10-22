@@ -1,5 +1,5 @@
 * {
-  order: 1px solid red !important;
+  brder: 1px solid red !important;
   box-sizing: border-box;
 }
 
@@ -76,15 +76,13 @@ body {
 }
 .cards-content{
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
   min-width: 12.4rem;
-  gap: 2rem;
   border: 1px solid rgb(52, 56, 56);
-  border-top: 4px solid rgb(3, 22, 52);
+  border-top: 4px solid rgba(3, 22, 52, .8);
   border-radius: .4rem;
-  background-color: rgb(233, 242, 249);
-
+  cursor: pointer;
 }
 .month-cards{
   display: grid;
@@ -98,21 +96,33 @@ body {
 }
 /*Style the card contents*/
 .one{
-  height: ;
-  border-radius: ;
-  background-color: ;
+  height: 2rem;
+  width: 3rem;
+  padding: 5px;
+  border-radius: .3rem;
+  background-color: rgba(3, 22, 52, .5);
   font-size: ;
+  
 }
 .two{
   max-width: 50%;
+  font-family: ;
+  font-size: ;
 }
 .three{
-
+  height: 2rem;
+  border-radius: .3rem;  
+  padding: 5px;
+  background: rgba(3, 22, 52, .5);
+  font-weight: bold;
 }
 .four{
-  height: ;
-  width: ;
+  height: 2rem;
+  width:;
   background-color: ;
+}
+.four:focus{
+  outline: ;
 }
 
 /*Style the main2 header section*/
