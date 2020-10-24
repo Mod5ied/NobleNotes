@@ -1,5 +1,5 @@
 * {
-  boder: 1px solid red !important;
+  border: 1px solid red !important;
   box-sizing: border-box;
 }
 
@@ -14,14 +14,14 @@
 :root{
   --input-color: rgb(52, 56, 56);
   --input-back:  hsla(0, 0%, 99%, 0.973);
-  --card1: rgba(27, 38, 85, 0.911);
-  --card2: rgba(88, 30, 81, 0.767);
-  --card3: rgb(92, 70, 97);
+  --card1: rgba(21, 33, 88, 0.911);
+  --card2: rgba(117, 38, 108, 0.767);
+  --card3: rgb(163, 119, 172);
   --card4: rgb(155, 32, 42);
   --card5: rgb(167, 67, 10);
   --card6: rgba(34, 148, 34, 0.795);
   --card7: rgb(30, 77, 21);
-  --card8: rgb(45, 59, 122);
+  --card8: rgb(43, 61, 138);
 }
 body {
   margin: 0;
@@ -35,9 +35,12 @@ body {
   flex-direction: column;
   align-items: center;
   padding: .4rem;
+}
+.liteback{
+  width: 100vw;
   background: hsl(0, 0%, 100%);
 }
-.main1 > h2,
+.liteback > h2,
 .main2 > h2{
   background: url(/images/pens\ and\ paint.jpg) center;
   background-size: cover;
@@ -51,38 +54,41 @@ body {
 /*Style for the input fields*/
 .input-field{
   display: flex;
+  gap: 4px;
   margin-left: auto;
 }
-#report{
-  height: 1.6rem;
+.report{
+  height: 2rem;
   width: 25vh;
-  border: 0.6px solid var(--input-color);
-  border-top-left-radius: .3rem;
-  border-bottom-left-radius: .3rem;
+  box-shadow: 0 4px 8px 0
+  rgba(0,0,0,.2), 0 6px 20px 0
+  rgba(0,0,0,.19);
+  border: none;
+  border-radius: .4rem;
   background: var(--input-back);
 }
-#report:focus,
-#report:hover{
+.report:focus,
+.report:hover{
   box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
   0 2px 6px 0 rgba(58,58,248);
   background-color: hsl(0, 0%, 100%);
   outline: none;
 }
 
-#report2{
+.report-btn{
   width: auto;
-  border: 0.6px solid var(--input-color);
-  border-top-right-radius: .3rem;
-  border-bottom-right-radius: .3rem;
-  background-color: rgb(163, 53, 26);
-  color: var(--card1);
+  border: none;
+  border-radius: 4px;
+  background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
+  font-size: 12px;
+  color: hsl(0, 0%, 0%);
 }
-#report2:focus{
+.report-btn:focus{
   box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
-  0 2px 6px 0 rgba(58,58,248);
+  0 2px 6px 0 rgb(114, 114, 250);
   outline: none;
 }
-#report2:hover{
+.report-btn:hover{
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
 }
@@ -105,11 +111,37 @@ body {
   display: grid;
   place-items: center;
   box-sizing: border-box;
-  height: 2rem;
+  height: 1.5rem;
   min-width: 4.7rem;
   margin-top: auto;
   margin-bottom: auto;
-  border: 1px solid rgb(52, 56, 56);
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+}
+.mnth1{
+  background: var(--card1);
+}
+.mnth2{
+  background: var(--card2);
+}
+.mnth3{
+  background: var(--card3);
+}
+.mnth4{
+  background: var(--card4);
+}
+.mnth5{
+  background: var(--card5);
+}
+.mnth6{
+  background: var(--card6);
+}
+.mnth7{
+  background: var(--card7);
+}
+.mnth8{
+  background: var(--card8);
 }
 .cards-content{
   display: flex;
@@ -166,6 +198,7 @@ body {
   width: 3rem;
   padding: 4px;
   background-color:  rgb(27,50,95);
+  border-radius: 4px;
   font-size: .8rem;
   color: hsl(0, 0%, 80%);
 }
@@ -175,7 +208,9 @@ body {
   font-size: .9rem;
 }
 .three{
-  
+  font-size: .8rem;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
 }
 .four{
   height: 1.3rem;
@@ -207,4 +242,48 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4em 2em;
+}
+
+/*Next Comes Media-queries for Other Screen Types*/
+@media (min-width: 640px){
+  /*.main1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: .9rem;
+    background: hsl(0, 0%, 100%);
+  }*/
+  .section1{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 4px;
+    background: url(/images/siteback.jpg) center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .section2{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 4px;
+    background: url(/images/sitebackgrounds.jpg) center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .cards-content{
+    background: hsl(0, 0%, 80%);
+    transition: 1s;
+    opacity: .9;
+  }
+  .cards-content:hover{
+    transform: scale(0.99);
+    opacity: .8;
+  }
 }
