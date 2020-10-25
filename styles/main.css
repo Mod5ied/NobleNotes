@@ -82,6 +82,7 @@ body {
   background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
   font-size: 12px;
   color: hsl(0, 0%, 0%);
+  cursor: pointer;
 }
 .report-btn:focus,
 .report-btn:hover{
@@ -98,6 +99,19 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
+  background: url(/images/Awesome-Bookworm-Vectors-2.jpg) no-repeat center;
+  background-attachment: scroll;
+  background-size: cover;
+
+}
+.section2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 2em;
+  background: url(/images/Awesome-Bookworm-Vectors-1.jpg) no-repeat center;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
 /*Style the section cards*/
@@ -154,6 +168,11 @@ body {
   rgba(0,0,0,.19);
   border-radius: .3rem;
   cursor: pointer;
+}
+.cards-content:hover{
+  transition: .8s;
+  transform: scale(0.99);
+  opacity: .88;
 }
 /*Style the cards top-border*/
 .card1{
@@ -219,6 +238,7 @@ body {
   border-radius: .4rem;
   font-size: .7rem;
   color: rgb(0,0,0);
+  cursor: pointer;
 }
 .four:focus{
   background-color: hsl(0, 0%, 97%);
@@ -237,15 +257,10 @@ body {
 }
 
 /*Style for the section2*/
-.section2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4em 2em;
-}
-
-/*Next Comes Media-queries for Other Screen Types*/
-@media (min-width: 640px){
+/*Here Goes Media-Queries for Tablet view*/
+@media (min-width: )
+/*Here Goes Media-Queries for Desktop view*/
+@media (min-width: 800px){
   .main1{
     display: flex;
     flex-direction: row;
@@ -286,7 +301,7 @@ body {
     width: 90vw;
     margin: auto;
     padding: 2rem;
-    gap: 2rem;
+    gap: 1rem;
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
@@ -300,17 +315,18 @@ body {
     padding: 2rem;
     gap: 1rem;
     border-radius: 4px;
-    background: url(/images/sitebackgrounds.jpg) center;
+    background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
     background-size: cover;
   }
   .cards-content{
     background: hsl(0, 0%, 80%);
-    transition: 1s;
     opacity: .9;
+    cursor: pointer;
   }
   .cards-content:hover{
+    transition: .8s;
     transform: scale(0.99);
-    opacity: .8;
+    opacity: .88;
   }
 }
