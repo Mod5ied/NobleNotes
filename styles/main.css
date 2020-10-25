@@ -1,5 +1,5 @@
 * {
-  boder: 1px solid red !important;
+  border: 1px solid red !important;
   box-sizing: border-box;
 }
 
@@ -24,6 +24,7 @@
   --card8: rgb(43, 61, 138);
 }
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background: hsl(0, 0%, 97%);
@@ -36,18 +37,19 @@ body {
   align-items: center;
   padding: .4rem;
 }
-.liteback{
+.main1-bg{
   width: 100vw;
   background: hsl(0, 0%, 100%);
 }
-.liteback > h2,
+  /*Styles for the Current notes and previous notes section*/
+.main1-bg > h2,
 .main2 > h2{
   background: url(/images/pens\ and\ paint.jpg) center;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 900;
   color: transparent;
 }
@@ -99,6 +101,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
+  box-sizing: border-box;
   background: url(/images/Awesome-Bookworm-Vectors-2.jpg) no-repeat center;
   background-attachment: scroll;
   background-size: cover;
@@ -109,6 +112,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 4em 2em;
+  box-sizing: border-box;
   background: url(/images/Awesome-Bookworm-Vectors-1.jpg) no-repeat center;
   background-attachment: scroll;
   background-size: cover;
@@ -118,7 +122,8 @@ body {
 .cards-bg{
   display: flex;
   flex-direction: row;
-  gap: .5rem;
+  /*gap: .5rem;*/
+  /*margin: .2;*/
 }
 .month-cards{
   display: grid;
@@ -160,8 +165,8 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 250px;
-  min-width: 12.4rem;
+  max-width: 250px;
+  min-width: 11rem;
   padding: .5rem;
   box-shadow: 0 4px 8px 0
   rgba(0,0,0,.2), 0 6px 20px 0
@@ -257,10 +262,23 @@ body {
 }
 
 /*Style for the section2*/
-/*Here Goes Media-Queries for Tablet view*/
-@media (min-width: )
+/*Here Goes Media-Queries for iphone4 and co view*/
+@media (max-width: 360px){
+  /*Styles for the Current notes and previous notes section*/
+  .main1-bg > h2,
+  .main2 > h2{
+    background: url(/images/pens\ and\ paint.jpg) center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: transparent;
+  }
+}
 /*Here Goes Media-Queries for Desktop view*/
-@media (min-width: 800px){
+@media (min-width: 1020px){
   .main1{
     display: flex;
     flex-direction: row;
@@ -275,14 +293,14 @@ body {
     padding: 0 4rem;
     background-color: hsl(0, 0%, 100%);
   }
-  .liteback > h2,
+  .main1-bg > h2,
   .main2 > h2{
     background: url(/images/pens\ and\ paint.jpg) right;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     text-align: left;
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     font-weight: 900;
     color: transparent;
 }
@@ -301,7 +319,7 @@ body {
     width: 90vw;
     margin: auto;
     padding: 2rem;
-    gap: 1rem;
+    /*gap: 1rem;*/
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
@@ -313,13 +331,14 @@ body {
     width: 90vw;
     margin: auto;
     padding: 2rem;
-    gap: 1rem;
+    /*gap: 1rem;*/
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
     background-size: cover;
   }
   .cards-content{
+    margin: .5rem 1rem;
     background: hsl(0, 0%, 80%);
     opacity: .9;
     cursor: pointer;
