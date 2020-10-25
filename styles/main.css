@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red !important;
+  boder: 1px solid red !important;
   box-sizing: border-box;
 }
 
@@ -76,20 +76,19 @@ body {
 }
 
 .report-btn{
-  width: auto;
+  width: 50px;
   border: none;
-  border-radius: 4px;
+  border-radius: 3.3px;
   background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
   font-size: 12px;
   color: hsl(0, 0%, 0%);
 }
-.report-btn:focus{
+.report-btn:focus,
+.report-btn:hover{
   box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
   0 2px 6px 0 rgb(114, 114, 250);
-  outline: none;
-}
-.report-btn:hover{
   background-color: hsl(0, 0%, 100%);
+  outline: none;
   color: hsl(0, 0%, 0%);
 }
 
@@ -161,7 +160,7 @@ body {
   border-top: 4px solid var(--card1);
 }
 .card2{
-  border-top: 4px solid var(--card1);
+  border-top: 4px solid var(--card2);
 }
 .card3{
   border-top: 4px solid var(--card3);
@@ -226,6 +225,7 @@ body {
   box-shadow: 0 0 0 2px hsl(0, 0%, 100%),
   0 0 0 5px rgb(3,54,73);
   outline: none;
+  transition: .8s;
 }
 
 /*Style the main2 header section*/
@@ -246,20 +246,47 @@ body {
 
 /*Next Comes Media-queries for Other Screen Types*/
 @media (min-width: 640px){
-  /*.main1{
+  .main1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: .9rem;
+    gap: 4px;
+    padding: 0 4rem;
     background: hsl(0, 0%, 100%);
-  }*/
+  }
+  .main2{
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .liteback > h2,
+  .main2 > h2{
+    background: url(/images/pens\ and\ paint.jpg) right;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: transparent;
+}
+  .input-field{
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+  }
+  .report-btn,.report:hover{
+    transition: .5s;
+    opacity: .9;
+  }
   .section1{
     display: flex;
     flex-flow: row wrap;
     width: 90vw;
     margin: auto;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem;
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
