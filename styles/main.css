@@ -3,6 +3,7 @@
   box-sizing: border-box;
 }
 
+
 /*
     The order of styling for Mobile-first inludes:
         1. The Body sections
@@ -66,7 +67,7 @@ body {
   rgba(0,0,0,.2), 0 6px 20px 0
   rgba(0,0,0,.19);
   border: none;
-  border-radius: .4rem;
+  border-radius: .3rem;
   background: var(--input-back);
 }
 .report:focus,
@@ -80,7 +81,7 @@ body {
 .report-btn{
   width: 50px;
   border: none;
-  border-radius: 3.3px;
+  border-radius: 3.2px;
   background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
   font-size: 12px;
   color: hsl(0, 0%, 0%);
@@ -227,8 +228,8 @@ body {
 }
 .two{
   max-width: 65%;
-  font-family: ;
   font-size: .9rem;
+  font-family: "Aladin" cursive;
 }
 .three{
   font-size: .8rem;
@@ -260,8 +261,18 @@ body {
   padding: .3rem;
   background-color: hsl(0, 0%, 100%);
 }
+/*Here Goes the style for the site footer*/
+.footer,.footer-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 .8rem;
+}
+.footer-input{
+  display: flex;
+  flex-direction: row;
+}
 
-/*Style for the section2*/
 /*Here Goes Media-Queries for iphone4 and co view*/
 @media (max-width: 360px){
   /*Styles for the Current notes and previous notes section*/
@@ -347,5 +358,17 @@ body {
     transition: .8s;
     transform: scale(0.99);
     opacity: .88;
+  }
+  .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  .footer-wrapper{
+    margin-left: auto;
+  }
+  .footer-input #report3{
+    width: 30vh;
   }
 }
