@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red !important;
+  boder: 1px solid red !important;
   box-sizing: border-box;
 }
 
@@ -82,18 +82,21 @@ body {
   width: 50px;
   border: none;
   border-radius: 3.2px;
-  background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
-  font-size: 12px;
+  /*background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));*/
+  background-color: hsl(0, 0%, 95%);
+  font-size: .7rem;
   color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
-.report-btn:focus,
 .report-btn:hover{
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
-  0 2px 6px 0 rgb(114, 114, 250);
-  background-color: hsl(0, 0%, 100%);
+  /*box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
+  0 2px 6px 0 rgb(114, 114, 250);*/
+  border: 2px solid rgb(163, 53, 26);
   outline: none;
   color: hsl(0, 0%, 0%);
+}
+.report-btn:focus{
+  background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
 }
 
 /*Style the section1*/
