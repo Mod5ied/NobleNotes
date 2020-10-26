@@ -69,6 +69,8 @@ body {
   border: none;
   border-radius: .3rem;
   background: var(--input-back);
+  font-family: 'comfortaa', cursive;
+
 }
 .report:focus,
 .report:hover{
@@ -84,7 +86,8 @@ body {
   border-radius: 3.2px;
   /*background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));*/
   background-color: hsl(0, 0%, 95%);
-  font-size: .7rem;
+  font-family: 'comfortaa', cursive;
+  font-size: .6rem;
   color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
@@ -139,7 +142,7 @@ body {
   margin-bottom: auto;
   border-radius: 3px;
   font-size: 12px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'comfortaa', cursive;
 }
 .mnth1{
   background: var(--card1);
@@ -232,12 +235,12 @@ body {
 .two{
   max-width: 65%;
   font-size: .9rem;
-  font-family: "Aladin" cursive;
+  font-family: "itim" cursive;
 }
 .three{
   font-size: .8rem;
   font-weight: bold;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'itim', sans-serif;
 }
 .four{
   height: 1.3rem;
