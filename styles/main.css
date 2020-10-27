@@ -218,6 +218,7 @@ body {
 .card8{
   border-top: 4px solid var(--card8);
 }
+
 /*Style the card contents*/
 .first{
   display: flex;
@@ -288,7 +289,7 @@ body {
   flex-direction: row;
 }
 
-/*Here Goes Media-Queries for iphone4 and co view*/
+/*Here Goes Media-Queries for iphone4 and other punishments*/
 @media (max-width: 360px){
   /*Styles for the Current notes and previous notes section*/
   .main1-bg > h2,
