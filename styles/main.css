@@ -92,9 +92,10 @@ body {
   border: none;
   border-radius: 3.2px;
   /*background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));*/
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 90%);
   font-family: 'comfortaa', cursive;
   font-size: .6rem;
+  font-weight: bold;
   color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
@@ -244,7 +245,7 @@ body {
 }
 .two{
   max-width: 65%;
-  font-size: .9rem;
+  font-size: .8rem;
 }
 .three{
   font-size: .8rem;
