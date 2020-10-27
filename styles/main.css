@@ -31,7 +31,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: hsl(0, 0%, 97%);
+  background: hsl(0, 0%, 95%);
   font-family: 'Lemonada', sans-serif;
 }
 /*Style the main header section*/
@@ -72,7 +72,7 @@ body {
 }
 .report{
   height: 2rem;
-  width: 25vh;
+  width: 30vh;
   box-shadow: 0 4px 8px 0
   rgba(0,0,0,.2), 0 6px 20px 0
   rgba(0,0,0,.19);
@@ -91,10 +91,9 @@ body {
 }
 
 .report-btn{
-  width: 50px;
+  width: 54px;
   border: none;
   border-radius: 3.2px;
-  /*background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));*/
   background-color: hsl(0, 0%, 90%);
   font-family: 'comfortaa', cursive;
   font-size: .6rem;
@@ -103,8 +102,6 @@ body {
   cursor: pointer;
 }
 .report-btn:hover{
-  /*box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
-  0 2px 6px 0 rgb(114, 114, 250);*/
   border: 2px solid rgb(163, 53, 26);
   outline: none;
   color: hsl(0, 0%, 0%);
@@ -339,17 +336,18 @@ body {
     gap: 4px;
     margin-left: auto;
   }
-  .report-btn,.report:hover{
+  .report-btn,.report-btn:hover{
+    width: 55px;
     transition: .5s;
     opacity: .9;
   }
   .section1{
     display: flex;
     flex-flow: row wrap;
-    width: 90vw;
+    justify-content: center;
+    max-width: 85rem;
     margin: auto;
-    padding: 2rem;
-    /*gap: 1rem;*/
+    padding: 3.5rem;
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
@@ -358,10 +356,10 @@ body {
   .section2{
     display: flex;
     flex-flow: row wrap;
-    width: 90vw;
+    justify-content: center;
+    max-width: 85rem;
     margin: auto;
-    padding: 2rem;
-    /*gap: 1rem;*/
+    padding: 15px;
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
@@ -382,7 +380,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 2rem;
+    
   }
   .footer-wrapper{
     margin-left: auto;
