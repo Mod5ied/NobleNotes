@@ -1,5 +1,5 @@
 * {
-  boder: 1px solid red !important;
+  /*border: 1px solid red !important;*/
   box-sizing: border-box;
 }
 
@@ -41,6 +41,13 @@ body {
 .main1-bg{
   width: 100vw;
   background: hsl(0, 0%, 100%);
+}
+/*Style the main2 header section*/
+.main2{
+  display: flex;
+  flex-direction: column;
+  padding: .3rem;
+  background-color: hsl(0, 0%, 100%);
 }
   /*Styles for the Current notes and previous notes section*/
 .main1-bg > h2,
@@ -129,10 +136,9 @@ body {
 .cards-bg{
   display: flex;
   flex-direction: row;
-  /*gap: .5rem;*/
   /*margin: .2;*/
 }
-.month-cards{
+.cards-month{
   display: grid;
   place-items: center;
   box-sizing: border-box;
@@ -182,7 +188,7 @@ body {
   cursor: pointer;
 }
 .cards-content:hover{
-  transition: .8s;
+  transition: .3s;
   transform: scale(0.99);
   opacity: .88;
 }
@@ -216,12 +222,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'Comfortaa', cursive;
+
 }
 .second{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  font-family: 'itim', cursive;
+
 }
 .one{
   height: 1.5rem;
@@ -235,7 +245,6 @@ body {
 .two{
   max-width: 65%;
   font-size: .9rem;
-  font-family: "itim" cursive;
 }
 .three{
   font-size: .8rem;
@@ -251,28 +260,27 @@ body {
   font-size: .7rem;
   color: rgb(0,0,0);
   cursor: pointer;
+  transition: .4s;
+}
+.four:hover{
+  color: hsl(0, 0%, 97%);
 }
 .four:focus{
   background-color: hsl(0, 0%, 97%);
+  color: hsl(0, 0%, 0%);
   box-shadow: 0 0 0 2px hsl(0, 0%, 100%),
   0 0 0 5px rgb(3,54,73);
   outline: none;
-  transition: .8s;
 }
 
-/*Style the main2 header section*/
-.main2{
-  display: flex;
-  flex-direction: column;
-  padding: .3rem;
-  background-color: hsl(0, 0%, 100%);
-}
 /*Here Goes the style for the site footer*/
 .footer,.footer-wrapper{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 .8rem;
+  padding: 1.2rem;
+  background: hsl(0, 0%, 100%);
 }
 .footer-input{
   display: flex;
@@ -361,9 +369,9 @@ body {
     cursor: pointer;
   }
   .cards-content:hover{
-    transition: .8s;
+    transition: .3s;
     transform: scale(0.99);
-    opacity: .88;
+    opacity: .8;
   }
   .footer{
     display: flex;
