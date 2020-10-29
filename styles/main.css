@@ -309,7 +309,46 @@ body {
   }
   .drop-container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
+  /*Style Buttons*/
+  .drop-btn {
+    width: 55px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #eee;
+    color: #444;
+    text-align: center;
+    transition: .4s;
+    cursor: pointer;
+  }
+  /*Add back-color if button is clicked and .active and upon hover*/
+  .drop-btn.active,
+  .drop-btn:hover {
+    background: #ddd;
+  }
+  /*Style Accordion panel (hidden by default)*/
+  .panel {
+    display: none;
+    width: 10%;
+    padding: 0 18px;
+    border-radius: 4px;
+    position: absolute;
+    top: 4.5rem;
+    left: 80%;
+    z-index: 2;
+    background: hsl(0, 0%, 80%);
+    text-align: center;
+  }
+  /*Show class is added on click*/
+  .panel.show{
+    display: flex !important;
+    flex-direction: column;
+    font-size: 10px;
+  }
+
   .main1 {
     display: flex;
     flex-direction: row;
