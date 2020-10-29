@@ -299,27 +299,45 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+  }
+  .logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .logo-info {
+    width: 15%;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    /*gap: 3rem;*/
+  }
+  .logo-info .active-tab {
+    padding: 10px 5px;
+    border-radius: 4px;
+    background: hsl(0, 0%, 80%);
+    font-size: 14px;
+    text-align: left;
   }
   .drop-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
   }
   /*Style Buttons*/
   .drop-btn {
     width: 55px;
-    padding: 10px;
+    height: 40px;
+    margin: 4px;
     border: none;
+    border-radius: 6px;
     outline: none;
     background: #eee;
-    color: #444;
+    color: #233;  
+    font-size: 14px;
     text-align: center;
     transition: .4s;
     cursor: pointer;
@@ -336,7 +354,7 @@ body {
     padding: 0 18px;
     border-radius: 4px;
     position: absolute;
-    top: 4.5rem;
+    top: 5.5rem;
     left: 80%;
     z-index: 2;
     background: hsl(0, 0%, 80%);
