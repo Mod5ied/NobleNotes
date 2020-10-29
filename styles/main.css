@@ -1,23 +1,13 @@
 /*GOOGLE FONTS TO USE*/
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
   /*border: 1px solid red !important;*/
   box-sizing: border-box;
 }
-
-
-/*
-    The order of styling for Mobile-first inludes:
-        1. The Body sections
-        2. The pseudo-class designs
-        3. Special designs for input fields
-        4. The Header 
-        5. The Footer
-*/
-:root{
+:root {
   --input-color: rgb(52, 56, 56);
-  --input-back:  hsla(0, 0%, 99%, 0.973);
+  --input-back: hsla(0, 0%, 99%, 0.973);
   --card1: rgba(21, 33, 88, 0.911);
   --card2: rgba(117, 38, 108, 0.767);
   --card3: rgb(163, 119, 172);
@@ -32,29 +22,33 @@ body {
   margin: 0;
   padding: 0;
   background: hsl(0, 0%, 95%);
-  font-family: 'Lemonada', sans-serif;
+  font-family: "Lemonada", sans-serif;
+}
+/*Style the header*/
+.head{
+  display: flexb;
 }
 /*Style the main header section*/
-.main1{
+.main1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: .4rem;
+  padding: 0.4rem;
 }
-.main1-bg{
+.main1-bg {
   width: 100vw;
   background: hsl(0, 0%, 100%);
 }
 /*Style the main2 header section*/
-.main2{
+.main2 {
   display: flex;
   flex-direction: column;
-  padding: .3rem;
+  padding: 0.3rem;
   background-color: hsl(0, 0%, 100%);
 }
-  /*Styles for the Current notes and previous notes section*/
+/*Styles for the Current notes and previous notes section*/
 .main1-bg > h2,
-.main2 > h2{
+.main2 > h2 {
   background: url(/images/pens\ and\ paint.jpg) center;
   background-size: cover;
   background-clip: text;
@@ -65,53 +59,53 @@ body {
   color: transparent;
 }
 /*Style for the input fields*/
-.input-field{
+.input-field {
   display: flex;
   gap: 4px;
   margin-left: auto;
 }
-.report{
+.report {
   height: 2rem;
   width: 30vh;
-  box-shadow: 0 4px 8px 0
-  rgba(0,0,0,.2), 0 6px 20px 0
-  rgba(0,0,0,.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: none;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   background: var(--input-back);
-  font-family: 'comfortaa', cursive;
-
+  font-family: "comfortaa", cursive;
 }
 .report:focus,
-.report:hover{
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
-  0 2px 6px 0 rgba(58,58,248);
+.report:hover {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(58, 58, 248);
   background-color: hsl(0, 0%, 100%);
   outline: none;
 }
 
-.report-btn{
+.report-btn {
   width: 54px;
   border: none;
   border-radius: 3.2px;
   background-color: hsl(0, 0%, 90%);
-  font-family: 'comfortaa', cursive;
-  font-size: .6rem;
+  font-family: "comfortaa", cursive;
+  font-size: 0.6rem;
   font-weight: bold;
   color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
-.report-btn:hover{
+.report-btn:hover {
   border: 2px solid rgb(163, 53, 26);
   outline: none;
   color: hsl(0, 0%, 0%);
 }
-.report-btn:focus{
-  background: -webkit-linear-gradient(left top, rgb(163, 53, 26), rgba(226, 52, 8, 0.726));
+.report-btn:focus {
+  background: -webkit-linear-gradient(
+    left top,
+    rgb(163, 53, 26),
+    rgba(226, 52, 8, 0.726)
+  );
 }
 
 /*Style the section1*/
-.section1{
+.section1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,9 +114,8 @@ body {
   background: url(/images/Awesome-Bookworm-Vectors-2.jpg) no-repeat center;
   background-attachment: scroll;
   background-size: cover;
-
 }
-.section2{
+.section2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,12 +127,12 @@ body {
 }
 
 /*Style the section cards*/
-.cards-bg{
+.cards-bg {
   display: flex;
   flex-direction: row;
   /*margin: .2;*/
 }
-.cards-month{
+.cards-month {
   display: grid;
   place-items: center;
   box-sizing: border-box;
@@ -149,151 +142,147 @@ body {
   margin-bottom: auto;
   border-radius: 3px;
   font-size: 12px;
-  font-family: 'comfortaa', cursive;
+  font-family: "comfortaa", cursive;
 }
-.mnth1{
+.mnth1 {
   background: var(--card1);
 }
-.mnth2{
+.mnth2 {
   background: var(--card2);
 }
-.mnth3{
+.mnth3 {
   background: var(--card3);
 }
-.mnth4{
+.mnth4 {
   background: var(--card4);
 }
-.mnth5{
+.mnth5 {
   background: var(--card5);
 }
-.mnth6{
+.mnth6 {
   background: var(--card6);
 }
-.mnth7{
+.mnth7 {
   background: var(--card7);
 }
-.mnth8{
+.mnth8 {
   background: var(--card8);
 }
-.cards-content{
+.cards-content {
   display: flex;
   flex-flow: column;
   align-items: center;
   max-width: 250px;
   min-width: 11rem;
-  padding: .5rem;
-  box-shadow: 0 4px 8px 0
-  rgba(0,0,0,.2), 0 6px 20px 0
-  rgba(0,0,0,.19);
-  border-radius: .3rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.3rem;
   cursor: pointer;
 }
-.cards-content:hover{
-  transition: .3s;
+.cards-content:hover {
+  transition: 0.3s;
   transform: scale(0.99);
-  opacity: .88;
+  opacity: 0.88;
 }
 /*Style the cards top-border*/
-.card1{
+.card1 {
   border-top: 4px solid var(--card1);
 }
-.card2{
+.card2 {
   border-top: 4px solid var(--card2);
 }
-.card3{
+.card3 {
   border-top: 4px solid var(--card3);
 }
-.card4{
+.card4 {
   border-top: 4px solid var(--card4);
 }
-.card5{
+.card5 {
   border-top: 4px solid var(--card5);
 }
-.card6{
+.card6 {
   border-top: 4px solid var(--card6);
 }
-.card7{
+.card7 {
   border-top: 4px solid var(--card7);
 }
-.card8{
+.card8 {
   border-top: 4px solid var(--card8);
 }
 
 /*Style the card contents*/
-.first{
+.first {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: 'Comfortaa', cursive;
-
+  font-family: "Comfortaa", cursive;
 }
-.second{
+.second {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  font-family: 'itim', cursive;
-
+  font-family: "itim", cursive;
 }
-.one{
+.one {
   height: 1.5rem;
   width: 3rem;
   padding: 4px;
-  background-color:  rgb(27,50,95);
+  background-color: rgb(27, 50, 95);
   border-radius: 4px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: hsl(0, 0%, 80%);
 }
-.two{
+.two {
   max-width: 65%;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
-.three{
-  font-size: .8rem;
+.three {
+  font-size: 0.8rem;
   font-weight: bold;
-  font-family: 'itim', sans-serif;
+  font-family: "itim", sans-serif;
 }
-.four{
+.four {
   height: 1.3rem;
   margin: auto;
-  background-color: rgb(3,54,73);
+  background-color: rgb(3, 54, 73);
   border: none;
-  border-radius: .4rem;
-  font-size: .7rem;
-  color: rgb(0,0,0);
+  border-radius: 0.4rem;
+  font-size: 0.7rem;
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
-.four:hover{
+.four:hover {
   color: hsl(0, 0%, 97%);
 }
-.four:focus{
+.four:focus {
   background-color: hsl(0, 0%, 97%);
   color: hsl(0, 0%, 0%);
-  box-shadow: 0 0 0 2px hsl(0, 0%, 100%),
-  0 0 0 5px rgb(3,54,73);
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%), 0 0 0 5px rgb(3, 54, 73);
   outline: none;
 }
 
 /*Here Goes the style for the site footer*/
-.footer,.footer-wrapper{
+.footer,
+.footer-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 .8rem;
+  margin: 0 0.8rem;
   padding: 1.2rem;
   background: hsl(0, 0%, 100%);
 }
-.footer-input{
+.footer-input {
   display: flex;
   flex-direction: row;
 }
 
 /*Here Goes Media-Queries for iphone4 and other punishments*/
-@media (max-width: 360px){
+@media (max-width: 360px) {
   /*Styles for the Current notes and previous notes section*/
   .main1-bg > h2,
-  .main2 > h2{
+  .main2 > h2 {
     background: url(/images/pens\ and\ paint.jpg) center;
     background-size: cover;
     background-clip: text;
@@ -305,8 +294,23 @@ body {
   }
 }
 /*Here Goes Media-Queries for Desktop view*/
-@media (min-width: 1020px){
-  .main1{
+@media (min-width: 1020px) {
+  .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 2rem;
+  }
+  .logo-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .drop-container {
+    display: flex;
+  }
+  .main1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -314,34 +318,35 @@ body {
     padding: 0 4rem;
     background: hsl(0, 0%, 100%);
   }
-  .main2{
+  .main2 {
     display: flex;
     flex-direction: column;
     padding: 0 4rem;
     background-color: hsl(0, 0%, 100%);
   }
   .main1-bg > h2,
-  .main2 > h2{
+  .main2 > h2 {
     background: url(/images/pens\ and\ paint.jpg) right;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     text-align: left;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 900;
     color: transparent;
-}
-  .input-field{
+  }
+  .input-field {
     display: flex;
     gap: 4px;
     margin-left: auto;
   }
-  .report-btn,.report-btn:hover{
+  .report-btn,
+  .report-btn:hover {
     width: 55px;
-    transition: .5s;
-    opacity: .9;
+    transition: 0.5s;
+    opacity: 0.9;
   }
-  .section1{
+  .section1 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -353,7 +358,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
   }
-  .section2{
+  .section2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -365,27 +370,26 @@ body {
     background-attachment: fixed;
     background-size: cover;
   }
-  .cards-content{
-    margin: .5rem 1rem;
+  .cards-content {
+    margin: 0.5rem 1rem;
     background: hsl(0, 0%, 80%);
-    opacity: .9;
+    opacity: 0.9;
     cursor: pointer;
   }
-  .cards-content:hover{
-    transition: .3s;
+  .cards-content:hover {
+    transition: 0.3s;
     transform: scale(0.99);
-    opacity: .8;
+    opacity: 0.8;
   }
-  .footer{
+  .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
   }
-  .footer-wrapper{
+  .footer-wrapper {
     margin-left: auto;
   }
-  .footer-input #report3{
+  .footer-input #report3 {
     width: 30vh;
   }
 }
