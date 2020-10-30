@@ -26,7 +26,7 @@ body {
 }
 /*Style the header*/
 .head{
-  display: flexb;
+  display: flex;
 }
 /*Style the main header section*/
 .main1 {
@@ -300,6 +300,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 2rem;
+    background: rgb(3, 54, 73);
   }
   .logo-img{
     display: flex;
@@ -313,6 +314,11 @@ body {
     justify-content: space-between;
     padding: 0 1.5rem;
     /*gap: 3rem;*/
+  }
+  .logo-img img {
+    width: 65px;
+    height: 50px;
+    border-radius: 3px;
   }
   .logo-info .active-tab {
     padding: 10px 5px;
@@ -330,10 +336,11 @@ body {
   /*Style Buttons*/
   .drop-btn {
     width: 55px;
-    height: 40px;
+    height: 30px;
     margin: 4px;
     border: none;
-    border-radius: 6px;
+    border-top: 2px solid rgb(155, 32, 42);
+    border-radius: 3px;
     outline: none;
     background: #eee;
     color: #233;  
