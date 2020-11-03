@@ -9,9 +9,9 @@
   --input-color: rgb(52, 56, 56);
   --input-back: hsla(0, 0%, 99%, 0.973);
   --card1: rgba(21, 33, 88, 0.911);
-  --card2: rgba(117, 38, 108, 0.767);
+  --card2: rgb(155, 32, 42);
   --card3: rgb(163, 119, 172);
-  --card4: rgb(155, 32, 42);
+  --card4: rgba(117, 38, 108, 0.767);
   --card5: rgb(167, 67, 10);
   --card6: rgba(34, 148, 34, 0.795);
   --card7: rgb(30, 77, 21);
@@ -115,23 +115,23 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-.section1 .cards-month {
+/*.section1 .cards-month {
   background: var(--card4);
-}
+}*/
 .section1 .mnth1 {
-  background: var(--card7);
+  background: var(--card1);
 }
 .section1 .mnth2 {
-  background: var(--card7);
+  background: var(--card2);
 }
 .section1 .mnth3 {
-  background: var(--card7);
+  background: var(--card3);
 }
 .section1 .mnth4 {
-  background: var(--card7);
+  background: var(--card4);
 }
 .section1 .mnth5 {
-  background: var(--card7);
+  background: var(--card5);
 }
 
 .section2 {
@@ -144,26 +144,26 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-.section2 .cards-month {
+/*.section2 .cards-month {
   background: var(--card8);
-}
+}*/
 .section2 .mnth1 {
   background: var(--card7);
 }
-.section1 .mnth2 {
-  background: var(--card7);
+.section2 .mnth2 {
+  background: var(--card6);
 }
-.section1 .mnth3 {
-  background: var(--card7);
+.section2 .mnth3 {
+  background: var(--card5);
 }
-.section1 .mnth4 {
-  background: var(--card7);
+.section2 .mnth4 {
+  background: var(--card4);
 }
-.section1 .mnth5 {
-  background: var(--card7);
+.section2 .mnth5 {
+  background: var(--card3);
 }
-.section1 .mnth5 {
-  background: var(--card7);
+.section2 .mnth5 {
+  background: var(--card2);
 }
 
 /*Style the section cards*/
