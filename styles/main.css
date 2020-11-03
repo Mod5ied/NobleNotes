@@ -118,6 +118,21 @@ body {
 .section1 .cards-month {
   background: var(--card4);
 }
+.section1 .mnth1 {
+  background: var(--card7);
+}
+.section1 .mnth2 {
+  background: var(--card7);
+}
+.section1 .mnth3 {
+  background: var(--card7);
+}
+.section1 .mnth4 {
+  background: var(--card7);
+}
+.section1 .mnth5 {
+  background: var(--card7);
+}
 
 .section2 {
   display: flex;
@@ -131,6 +146,24 @@ body {
 }
 .section2 .cards-month {
   background: var(--card8);
+}
+.section2 .mnth1 {
+  background: var(--card7);
+}
+.section1 .mnth2 {
+  background: var(--card7);
+}
+.section1 .mnth3 {
+  background: var(--card7);
+}
+.section1 .mnth4 {
+  background: var(--card7);
+}
+.section1 .mnth5 {
+  background: var(--card7);
+}
+.section1 .mnth5 {
+  background: var(--card7);
 }
 
 /*Style the section cards*/
@@ -151,6 +184,7 @@ body {
   font-size: 12px;
   font-family: "comfortaa", cursive;
 }
+/*
 .mnth1 {
   background: var(--card1);
 }
@@ -174,7 +208,7 @@ body {
 }
 .mnth8 {
   background: var(--card8);
-}
+}*/
 .cards-content {
   display: flex;
   flex-flow: column;
