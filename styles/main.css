@@ -369,7 +369,6 @@ body {
   }
   .drop-btn:focus {
     background:  rgb(163, 53, 26);
-    /*transition: all ease-in-out;*/
   }
   /*Style Accordion panel (hidden by default)*/
   .panel {
@@ -378,11 +377,19 @@ body {
     padding: 0 18px;
     border-radius: 4px;
     position: absolute;
-    top: 5.5rem;
+    top: 4.5rem;
     left: 80%;
     z-index: 2;
     background: hsl(0, 0%, 80%);
     text-align: center;
+  }
+  .panel a {
+    font-size: 10px;
+    color: #233;
+    text-decoration: none;
+  }
+  .panel a:hover {
+    color: #135bbf;
   }
   /*Show class is added on click*/
   .panel.show{
