@@ -115,9 +115,6 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-/*.section1 .cards-month {
-  background: var(--card4);
-}*/
 .section1 .mnth1 {
   background: var(--card1);
 }
@@ -144,9 +141,6 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-/*.section2 .cards-month {
-  background: var(--card8);
-}*/
 .section2 .mnth1 {
   background: var(--card7);
 }
@@ -170,7 +164,6 @@ body {
 .cards-bg {
   display: flex;
   flex-direction: row;
-  /*margin: .2;*/
 }
 .cards-month {
   display: grid;
@@ -184,31 +177,7 @@ body {
   font-size: 12px;
   font-family: "comfortaa", cursive;
 }
-/*
-.mnth1 {
-  background: var(--card1);
-}
-.mnth2 {
-  background: var(--card2);
-}
-.mnth3 {
-  background: var(--card3);
-}
-.mnth4 {
-  background: var(--card4);
-}
-.mnth5 {
-  background: var(--card5);
-}
-.mnth6 {
-  background: var(--card6);
-}
-.mnth7 {
-  background: var(--card7);
-}
-.mnth8 {
-  background: var(--card8);
-}*/
+
 .cards-content {
   display: flex;
   flex-flow: column;
@@ -340,21 +309,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: .5rem 2rem;
     background: rgb(3, 54, 73);
   }
-  .logo-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .logo-info {
-    width: 15%;
+    width: 17%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 1.5rem;
     /*gap: 3rem;*/
+  }
+  .logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .logo-img img {
     width: 65px;
@@ -365,8 +334,9 @@ body {
     padding: 10px 5px;
     border-radius: 4px;
     background: hsl(0, 0%, 80%);
-    font-size: 14px;
+    font-size: 12px;
     text-align: left;
+    white-space: nowrap;
   }
   .drop-container {
     display: flex;
