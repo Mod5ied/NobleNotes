@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
-  /*border: 1px solid red !important;*/
+  bborder: 1px solid red !important;*/
   box-sizing: border-box;
 }
 :root {
@@ -208,16 +208,16 @@ body {
   border-top: 4px solid var(--card4);
 }
 .card5 {
-  border-top: 4px solid var(--card5);
-}
-.card6 {
   border-top: 4px solid var(--card6);
 }
-.card7 {
+.card6 {
   border-top: 4px solid var(--card7);
 }
+.card7 {
+  border-top: 4px solid var(--card6);
+}
 .card8 {
-  border-top: 4px solid var(--card8);
+  border-top: 4px solid var(--card7);
 }
 
 /*Style the card contents*/
@@ -310,7 +310,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: .5rem 2rem;
-    background: rgb(3, 54, 73);
+    background: rgba(21, 33, 88, 0.911);
   }
   .logo-info {
     width: 17%;
@@ -350,12 +350,13 @@ body {
     height: 30px;
     margin: 4px;
     border: none;
-    border-top: 2px solid rgb(155, 32, 42);
+    outline: 2px solid rgb(155, 32, 42);
     border-radius: 3px;
     outline: none;
-    background: #eee;
+    background: hsl(0, 0%, 100%);
     color: #233;  
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
     text-align: center;
     transition: .4s;
     cursor: pointer;
@@ -364,6 +365,11 @@ body {
   .drop-btn.active,
   .drop-btn:hover {
     background: #ddd;
+    border: 1px solid  rgb(163, 53, 26);
+  }
+  .drop-btn:focus {
+    background:  rgb(163, 53, 26);
+    /*transition: all ease-in-out;*/
   }
   /*Style Accordion panel (hidden by default)*/
   .panel {
