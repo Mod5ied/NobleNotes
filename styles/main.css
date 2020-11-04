@@ -125,7 +125,7 @@ body {
   background: var(--card3);
 }
 .section1 .mnth4 {
-  background: var(--card4);
+  background: var(--card8);
 }
 .section1 .mnth5 {
   background: var(--card5);
@@ -235,7 +235,7 @@ body {
   font-family: "itim", cursive;
 }
 .one {
-  height: 1.5rem;
+  height: 1.2rem;
   width: 3rem;
   padding: 4px;
   background-color: rgb(27, 50, 95);
@@ -419,7 +419,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     color: transparent;
   }
