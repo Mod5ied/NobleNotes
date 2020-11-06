@@ -2,8 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
-  bborder: 1px solid red !important;*/
+  border: 1px solid red !important;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 :root {
   --input-color: rgb(52, 56, 56);
@@ -19,8 +21,6 @@
 }
 body {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   background: hsl(0, 0%, 95%);
   font-family: "Lemonada", sans-serif;
 }
@@ -46,7 +46,7 @@ body {
   padding: 0.3rem;
   background-color: hsl(0, 0%, 100%);
 }
-/*Styles for the Current notes and previous notes section*/
+/*Styles for the Current and Previous notes header*/
 .main1-bg > h2,
 .main2 > h2 {
   background: url(/images/pens\ and\ paint.jpg) center;
