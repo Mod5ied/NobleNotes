@@ -2,10 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
-  border: 1px solid red !important;
+  order: 1px solid red !important;*/
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  
 }
 :root {
   --input-color: rgb(52, 56, 56);
@@ -23,6 +22,8 @@ body {
   box-sizing: border-box;
   background: hsl(0, 0%, 95%);
   font-family: "Lemonada", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 /*Style the header*/
 .head{
@@ -109,8 +110,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
-  box-sizing: border-box;
+  padding: 4rem .2rem;
+  /*box-sizing: border-box;*/
   background: url(/images/Awesome-Bookworm-Vectors-2.jpg) no-repeat center;
   background-attachment: scroll;
   background-size: cover;
@@ -135,8 +136,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4em 2em;
-  box-sizing: border-box;
+  padding: 4rem .2rem;
+  /*box-sizing: border-box;*/
   background: url(/images/Awesome-Bookworm-Vectors-1.jpg) no-repeat center;
   background-attachment: scroll;
   background-size: cover;
@@ -182,7 +183,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  max-width: 250px;
+  max-width: 200px; /*This was originally 230-250px*/
   min-width: 11rem;
   padding: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -228,27 +229,30 @@ body {
   font-family: "Comfortaa", cursive;
 }
 .second {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 10px;
   width: 100%;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  background: rgba(115, 177, 228, 0.274);
   font-family: "itim", cursive;
 }
+
 .one {
-  height: 1.2rem;
-  width: 3rem;
-  padding: 4px;
-  background-color: rgb(27, 50, 95);
-  border-radius: 4px;
-  font-size: 0.8rem;
-  color: hsl(0, 0%, 80%);
+  width: 100%;
+  font-size: .8rem;
+  white-space: wrap;
 }
 .two {
-  max-width: 65%;
-  font-size: 0.8rem;
+  font-size: .7rem;
+  font-weight: bold;
+  font-family: "itim", sans-serif;
 }
 .three {
-  font-size: 0.8rem;
+  font-size: .7rem;
   font-weight: bold;
   font-family: "itim", sans-serif;
 }
@@ -257,7 +261,7 @@ body {
   margin: auto;
   background-color: rgb(3, 54, 73);
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   font-size: 0.7rem;
   color: rgb(0, 0, 0);
   cursor: pointer;
@@ -403,13 +407,13 @@ body {
     flex-direction: row;
     justify-content: space-around;
     gap: 4px;
-    padding: 0 4rem;
+    padding: 0 5rem;
     background: hsl(0, 0%, 100%);
   }
   .main2 {
     display: flex;
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 0 5rem;
     background-color: hsl(0, 0%, 100%);
   }
   .main1-bg > h2,
@@ -438,7 +442,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 85rem;
+    width: 80%;
     margin: auto;
     padding: 3.5rem;
     border-radius: 4px;
@@ -450,9 +454,9 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    max-width: 85rem;
+    width: 80%;
     margin: auto;
-    padding: 15px;
+    padding: 3.5rem;
     border-radius: 4px;
     background: url(/images/siteback.jpg) center;
     background-attachment: fixed;
@@ -469,6 +473,15 @@ body {
     transform: scale(0.99);
     opacity: 0.8;
   }
+  .second {
+    border-radius: 1rem;
+    background:  rgba(4, 78, 139, 0.082);
+  }
+  .second:hover {
+    background: none;
+    transition: .5s;
+  }
+
   .footer {
     display: flex;
     flex-direction: row;
