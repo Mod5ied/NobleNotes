@@ -350,8 +350,8 @@ body {
   }
   /*Style Buttons*/
   .drop-btn {
-    width: 55px;
-    height: 30px;
+    width: 45px;
+    height: 25px;
     margin: 4px;
     border: none;
     outline: 2px solid rgb(155, 32, 42);
@@ -359,7 +359,7 @@ body {
     outline: none;
     background: hsl(0, 0%, 100%);
     color: #233;  
-    font-size: 12px;
+    font-size: .7rem;
     font-weight: 600;
     text-align: center;
     transition: .4s;
