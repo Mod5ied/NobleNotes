@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
-  order: 1px solid red !important;*/
+  border: 1px solid red !important;*/
   box-sizing: border-box;
   
 }
@@ -489,6 +489,9 @@ body {
   }
   .footer-wrapper {
     margin-left: auto;
+  }
+  .footer-input {
+    padding: 0 1rem;
   }
   .footer-input #report3 {
     width: 30vh;
