@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
 * {
-  border: 1px solid red !important;*/
+  border: 1px solid red !important;
   box-sizing: border-box;
   
 }
@@ -483,15 +483,27 @@ body {
   }
 
   .footer {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
   .footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
     margin-left: auto;
   }
+  .footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    color: rgb(43, 61, 138);
+    font-size: 1.5rem;
+  }
   .footer-input {
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
   .footer-input #report3 {
     width: 30vh;
