@@ -1,0 +1,49 @@
+* {
+    brder: 1px solid red !important;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: hsl(0, 0%, 40%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    .main-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards {
+        width: 95%;
+        height: 10rem;
+        max-height: 20%;
+        margin: .5rem 0;
+        background: hsl(0, 0%, 70%);
+
+        h3, .card-info {
+            display: grid;
+            place-items: center;
+        }
+        .card-tips {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 1.5rem;
+            overflow: hidden;
+            gap: 1rem;
+        }
+    }
+}
+
+
+@media (min-width: 1020px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+}

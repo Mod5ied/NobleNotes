@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/cjs/ionicons.cjs.js"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.2.3/cjs/ionicons.cjs.js"></script-->
     <title>Noblenotes</title>
-    <style>
-        *{
-            border: 1px solid red !important;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 
 <body>
-    <header>
+    <!--header>
         <nav>
             <img src="" alt="" />
         </nav>
@@ -22,14 +18,14 @@
             <button></button>
             <button></button>
         </nav>
-    </header>
+    </header-->
 
     <main>
-        <div>
+        <div class="main-area">
             <nav class="cards card1">
                 <h3>NOTES FOR THE DAY</h3>
-                <span><!--info icon here-->About {{No of notes}} notes today</span>
-                <div>
+                <span class="card-info"><!--info icon here-->About {{No of notes}} notes today</span>
+                <div class="card-tips">
                     <p>COS<span>201</span></p>
                     <p>GSP<span>207</span></p>
                     <p>STA<span>205</span></p>
@@ -37,15 +33,15 @@
             </nav>
             <nav class="cards card2">
                 <h3>ASSIGNMENT HUB</h3>
-                <span><!--info icon here-->Below are pending assignments</span>
-                <div>
+                <span class="card-info"><!--info icon here-->Below are pending assignments</span>
+                <div class="card-tips">
                     <p>COS<span>201</span></p>
                     <p>STA<span>205</span></p>
                 </div> 
             </nav>
             <nav class="cards card2">
                 <h3>SOLUTION HUB</h3>
-                <span><!--light-bulb icon here-->Get and Post assignments here</span>
+                <span class="card-info"><!--light-bulb icon here-->Get and Post solutions to assignments here</span>
             </nav>
         </div>
     </main>
@@ -88,7 +84,7 @@
         <div>
             <nav>
                 <h3>STUDENTS HUB</h3>
-                <span><!--light-bulb icon here-->Get facts and info to make your student life a easier!</span>
+                <span><!--light-bulb icon here-->Get facts class="card-info" and info to make your student life a easier!</span>
             </nav>
             <nav>
                 <h3>SHADY ISSUES</h3>
