@@ -1,5 +1,5 @@
 * {
-  brder: 1px solid red !important;
+  borer: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #666666;
+  background: #e6e6e6;
 }
 
 main {
@@ -20,7 +20,7 @@ main {
           flex-direction: column;
 }
 
-main .main-area {
+.main-area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,21 +36,27 @@ main .main-area {
           align-items: center;
 }
 
-main .cards {
+.main-area .cards {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 95%;
   height: 10rem;
   max-height: 20%;
   margin: .5rem 0;
-  background: #b3b3b3;
+  border-radius: .5rem;
+  background: #f7f7f7;
 }
 
-main .cards h3, main .cards .card-info {
+.main-area h2, .main-area .card-info {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
-main .cards .card-tips {
+.main-area .card-tips {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +70,67 @@ main .cards .card-tips {
   margin-top: 1.5rem;
   overflow: hidden;
   gap: 1rem;
+}
+
+.main-area .card-tips p {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  height: 1.22rem;
+  padding-right: .5rem;
+  border-radius: 1rem;
+  background: #666666;
+  font-size: .8rem;
+  color: white;
+}
+
+.main-area .card-tips p span {
+  height: 1.2rem;
+  padding: .1rem;
+  border-radius: 1rem;
+  background: #ebebeb;
+  color: black;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: gray;
+}
+
+.section1 .section-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  background: #333333;
+  line-height: .2;
+}
+
+.section1 .section-head h3 {
+  font-size: 1.3rem;
 }
 
 @media (min-width: 1020px) {

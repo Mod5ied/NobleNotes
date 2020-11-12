@@ -1,43 +1,88 @@
 * {
-    brder: 1px solid red !important;
+    borer: 1px solid red !important;
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: hsl(0, 0%, 40%);
+    background: hsl(0, 0%, 90%);
 }
 
 main {
     display: flex;
     flex-direction: column;
-    .main-area {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+}
+.main-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .cards {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 95%;
         height: 10rem;
         max-height: 20%;
         margin: .5rem 0;
-        background: hsl(0, 0%, 70%);
-
-        h3, .card-info {
-            display: grid;
-            place-items: center;
-        }
-        .card-tips {
+        border-radius: .5rem;
+        background: hsl(0, 0%, 97%);
+    }
+    h2, .card-info {
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .card-tips {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1.5rem;
+        overflow: hidden;
+        gap: 1rem;
+        //The card-tips styling
+        p {
+            box-sizing: border-box;
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 1.5rem;
-            overflow: hidden;
-            gap: 1rem;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            height: 1.22rem;
+            padding-right: .5rem;
+            border-radius: 1rem;
+            background: hsl(0, 0%, 40%);
+            font-size: .8rem;
+            color: white;
+        }
+        p span{
+            height: 1.2rem;
+            padding: .1rem;
+            border-radius: 1rem;
+            background: hsl(0, 0%, 92%);
+            color: black;
         }
     }
+}
+.section1 {
+    display: flex;
+    flex-direction: column;
+    background: hsl(0, 0%, 50%);
+
+    .section-head {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background: hsl(0, 0%, 20%);
+        line-height: .2;
+
+        h3 {
+            font-size: 1.3rem;
+        }
+    }
+    .section-scroll {}
+
 }
 
 
