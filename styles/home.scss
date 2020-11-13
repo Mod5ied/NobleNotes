@@ -1,5 +1,5 @@
 * {
-    borer: 1px solid red !important;
+    order: 1px solid red !important;
     box-sizing: border-box;
 }
 
@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background: hsl(0, 0%, 90%);
+    
 }
 
 main {
@@ -68,21 +69,45 @@ main {
 .section1 {
     display: flex;
     flex-direction: column;
-    background: hsl(0, 0%, 50%);
+    background: hsl(0, 0%, 20%);
+    padding: 1rem 0;
 
     .section-head {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        background: hsl(0, 0%, 20%);
+        background: hsl(0, 0%, 90%);
         line-height: .2;
 
         h3 {
             font-size: 1.3rem;
         }
     }
-    .section-scroll {}
+    .section-scroll {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1.2rem;
+        background: hsl(0, 0%, 20%);
+        overflow-y: scroll !important;
+        white-space: nowrap;
+        
+        .section-card {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            max-width: 200px;
+            height: 10rem;
+            padding: 1rem 2rem;
+            border-radius: .3rem;
+            background: hsl(0, 0%, 90%);
+        }
+    }
 
+}
+.section2 {
+    padding: 2rem 0;
 }
 
 
