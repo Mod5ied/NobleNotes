@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
+
 * {
-    order: 1px solid red !important;
+    border: 1px solid red !important;
     box-sizing: border-box;
 }
 
@@ -7,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background: hsl(0, 0%, 90%);
-    
+    font-family: "Comfortaa", sans-serif;
 }
 
 main {
@@ -70,13 +72,12 @@ main {
     display: flex;
     flex-direction: column;
     background: hsl(0, 0%, 20%);
-    padding: 1rem 0;
+    padding: 2rem;
 
     .section-head {
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        background: hsl(0, 0%, 90%);
         line-height: .2;
 
         h3 {
@@ -86,28 +87,49 @@ main {
     .section-scroll {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-        padding: 1.2rem;
-        background: hsl(0, 0%, 20%);
-        overflow-y: scroll !important;
+        gap: 1.5rem;
+        padding: .8rem;
+        overflow-y: scroll;
         white-space: nowrap;
         
         .section-card {
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            height: 200px;
-            max-width: 200px;
-            height: 10rem;
-            padding: 1rem 2rem;
+            display: grid;
+            place-items: center;
             border-radius: .3rem;
-            background: hsl(0, 0%, 90%);
+            max-width: 200px;
+            min-width: 200px;
+            height: 10rem;
+            background: hsl(0, 0%, 97%);
+
+            span {
+                font-size: 1.2rem;
+                color: hsl(0, 0%, 20%);
+                background: hsl(0, 0%, 90%);
+                border-radius: 50%;
+            }
         }
     }
 
 }
 .section2 {
     padding: 2rem 0;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    p {
+        text-align: center;
+    }
+    span {
+        display: flex;
+        flex-flow: row;
+        gap: 1.2rem;
+        font-size: 1.5rem;
+    }
 }
 
 

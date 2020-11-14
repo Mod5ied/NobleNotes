@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  -webkit-box-ordinal-group: 2 !important;
-      -ms-flex-order: 1px solid red !important;
-          order: 1px solid red !important;
+  border: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -10,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background: #e6e6e6;
+  font-family: "Comfortaa", sans-serif;
 }
 
 main {
@@ -116,7 +116,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #333333;
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
 .section1 .section-head {
@@ -128,7 +128,6 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
-  background: #e6e6e6;
   line-height: .2;
 }
 
@@ -144,16 +143,37 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 1rem;
-  padding: 1.2rem;
-  background: #333333;
-  overflow-y: scroll !important;
+  gap: 1.5rem;
+  padding: .8rem;
+  overflow-y: scroll;
   white-space: nowrap;
 }
 
 .section1 .section-scroll .section-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: .3rem;
+  max-width: 200px;
+  min-width: 200px;
+  height: 10rem;
+  background: #f7f7f7;
+}
+
+.section1 .section-scroll .section-card span {
+  font-size: 1.2rem;
+  color: #333333;
+  background: #e6e6e6;
+  border-radius: 50%;
+}
+
+.section2 {
+  padding: 2rem 0;
+}
+
+footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,16 +181,26 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 200px;
-  max-width: 200px;
-  height: 10rem;
-  padding: 1rem 2rem;
-  border-radius: .3rem;
-  background: #e6e6e6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
 }
 
-.section2 {
-  padding: 2rem 0;
+footer p {
+  text-align: center;
+}
+
+footer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  gap: 1.2rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1020px) {

@@ -446,9 +446,9 @@ body {
     margin: auto;
     padding: 3.5rem;
     border-radius: 4px;
-    background: url(/images/siteback.jpg) center;
+    background: url(/images/Bookworm\ vector\ 6.jpg) center no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
   }
   .section2 {
     display: flex;
@@ -458,9 +458,9 @@ body {
     margin: auto;
     padding: 3.5rem;
     border-radius: 4px;
-    background: url(/images/siteback.jpg) center;
+    background: url(/images/Bookworm\ vector\ 6.jpg) center no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
   }
   .cards-content {
     margin: 0.5rem 1rem;
