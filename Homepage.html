@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js"></script>
+    <!--script href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/js/ionic.min.js"></script-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <title>Noblenotes</title>
     <link rel="stylesheet" href="/styles/home.css">
@@ -25,7 +25,7 @@
         <div class="main-area">
             <nav class="cards card1">
                 <h2>NOTES FOR THE DAY</h2>
-                <span class="card-info"><!--info icon here-->About {{No of notes}} notes today</span>
+                <span class="card-info"><i class="fas fa-info-circle"></i><p> About {{No of notes}} notes today </p></span>
                 <div class="card-tips">
                     <p>201<span>COS</span></p>
                     <p>207<span>GSP</span></p>
@@ -34,7 +34,9 @@
             </nav>
             <nav class="cards card2">
                 <h2>ASSIGNMENT HUB</h2>
-                <span class="card-info"><!--info icon here-->Below are pending assignments</span>
+                <span class="card-info"><!--info icon here-->
+                    <i class="fas fa-info-circle"></i>
+                    <p> Below are pending assignments </p></span>
                 <div class="card-tips">
                     <p>201<span>COS</span></p>
                     <p>205<span>STA</span></p>
@@ -42,7 +44,9 @@
             </nav>
             <nav class="cards card3">
                 <h2>SOLUTION HUB</h2>
-                <span class="card-info"><!--light-bulb icon here-->Get and Post solutions to assignments here</span>
+                <span class="card-info">
+                    <i class="fas fa-info-circle"></i>
+                    <p> Get and Post solutions to assignments here </p></span>
             </nav>
         </div>
     </main>
@@ -54,27 +58,27 @@
         </div>
         <aside class="section-scroll">
             <nav class="section-card first-card">
-                <span><ion-icon name="desktop-outline"></ion-icon></span>
+                <span><i class="fas fa-desktop"></i></span>
                 <h4> COS NOTES</h4>
                 <p>Computer Science</p>
             </nav>
             <nav class="section-card">
-                <span><ion-icon name="calculator"></ion-icon></span>
+                <span><i class="fas fa-calculator"></i></span>
                 <h4> MTH NOTES</h4>
                 <p>Mathematics</p>
             </nav>
             <nav class="section-card">
-                <span><ion-icon name="stats-chart"></ion-icon></span>
+                <span><i class="far fa-chart-bar"></i></span>
                 <h4> STAT NOTES</h4>
                 <p>Statistics</p>
             </nav>
             <nav class="section-card">
-                <span><ion-icon name="cog"></ion-icon></span>
+                <span><i class="fas fa-cogs"></i></span>
                 <h4> ENGR NOTES</h4>
                 <p>Engineering</p>
             </nav>
             <nav class="section-card last-card">
-                <span><ion-icon name="trash"></ion-icon></span> <!--name="people"-->
+                <span><i class="fas fa-trash"></i></span> <!--name="people"-->
                 <h4> GSP NOTES</h4>
                 <p>General Studies</p>
             </nav>
@@ -85,11 +89,15 @@
         <div class="main-area">
             <nav class="cards card4">
                 <h2>STUDENTS HUB</h2>
-                <span class="card-info"><!--light-bulb icon here-->Get facts and info to make your student life a easier!</span>
+                <span class="card-info"><!--light-bulb icon here-->
+                    <i class="far fa-lightbulb"></i>
+                    <p> Get facts & info to make your student life easier! </p></span>
             </nav>
             <nav class="cards card5" >
                 <h2>SHADY ISSUES</h2>
-                <span class="card-info"><!--light-bulb icon here-->Earn from the platform</span>
+                <span class="card-info"><!--light-bulb icon here-->
+                    <i class="far fa-lightbulb"></i>
+                    <p> Earn from the platform </p></span>
             </nav>
         </div>
     </section>
