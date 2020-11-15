@@ -1,0 +1,136 @@
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+.main-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cards {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 95%;
+        height: 10rem;
+        max-height: 20%;
+        margin: .5rem 0;
+        border-radius: .5rem;
+        background: hsl(0, 0%, 97%);
+        line-height: .7;
+    }
+    h2, .card-info {
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+    .card-info {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        gap: 5px;
+        font-size: .8rem;
+
+        i {
+            font-size: 1rem;
+            color: #135bbf;
+        }
+    }
+    .card-tips {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1.5rem;
+        overflow: hidden;
+        gap: 1rem;
+        //The card-tips styling
+        p {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            height: 1rem;
+            padding-right: .5rem;
+            border-radius: 1rem;
+            background: #135bbf;
+            font-size: .7rem;
+            color: white;
+        }
+        p span{
+            height: 1rem;
+            padding: .3rem;
+            border-radius: 1rem;
+            background: #001133;
+            color: hsl(0, 0%, 80%);
+        }
+    }
+}
+.section1 {
+    display: flex;
+    flex-direction: column;
+    background: hsl(0, 0%, 20%);
+    padding: 2rem;
+
+    .section-head {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        line-height: .2;
+
+        h3 {
+            font-size: 1.3rem;
+        }
+    }
+    .section-scroll {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: .8rem;
+        overflow-y: scroll;
+        white-space: nowrap;
+        
+        .section-card {
+            box-sizing: border-box;
+            display: grid;
+            place-items: center;
+            border-radius: .3rem;
+            max-width: 200px;
+            min-width: 200px;
+            height: 10rem;
+            padding: .4rem;
+            background: hsl(0, 0%, 97%);
+
+            span {
+                font-size: 2rem;
+                color: #135bbf;
+                background: hsl(0, 0%, 90%);
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+.section2 {
+    padding: 2rem 0;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px dotted black;
+
+    p {
+        text-align: center;
+    }
+    span {
+        display: flex;
+        flex-flow: row;
+        gap: 1.2rem;
+        font-size: 1.5rem;
+        color: #135bbf;
+    }
+}
