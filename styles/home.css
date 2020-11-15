@@ -70,7 +70,13 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 5px;
   font-size: .8rem;
+}
+
+.main-area .card-info i {
+  font-size: 1rem;
+  color: #135bbf;
 }
 
 .main-area .card-tips {
@@ -111,17 +117,17 @@ main {
   height: 1rem;
   padding-right: .5rem;
   border-radius: 1rem;
-  background: #666666;
-  font-size: .8rem;
+  background: #135bbf;
+  font-size: .7rem;
   color: white;
 }
 
 .main-area .card-tips p span {
   height: 1rem;
-  padding: .31rem;
+  padding: .3rem;
   border-radius: 1rem;
-  background: #ebebeb;
-  color: black;
+  background: #001133;
+  color: #cccccc;
 }
 
 .section1 {
@@ -182,7 +188,7 @@ main {
 
 .section1 .section-scroll .section-card span {
   font-size: 2rem;
-  color: #333333;
+  color: #135bbf;
   background: #e6e6e6;
   border-radius: 50%;
 }
@@ -203,6 +209,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  border-top: 1px dotted black;
 }
 
 footer p {
@@ -219,6 +226,7 @@ footer span {
           flex-flow: row;
   gap: 1.2rem;
   font-size: 1.5rem;
+  color: #135bbf;
 }
 
 /*Here Goes Media-Queries for iphone4 and other punishments*/
