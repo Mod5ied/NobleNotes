@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 
+@mixin flexLayout($direction) {
+    display: flex;
+    flex-flow: $direction;
+}
+@mixin row($direction) {
+    justify-content: $direction;
+}
+@mixin column($direction) {
+    align-items: $direction;
+}
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
 * {
     border: 1px solid red !important;
     box-sizing: border-box;
@@ -11,6 +26,7 @@ body {
     background: hsl(0, 0%, 90%);
     font-family: "Comfortaa", sans-serif;
 }
+/*Here goes the Media query for Smartphones*/
 @media  (max-width: 420px) {
     
     main {
@@ -97,6 +113,10 @@ body {
             h3 {
                 font-size: 1.3rem;
             }
+            span {
+                display: flex;
+                align-items: center;
+            }
         }
         .section-scroll {
             display: flex;
@@ -150,7 +170,7 @@ body {
     }
 }
 
-/*Here Goes Media-Queries for iphone4 and other punishments*/
+/*Here Goes Media-Queries for iPhone4,4-plus and other punishments*/
 @media (max-width: 320px) {
     
     
@@ -161,7 +181,7 @@ body {
         line-height: .2;
 
         h3 {
-            font-size: 1.1rem;
+            font-size: 8px;
         }
         p {
             font-size: .8rem;
@@ -172,6 +192,32 @@ body {
     }
 }
 
+/*Here goes Media query for Tablet devices*/
+@media (max-width: 800px) {
+    .main-area {
+        @include flexLayout(column);
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+
+        .cards {
+            @include gridCenter;
+            gap: 1rem;
+        }
+        .card-info {
+            @include flexLayout(row);
+            @include column(center);
+        }
+        .card-tips {
+            @include flexLayout(row);
+
+            p {
+            margin: 1rem 5px;
+            }
+        }
+    }
+}
+
+/*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1020px) {
     
     .main-area {

@@ -12,6 +12,7 @@ body {
   font-family: "Comfortaa", sans-serif;
 }
 
+/*Here goes the Media query for Smartphones*/
 @media (max-width: 420px) {
   main {
     display: -webkit-box;
@@ -145,6 +146,14 @@ body {
   .section1 .section-head h3 {
     font-size: 1.3rem;
   }
+  .section1 .section-head span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .section1 .section-scroll {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -211,7 +220,7 @@ body {
   }
 }
 
-/*Here Goes Media-Queries for iphone4 and other punishments*/
+/*Here Goes Media-Queries for iPhone4,4-plus and other punishments*/
 @media (max-width: 320px) {
   .section-head {
     display: -webkit-box;
@@ -225,7 +234,7 @@ body {
     line-height: .2;
   }
   .section-head h3 {
-    font-size: 1.1rem;
+    font-size: 8px;
   }
   .section-head p {
     font-size: .8rem;
@@ -235,6 +244,52 @@ body {
   }
 }
 
+/*Here goes Media query for Tablet devices*/
+@media (max-width: 800px) {
+  .main-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  .main-area .cards {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+  }
+  .main-area .card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-area .card-tips {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  .main-area .card-tips p {
+    margin: 1rem 5px;
+  }
+}
+
+/*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1020px) {
   .main-area {
     display: -webkit-box;
