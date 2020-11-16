@@ -204,36 +204,40 @@ body {
         @include flexLayout(column);
         padding: 1rem;
         
-        .main-area {
+    }
+    .main-area {
+        box-sizing: border-box;
+        @include flexLayout(column);
+        gap: 2rem;
+
+        .cards {
             box-sizing: border-box;
-            @include flexLayout(column);
-            gap: 2rem;
+            @include flexLayout(row);
+            gap: 1rem;
+            height: 8rem;
 
-            .cards {
-                box-sizing: border-box;
-                @include flexLayout(row);
-                gap: 1rem;
-
-                h2 {
-                    flex: 40%;
-                    max-width: 220px;
-                    min-width: 250px;
-                }
-            }
-            .card-info {
-                @include flexLayout(row);
-                @include column(center);
-                font-size: .9rem;
-            }
-            .card-tips {
-                @include flexLayout(row);
-                @include column(center);
-                font-size: .8rem;
-
-                
+            h2 {
+                @include gridCenter();
+                flex: 40%;
+                max-width: 220px;
+                min-width: 250px;
+                text-align: center;
             }
         }
+        .card-info {
+            @include flexLayout(row);
+            @include column(center);
+            font-size: .9rem;
+        }
+        .card-tips {
+            @include flexLayout(row);
+            @include column(center);
+            font-size: .8rem;
+
+            
+        }
     }
+    
     .card-tips {
         @include flexLayout(row);
         gap: 1rem;
@@ -254,7 +258,31 @@ body {
                 @include column(center);
             }
         }
-        
+        .section-scroll {
+            @include flexLayout(row);
+            gap: 2rem;
+            padding: .7rem;
+            white-space: nowrap;
+            overflow: auto;
+        }
+        .section-card {
+            @include gridCenter();
+            min-width: 220px;
+            height: 180px;
+        }
+    }
+    footer {
+        @include flexLayout(row);
+        gap: 2rem;
+        padding: 1rem;
+
+        span {
+            @include flexLayout(row);
+            @include column(center);
+            gap: 2rem;
+
+            i{font-size: 1.4rem;}
+        }
     }
 }
 /*Here goes Media query for Laptops and Desktops*/
