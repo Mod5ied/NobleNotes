@@ -80,21 +80,21 @@ body {
             //The card-tips styling
             p {
                 box-sizing: border-box;
-                display: flex;
+                /*display: flex;
                 flex-direction: row-reverse;
                 justify-content: flex-start;
                 align-items: center;
                 gap: 5px;
                 height: 1rem;
-                padding-right: .5rem;
+                padding-right: .5rem;*/
                 border-radius: 1rem;
                 background: #135bbf;
-                font-size: .7rem;
+                /*font-size: .7rem;*/
                 color: white;
             }
             p span{
-                height: 1rem;
-                padding: .3rem;
+                /*height: 1rem;
+                padding: .3rem;*/
                 border-radius: 1rem;
                 background: #001133;
                 color: hsl(0, 0%, 80%);
@@ -198,15 +198,63 @@ body {
 
 
 /*Here goes Media query for Tablet devices*/
-@media (max-width: 768px) {
-   
+@media (min-width: 430px) {
+
+    main {
+        @include flexLayout(column);
+        padding: 1rem;
+        
+        .main-area {
+            box-sizing: border-box;
+            @include flexLayout(column);
+            gap: 2rem;
+
+            .cards {
+                box-sizing: border-box;
+                @include flexLayout(row);
+                gap: 1rem;
+
+                h2 {
+                    flex: 40%;
+                    max-width: 220px;
+                    min-width: 250px;
+                }
+            }
+            .card-info {
+                @include flexLayout(row);
+                @include column(center);
+                font-size: .9rem;
+            }
+            .card-tips {
+                @include flexLayout(row);
+                @include column(center);
+                font-size: .8rem;
+
+                
+            }
+        }
+    }
     .card-tips {
         @include flexLayout(row);
-        gap: 5rem;
+        gap: 1rem;
 
         p {
         margin: 1rem 5px;
         }
+    }
+    .section1 {
+        @include flexLayout(column);
+        padding: 1rem;
+
+        .section-head {
+            padding: 1rem 0;
+
+            span {
+                @include flexLayout(row);
+                @include column(center);
+            }
+        }
+        
     }
 }
 /*Here goes Media query for Laptops and Desktops*/

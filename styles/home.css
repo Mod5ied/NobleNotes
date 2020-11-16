@@ -95,30 +95,21 @@ body {
   .main-area .card-tips p {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 5px;
-    height: 1rem;
-    padding-right: .5rem;
+    /*display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 5px;
+                height: 1rem;
+                padding-right: .5rem;*/
     border-radius: 1rem;
     background: #135bbf;
-    font-size: .7rem;
+    /*font-size: .7rem;*/
     color: white;
   }
   .main-area .card-tips p span {
-    height: 1rem;
-    padding: .3rem;
+    /*height: 1rem;
+                padding: .3rem;*/
     border-radius: 1rem;
     background: #001133;
     color: #cccccc;
@@ -249,7 +240,74 @@ body {
 }
 
 /*Here goes Media query for Tablet devices*/
-@media (max-width: 768px) {
+@media (min-width: 430px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 1rem;
+  }
+  main .main-area {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    gap: 2rem;
+  }
+  main .main-area .cards {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 1rem;
+  }
+  main .main-area .cards h2 {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+    max-width: 220px;
+    min-width: 250px;
+  }
+  main .main-area .card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: .9rem;
+  }
+  main .main-area .card-tips {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: .8rem;
+  }
   .card-tips {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,10 +316,35 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    gap: 5rem;
+    gap: 1rem;
   }
   .card-tips p {
     margin: 1rem 5px;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 1rem;
+  }
+  .section1 .section-head {
+    padding: 1rem 0;
+  }
+  .section1 .section-head span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
