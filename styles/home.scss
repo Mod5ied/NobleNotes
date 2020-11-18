@@ -27,9 +27,8 @@ body {
     font-family: "Comfortaa", sans-serif;
 }
 
-
 /*Here goes the Media query for Smartphones*/
-@media  (max-width: 426px) {
+@media  (max-width: 430px) {
     
     main {
         box-sizing: border-box;
@@ -80,23 +79,25 @@ body {
             //The card-tips styling
             p {
                 box-sizing: border-box;
-                /*display: flex;
-                flex-direction: row-reverse;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 5px;
+                @include flexLayout(row);
+                @include column(center);
+                @include row(center);
+                gap: 4px;
                 height: 1rem;
-                padding-right: .5rem;*/
+                padding-right: 0;
                 border-radius: 1rem;
-                background: #135bbf;
-                /*font-size: .7rem;*/
+                background: #093777;
+                font-size: .5rem;
                 color: white;
             }
             p span{
-                /*height: 1rem;
-                padding: .3rem;*/
+                box-sizing: border-box;
+                height: 1rem;
+                width: 1.4rem;
+                padding: .27rem;
                 border-radius: 1rem;
                 background: #001133;
+                font-size: .5rem;
                 color: hsl(0, 0%, 80%);
             }
         }
@@ -173,9 +174,12 @@ body {
     }
 }
 
-/*Here Goes Media-Queries for iPhone4,4-plus and other punishments*/
+/*Here Goes Media-Queries for iPhone4, 4-plus and other punishments*/
 @media (max-width: 320px) {
     
+    .card-info p {
+        font-size: 10px;
+    }
     
     .section-head {
         box-sizing: border-box;
@@ -191,14 +195,11 @@ body {
             font-size: .8rem;
         }
     }
-    .card-info p {
-        font-size: 10px;
-    }
+
 }
 
-
 /*Here goes Media query for Tablet devices*/
-@media (min-width: 430px) {
+@media (min-width: 460px) {
 
     main {
         @include flexLayout(column);
@@ -209,16 +210,27 @@ body {
         box-sizing: border-box;
         @include flexLayout(column);
         gap: 2rem;
+        border-bottom: .8px solid #3a3a3a;
+
+        i:not(.far) {
+            color: #135bbf;
+        }
+        .far {
+            color: #e79908;
+        }
 
         .cards {
             box-sizing: border-box;
             @include flexLayout(row);
             gap: 1rem;
             height: 8rem;
+            border-radius: .8rem;
+            background: hsl(0, 0%, 98%);
 
             h2 {
-                @include gridCenter();
-                flex: 40%;
+                @include flexLayout(column);
+                @include column(center);
+                @include row(center);
                 max-width: 220px;
                 min-width: 250px;
                 text-align: center;
@@ -227,14 +239,42 @@ body {
         .card-info {
             @include flexLayout(row);
             @include column(center);
+            gap: 5px;
             font-size: .9rem;
+            i {
+                font-size: 1rem;
+            }
         }
         .card-tips {
             @include flexLayout(row);
             @include column(center);
+            gap: 7px;
             font-size: .8rem;
 
-            
+            //The card-tips styling
+            p {
+                box-sizing: border-box;
+                @include flexLayout(row);
+                @include column(center);
+                @include row(center);
+                gap: 4px;
+                height: 1rem;
+                padding-right: 0;
+                border-radius: 1rem;
+                background: #093777;
+                font-size: .5rem;
+                color: white;
+            }
+            p span{
+                box-sizing: border-box;
+                height: 1rem;
+                width: 1.4rem;
+                padding: .2rem;
+                border-radius: 1rem;
+                background: #001133;
+                font-size: .5rem;
+                color: hsl(0, 0%, 80%);
+            }
         }
     }
     
@@ -249,13 +289,22 @@ body {
     .section1 {
         @include flexLayout(column);
         padding: 1rem;
+        background: hsl(0, 0%, 80%);
 
         .section-head {
             padding: 1rem 0;
 
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
             span {
                 @include flexLayout(row);
                 @include column(center);
+                
+                .far {
+                    color: #e79908;
+                }
             }
         }
         .section-scroll {
@@ -269,6 +318,13 @@ body {
             @include gridCenter();
             min-width: 220px;
             height: 180px;
+            border-radius: 1rem;
+            background: hsl(0, 0%, 100%);
+
+            i {
+                font-size: 1.3rem;
+                color: #135bbf;
+            }
         }
     }
     footer {
@@ -281,10 +337,17 @@ body {
             @include column(center);
             gap: 2rem;
 
-            i{font-size: 1.4rem;}
+            i{
+                font-size: 1.4rem;
+            }
+            i:hover,
+            i:focus {
+                color: #093777;
+            }
         }
     }
 }
+
 /*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1020px) {
     
@@ -303,6 +366,10 @@ body {
             gap: 1rem;
             height: 15rem;
         }
+        .card1 h2 {
+            text-align: left;
+            white-space: nowrap;
+        }
         .card-info {
             display: flex;
             flex-direction: row;
@@ -318,6 +385,30 @@ body {
             display: flex;
             gap: 1.5rem;
 
+            //The card-tips styling
+            p {
+                box-sizing: border-box;
+                @include flexLayout(row);
+                @include column(center);
+                @include row(center);
+                gap: 4px;
+                height: 1rem;
+                padding-right: 0;
+                border-radius: 1rem;
+                background: #093777;
+                font-size: .5rem;
+                color: white;
+            }
+            p span{
+                box-sizing: border-box;
+                height: 1rem;
+                width: 1.4rem;
+                padding: .2rem;
+                border-radius: 1rem;
+                background: #001133;
+                font-size: .5rem;
+                color: hsl(0, 0%, 80%);
+            }
             
         }
     }
