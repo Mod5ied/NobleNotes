@@ -120,7 +120,7 @@ body {
             justify-content: center;
     gap: 4px;
     height: 1rem;
-    padding-right: 0;
+    padding-left: 3px;
     border-radius: 1rem;
     background: #093777;
     font-size: .5rem;
@@ -131,10 +131,11 @@ body {
             box-sizing: border-box;
     height: 1rem;
     width: 1.4rem;
-    padding: .27rem;
+    padding: .35rem;
     border-radius: 1rem;
     background: #001133;
     font-size: .5rem;
+    font-weight: bold;
     color: #cccccc;
   }
   .section1 {
@@ -549,6 +550,9 @@ body {
     gap: 1rem;
     height: 15rem;
   }
+  .main-area .cards span {
+    max-height: 50px;
+  }
   .main-area .card1 h2 {
     text-align: left;
     white-space: nowrap;
@@ -595,7 +599,7 @@ body {
             justify-content: center;
     gap: 4px;
     height: 1rem;
-    padding-right: 0;
+    padding-left: 3px;
     border-radius: 1rem;
     background: #093777;
     font-size: .5rem;
