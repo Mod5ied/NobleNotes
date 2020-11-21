@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
+@import "./presets";
+
+@mixin flexLayout($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin row($direction) {
+    justify-content: $direction;
+}
+@mixin col($direction) {
+    align-items: $direction;
+}
+@mixin gridLayout {
+    display: grid;
+    place-items: center;
+}
+
+// Media query for Smartphones
+@media (max-width: 430px) {
+    .section-1 {
+        @include flexLayout(column);
+
+        .section-note {
+            @include flexLayout(column);
+            padding: 1rem;
+            background: hsl(0, 0%, 80%);
+
+            .section-btn {
+                @include flexLayout(row);
+                gap: 3rem;
+            }
+        }
+        .section-scroll {
+            @include flexLayout(column);
+            @include col(center);
+            padding: .5rem 1rem;
+
+            ul {
+                @include flexLayout(column);
+                @include row(center);
+                list-style-type: none;
+                width: 100%;
+
+                li {
+                    @include gridLayout();
+                    width: 100%;
+                    height: 20rem;
+                    background: hsl(0, 0%, 90%);
+                }
+            }
+        }
+    }
+}
+// Media query for iPhone4,5 and other punishments
+@media (max-width: 320px) {
+
+}
+// Media query for Tablets
+@media (min-width: 450px) {
+
+}
+// Media query for PCs and High-end Tablets
+@media (min-width: 1020px) {
+
+}
