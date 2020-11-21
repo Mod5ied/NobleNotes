@@ -22,6 +22,32 @@
         @include flexLayout(column);
         padding: .2rem .5rem;
 
+        .active-head {
+            @include flexLayout(row);
+            gap: 1rem;
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            
+
+        }
+        .drop-content {
+            @include gridLayout();
+            gap: .2rem;
+            width: 85%;
+            height: 14rem;
+            margin: 0 auto;
+            background: hsl(0, 0%, 90%);
+
+            button {
+                background: transparent;
+            }
+        }
         
     }
     .section {

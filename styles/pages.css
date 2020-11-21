@@ -23,6 +23,36 @@ body {
             flex-flow: column;
     padding: .2rem .5rem;
   }
+  .header .active-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 1rem;
+  }
+  .header .active-head img {
+    width: 15px;
+    height: 15px;
+  }
+  .header .active-head h1 {
+    font-size: 18px;
+  }
+  .header .drop-content {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    gap: .2rem;
+    width: 85%;
+    height: 14rem;
+    margin: 0 auto;
+    background: #e6e6e6;
+  }
+  .header .drop-content button {
+    background: transparent;
+  }
   .section {
     display: -webkit-box;
     display: -ms-flexbox;
