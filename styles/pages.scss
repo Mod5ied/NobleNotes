@@ -3,7 +3,7 @@
 
 @mixin flexLayout($direction) {
     display: flex;
-    flex-direction: $direction;
+    flex-flow: $direction;
 }
 @mixin row($direction) {
     justify-content: $direction;
@@ -18,7 +18,13 @@
 
 // Media query for Smartphones
 @media (max-width: 430px) {
-    .section-1 {
+    .header {
+        @include flexLayout(column);
+        padding: .2rem .5rem;
+
+        
+    }
+    .section {
         @include flexLayout(column);
 
         .section-note {
@@ -31,36 +37,153 @@
                 gap: 3rem;
             }
         }
-        .section-scroll {
+    }
+    /* This is styling for the scrollable section and cards*/
+    .section-scroll {
+        @include flexLayout(column);
+        @include col(center);
+        gap: 1.5rem;
+        width: 95%;
+        max-height: 490px;
+        margin: 0 auto;
+        padding: .9rem 1rem;
+        list-style-type: none;
+        background: hsl(0, 0%, 75%);
+        overflow: auto;
+
+        .card {
             @include flexLayout(column);
-            @include col(center);
-            padding: .5rem 1rem;
+            gap: 2rem;
+            width: 100%;
+            height: 13rem;
+            background: hsl(0, 0%, 90%);
 
-            ul {
-                @include flexLayout(column);
-                @include row(center);
-                list-style-type: none;
-                width: 100%;
+            .note-title {
+                height: 90px;
+                padding-top: .5rem;
+                font-size: 1rem;
+                text-align: left;
+            }
+            .card-tips {
+                @include flexLayout(row);
+                @include row(space-around);
 
-                li {
-                    @include gridLayout();
-                    width: 100%;
-                    height: 20rem;
-                    background: hsl(0, 0%, 90%);
+                span {
+                    @include flexLayout(column);
+                    @include col(center);
+                    @include row(center);
                 }
             }
         }
     }
 }
-// Media query for iPhone4,5 and other punishments
+/*/Media query for iPhone4,5 and other punishments
 @media (max-width: 320px) {
 
-}
+}*/
 // Media query for Tablets
-@media (min-width: 450px) {
+@media (min-width: 460px) {
+    .card {
+        box-sizing: border-box;
+        @include flexLayout(column);
+        @include col(center);
+        
+        .note-title {
+            font-size: 10px;
+        }
+        .card-tips {
+            margin-top: -1rem;
+            width: 100%;
+        }
 
+    }
 }
+
 // Media query for PCs and High-end Tablets
 @media (min-width: 1020px) {
+    .header {
+        @include flexLayout(row);
+        @include row(space-between);
+        padding: .5rem 1rem;
 
+        .active-head {
+            @include flexLayout(row);
+            gap: 1rem;
+        }
+        .drop-content {
+            @include flexLayout(row);
+            @include col(center);
+            margin-right: 3rem;
+            gap: 1rem;
+            
+            .home-btn {
+                display: none;
+            }
+        }
+    }
+
+    .section {
+        @include flexLayout(row);
+        gap: 2rem;
+        padding: 1rem;
+        border-bottom: 1px solid hsl(0, 0%, 30%);;
+
+        .section-note {
+            width: 20%;
+            height: 30rem;
+            border: 1px solid hsl(0, 0%, 30%);
+            background: hsl(0, 0%, 60%);
+            text-align: center;
+            
+            .section-btn {
+                display: none;
+            }
+        }
+        .section-scroll {
+            @include flexLayout(row wrap);
+            @include row(center);
+            gap: 1.2rem;
+            max-width: 70%;
+            margin: 0 auto;
+            padding: 1.5rem;
+            border: 1px solid hsl(0, 0%, 30%);
+            background: hsl(0, 0%, 60%);
+            list-style-type: none;
+            overflow: auto;
+        }
+        .card {
+            @include flexLayout(column);
+            gap: 2rem;
+            width: 30%;
+            height: 33%;
+            border: 1px solid hsl(0, 0%, 30%);
+            background-color: transparent;
+
+            .note-title  {
+                padding: .3rem;
+                font-size: .8rem;
+            }
+            .card-tips {
+                @include flexLayout(row);
+                @include row(space-around);
+
+                p{
+                    font-size: 14px;
+                }
+                span {
+                    @include gridLayout();
+                }
+            }
+        }
+
+    }
+    .footer {
+        @include flexLayout(row-reverse);
+        gap: 2rem;
+        padding: .5rem 4rem;
+
+        p {
+            font-size: .8rem;
+        }
+    }
 }

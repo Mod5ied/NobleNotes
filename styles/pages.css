@@ -13,70 +13,275 @@ body {
 }
 
 @media (max-width: 430px) {
-  .section-1 {
+  .header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: .2rem .5rem;
   }
-  .section-1 .section-note {
+  .section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .section .section-note {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     padding: 1rem;
     background: #cccccc;
   }
-  .section-1 .section-note .section-btn {
+  .section .section-note .section-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-flow: row;
+            flex-flow: row;
     gap: 3rem;
   }
-  .section-1 .section-scroll {
+  /* This is styling for the scrollable section and cards*/
+  .section-scroll {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: .5rem 1rem;
+    gap: 1.5rem;
+    width: 95%;
+    max-height: 490px;
+    margin: 0 auto;
+    padding: .9rem 1rem;
+    list-style-type: none;
+    background: #bfbfbf;
+    overflow: auto;
   }
-  .section-1 .section-scroll ul {
+  .section-scroll .card {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    gap: 2rem;
+    width: 100%;
+    height: 13rem;
+    background: #e6e6e6;
+  }
+  .section-scroll .card .note-title {
+    height: 90px;
+    padding-top: .5rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+  .section-scroll .card .card-tips {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section-scroll .card .card-tips span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    list-style-type: none;
+  }
+}
+
+/*/Media query for iPhone4,5 and other punishments
+@media (max-width: 320px) {
+
+}*/
+@media (min-width: 460px) {
+  .card {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card .note-title {
+    font-size: 10px;
+  }
+  .card .card-tips {
+    margin-top: -1rem;
     width: 100%;
   }
-  .section-1 .section-scroll ul li {
+}
+
+@media (min-width: 1020px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .5rem 1rem;
+  }
+  .header .active-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 1rem;
+  }
+  .header .drop-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 3rem;
+    gap: 1rem;
+  }
+  .header .drop-content .home-btn {
+    display: none;
+  }
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #4d4d4d;
+  }
+  .section .section-note {
+    width: 20%;
+    height: 30rem;
+    border: 1px solid #4d4d4d;
+    background: #999999;
+    text-align: center;
+  }
+  .section .section-note .section-btn {
+    display: none;
+  }
+  .section .section-scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.2rem;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid #4d4d4d;
+    background: #999999;
+    list-style-type: none;
+    overflow: auto;
+  }
+  .section .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    gap: 2rem;
+    width: 30%;
+    height: 33%;
+    border: 1px solid #4d4d4d;
+    background-color: transparent;
+  }
+  .section .card .note-title {
+    padding: .3rem;
+    font-size: .8rem;
+  }
+  .section .card .card-tips {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section .card .card-tips p {
+    font-size: 14px;
+  }
+  .section .card .card-tips span {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    width: 100%;
-    height: 20rem;
-    background: #e6e6e6;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+    gap: 2rem;
+    padding: .5rem 4rem;
+  }
+  .footer p {
+    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=pages.css.map */
