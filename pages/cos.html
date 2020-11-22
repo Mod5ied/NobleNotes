@@ -33,12 +33,11 @@
       <aside class="section-note">
         <h2>COS 201</h2>
         <span class="section-btn">
-          <button id="show">Show Notes</button>
-          <button id="hide">Hide Notes</button>
+          <button id="toggle" onclick="hideFunction()">Show/Hide Notes</button>
         </span>
       </aside>
 
-        <ul class="section-scroll">
+        <ul class="section-scroll" id="content">
           <li class="card card1">
             <h2 class="note-title">COMPUTER PROGRAMMING AND VIEW TO JAVA PROGRAMMING</h2>
             <div class="card-tips">
@@ -113,12 +112,11 @@
       <aside class="section-note">
         <h2>COS 203</h2>
         <span class="section-btn">
-          <button id="show">Show Notes</button>
-          <button id="hide">Hide Notes</button>
+          <button id="toggle2" onclick="hideFunction()">Show/Hide Notes</button>
         </span>
       </aside>
 
-        <ul class="section-scroll">
+        <ul class="section-scroll" id="content2">
           <li class="card card1">
             <h2 class="note-title">COMPUTER PROGRAMMING AND VIEW TO JAVA PROGRAMMING</h2>
             <div class="card-tips">
@@ -268,5 +266,18 @@
       <p><a href="">FAQS</a></p>
       <p>COPYRIGHT &copy; 2020 Noblenotes - ALL RIGHTS RESERVED</p>
     </footer>
+    <script>
+      let hideFunction = () => {
+        let toggle = document.getElementById("toggle");
+        let content = document.getElementById("content");
+        toggle.addEventListener('click', function() {
+          content.classList.toggle('show');
+        });
+        toggle2.addEventListener('click', function() {
+          content2.classList.toggle('show');
+        });
+        
+      }
+    </script>
   </body>
 </html>

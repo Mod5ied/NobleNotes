@@ -83,6 +83,18 @@ body {
             flex-flow: row;
     gap: 3rem;
   }
+  .section #content {
+    display: none;
+  }
+  .section #content.show {
+    display: block;
+  }
+  .section #content2 {
+    display: none;
+  }
+  .section #content2.show {
+    display: block;
+  }
   /* This is styling for the scrollable section and cards*/
   .section-scroll {
     display: -webkit-box;
