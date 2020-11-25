@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -47,10 +49,16 @@ body {
   .header .active-head .home-btn {
     margin-left: 5.9rem;
   }
-  .header .drop-content {
+  .header #drop-content.hide {
+    display: block;
     display: -ms-grid;
     display: grid;
     place-items: center;
+  }
+  .header #drop-content {
+    display: none;
+  }
+  .header .drop-content {
     gap: .2rem;
     width: 85%;
     height: 14rem;
@@ -100,16 +108,16 @@ body {
     gap: 3rem;
   }
   .section #content {
-    display: none;
+    display: block;
   }
   .section #content.show {
-    display: block;
-  }
-  .section #content2 {
     display: none;
   }
-  .section #content2.show {
+  .section #content2 {
     display: block;
+  }
+  .section #content2.show {
+    display: none;
   }
   /* This is styling for the scrollable section and cards*/
   .section-scroll {

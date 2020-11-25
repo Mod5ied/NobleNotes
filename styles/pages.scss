@@ -40,8 +40,15 @@
             }
 
         }
-        .drop-content {
+        #drop-content.hide {
+            display: block;
             @include gridLayout();
+        }
+        #drop-content {
+            display: none;
+        }
+        .drop-content {
+            
             gap: .2rem;
             width: 85%;
             height: 14rem;
@@ -77,16 +84,16 @@
             }
         }
         #content {
-            display: none;
+            display: block;
         }
         #content.show {
-            display: block;
-        }
-        #content2 {
             display: none;
         }
-        #content2.show {
+        #content2 {
             display: block;
+        }
+        #content2.show {
+            display: none;
         }
         
 
