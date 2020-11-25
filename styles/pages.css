@@ -31,14 +31,21 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 1rem;
   }
   .header .active-head img {
-    width: 15px;
-    height: 15px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.5rem;
   }
   .header .active-head h1 {
     font-size: 18px;
+  }
+  .header .active-head .home-btn {
+    margin-left: 5.9rem;
   }
   .header .drop-content {
     display: -ms-grid;
@@ -48,9 +55,18 @@ body {
     width: 85%;
     height: 14rem;
     margin: 0 auto;
+    margin-bottom: .8rem;
+    position: relative;
+    top: 7px;
+    bottom: 7px;
+    border-radius: .2rem;
     background: #e6e6e6;
+    overflow: auto;
   }
   .header .drop-content button {
+    border: 0.5px solid #666666;
+    width: 100%;
+    height: 2.5rem;
     background: transparent;
   }
   .section {
@@ -215,6 +231,9 @@ body {
             flex-flow: row;
     gap: 1rem;
   }
+  .header .active-head .home-btn {
+    display: none;
+  }
   .header .drop-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -228,9 +247,6 @@ body {
             align-items: center;
     margin-right: 3rem;
     gap: 1rem;
-  }
-  .header .drop-content .home-btn {
-    display: none;
   }
   .section {
     display: -webkit-box;
