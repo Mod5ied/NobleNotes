@@ -118,5 +118,19 @@
             </span>
     </footer>
 </body>
-
+/* JavaScript to toggle between showing and hiding the scrollable notes section*/
+function hideFunction() {
+  let toggle = document.getElementById("toggle");
+  let content = document.getElementById("content");
+  toggle.addEventListener("click", () => {
+    content.classList.toggle("show");
+  });
+}
+function hideFunction2() {
+  let toggle2 = document.getElementById("toggle2");
+  let content2 = document.getElementById("content2");
+  toggle2.addEventListener("click", () => {
+    content2.classList.toggle("show");
+  });
+}
 </html>
