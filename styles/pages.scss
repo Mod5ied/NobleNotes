@@ -2,248 +2,562 @@
 @import "./presets";
 
 @mixin flexLayout($direction) {
-    display: flex;
-    flex-flow: $direction;
+  display: flex;
+  flex-flow: $direction;
 }
 @mixin row($direction) {
-    justify-content: $direction;
+  justify-content: $direction;
 }
 @mixin col($direction) {
-    align-items: $direction;
+  align-items: $direction;
 }
 @mixin gridLayout {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
-// Media query for Smartphones
-@media (max-width: 430px) {
-    .header {
-        @include flexLayout(column);
-        padding: .2rem .5rem;
+/* Media query for Smartphones */
+@media (max-width: 500px) {
+  .header {
+    @include flexLayout(column);
+    padding: 0.2rem 0.5rem;
+    background: #0d1b36f6;
 
-        .active-head {
-            @include flexLayout(row);
-            @include col(center);
-            gap: 1rem;
+    .active-head {
+      @include flexLayout(row);
+      @include row(space-between);
+      @include col(center);
+      gap: 1rem;
+      
+      .logo {
+        display: none;
+        order: 2;
+        margin-right: -4.5rem;
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 50%;
+        }
+      }
+      h1 {
+        order: 1;
+        font-size: 1rem;
+        color: hsl(0, 0%, 55%);
+      }
+      .home-btn {
+        order: 3;
+        margin-left: 8rem;
+        padding: 0.3rem;
+        border: none;
+        border-radius: 0.39rem;
+        background: hsla(0, 0%, 85%, 0.822);
+        color: #092c6d;
+        font-weight: 600;
+        font-family: "itim", sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+          0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+      }
+      .home-btn:focus, 
+      :hover {
+        background: #053896;
+        color: hsl(0, 0%, 85%);
+        outline: 1px solid transparent;
+      }
+    }
+    #drop-content.hide {
+      display: block;
+      @include gridLayout();
+    }
+    #drop-content {
+      display: none;
+    }
+    .drop-content {
+      gap: 0.2rem;
+      width: 90%;
+      height: 18rem;
+      margin-bottom: 0.8rem;
+      border-radius: .4rem;
+      background: rgba(196, 195, 195, 0.925);
+      position: absolute;
+      top: 4.5rem;
+      left: 1.2rem;
+      border-radius: 0.2rem;
+      
 
-            img {
-                width: 3.5rem;
-                height: 3.5rem;
-                border-radius: 1.5rem;
-            }
-            h1 {
-                font-size: 18px;
-            }  
-            .home-btn {
-                margin-left: 5.9rem;
-            }
+      button {
+        width: 100%;
+        height: 2.5rem;
+        border: none;
+        background: transparent;
+        color: hsl(0, 0%, 10%);
+      }
+      button:focus,
+      :hover {
+        outline: none;
+        background: #040d44ce;
+        color: hsl(0, 0%, 90%);
+      }
 
-        }
-        #drop-content.hide {
-            display: block;
-            @include gridLayout();
-        }
-        #drop-content {
-            display: none;
-        }
-        .drop-content {
-            
-            gap: .2rem;
-            width: 85%;
-            height: 14rem;
-            margin: 0 auto;
-            margin-bottom: .8rem;
-            position: relative;
-            top: 7px;
-            bottom: 7px;
-            border-radius: .2rem;
-            background: hsl(0, 0%, 90%);
-            overflow: auto;
+      .home a{
+        text-decoration: none;
+        color: hsl(0, 0%, 10%);
+      }
+      .home a:focus,
+      :active, :visited {
+        color: hsl(0, 0%, 90%);
+      }
+    }
+  }
+  .section {
+    @include flexLayout(column);
+    background: #0c1830;  
 
-            button {
-                border: .5px solid hsl(0, 0%, 40%);
-                width: 100%;
-                height: 2.5rem;
-                background: transparent;
-            }
-        }
+    .section-note {
+      @include flexLayout(column);
+      padding: 1rem;
+      h2 {
+        color: hsl(0, 0%, 67%);
+      }
+      .section-btn {
+        @include flexLayout(row);
         
+        #toggle,#toggle2 {
+          padding: 0.3rem;
+          border: none;
+          border-radius: 0.4rem;
+          background: hsla(0, 0%, 85%, 0.842);
+          color: #092c6d;
+          font-weight: 600;
+          font-family: "itim", sans-serif;
+          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+            0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+        }
+        #toggle:focus,
+        #toggle2:focus {
+          background: #053896;
+          color: hsl(0, 0%, 85%);
+          outline: none;
+          border: 1px solid hsla(0, 89%, 48%, 0.726);
+          border-radius: .4rem;
+        }
+      }
     }
-    .section {
-        @include flexLayout(column);
-
-        .section-note {
-            @include flexLayout(column);
-            padding: 1rem;
-            background: hsl(0, 0%, 80%);
-
-            .section-btn {
-                @include flexLayout(row);
-                gap: 3rem;
-            }
-        }
-        #content {
-            display: block;
-        }
-        #content.show {
-            display: none;
-        }
-        #content2 {
-            display: block;
-        }
-        #content2.show {
-            display: none;
-        }
-        
-
+    #content,
+    #content2 {
+      @include flexLayout(column);
+      @include col(center);
     }
-    /* This is styling for the scrollable section and cards*/
-    .section-scroll {
-        @include flexLayout(column);
-        @include col(center);
-        gap: 1.5rem;
-        width: 95%;
-        max-height: 490px;
-        margin: 0 auto;
-        padding: .9rem 1rem;
-        list-style-type: none;
-        background: hsl(0, 0%, 75%);
-        overflow: auto;
-
-        .card {
-            @include flexLayout(column);
-            gap: 2rem;
-            width: 100%;
-            height: 13rem;
-            background: hsl(0, 0%, 90%);
-
-            .note-title {
-                height: 90px;
-                padding-top: .5rem;
-                font-size: 1rem;
-                text-align: left;
-            }
-            .card-tips {
-                @include flexLayout(row);
-                @include row(space-around);
-
-                span {
-                    @include flexLayout(column);
-                    @include col(center);
-                    @include row(center);
-                }
-            }
-        }
+    #content.show,
+    #content2.show {
+      display: none;
     }
-}
-/*/Media query for iPhone4,5 and other punishments
-@media (max-width: 320px) {
+    #content3 {
+      @include flexLayout(row);
+      gap: 1.5rem;
+      .card {
+        min-width: 18rem;
+      }
+    }
+  }
+  /* This is styling for the scrollable section and cards*/
+  .section-scroll {
+    @include flexLayout(column);
+    @include col(center);
+    gap: 1rem;
+    width: 95%;
+    max-height: 490px;
+    margin: 0 auto;
+    padding: 0.9rem 1rem;
+    border-radius: 0.25rem;
+    list-style-type: none;
+    background: #0b1524;    
+    overflow: auto;
 
-}*/
-// Media query for Tablets
-@media (min-width: 460px) {
     .card {
-        box-sizing: border-box;
+      @include flexLayout(column);
+      gap: 1rem;
+      width: 100%;
+      height: 13rem;
+      padding: 0.4rem 1rem;
+      border-bottom: 2.5px solid hsla(0, 89%, 48%, 0.726);
+      border-radius: 0.29rem;
+      background-color: #101e38de;
+
+      .note-title {
+        height: 90px;
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        color: hsl(0, 0%, 70%);
+        text-align: left;
+      }
+      .card-tips {
+        @include flexLayout(row);
+        @include row(space-around);
+        p {
+          color: hsla(0, 89%, 48%, 0.726);
+        }
+
+        span {
+          @include flexLayout(column);
+          @include col(center);
+          @include row(center);
+          button {
+            padding: 0.3rem;
+            border: none;
+            border-radius: 0.39rem;
+            background: hsla(0, 0%, 85%, 0.842);
+            color: #092c6d;
+            font-size: .8rem;
+            font-weight: 600;
+            font-family: "itim", sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+              0 6px 30px 1.7px rgba(18, 55, 189, 0.19);
+          }
+          button:focus,
+          :hover {
+            background: #053896;
+            color: hsl(0, 0%, 85%);
+            outline: none;
+            border: 1px solid hsla(0, 89%, 48%, 0.726);
+            border-radius: .4rem;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 1rem 2rem;
+    background: #0f1c35;
+    font-size: .8rem;
+    p {
+      color: hsl(0, 0%, 66%);
+    }
+    a {
+      color: hsl(0, 0%, 66%);
+      text-decoration: none;
+    }
+    a:hover,
+    :active {
+      color: #053896;
+    }
+  }
+}
+
+/* Media query for Tablets */
+@media (max-width: 1020px) and (min-width: 501px) {
+  .header {
+    @include flexLayout(row);
+    @include row(space-between);
+    padding: 0 0.3rem;
+    background: #0d1b36f6;
+
+    .active-head {
+      @include flexLayout(row);
+      @include col(center);
+      gap: 0.5rem;
+
+      img {
+        width: 5rem;
+        height: 4.8rem;
+        border-radius: 50%;
+      }
+      h1 {
+        font-size: 1.1rem;
+        color: #053896;
+      }
+      .home-btn {
+        display: none;
+      }
+    }
+    .drop-content {
+      @include flexLayout(row);
+      @include col(center);
+      gap: 0.8rem;
+
+      button {
+        border: none;
+        background: transparent;
+        color: hsl(0, 0%, 70%);
+      }
+      button:focus {
+        color: #053896;
+      }
+      .home {
+        display: none;
+      }
+    }
+  }
+  .section {
+    @include flexLayout(column);
+    padding: 0.5rem;
+    background: #122241;
+
+    .section-note {
+      @include flexLayout(row);
+      @include row(space-between);
+      padding: 0 2.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+        color: hsla(0, 0%, 85%, 0.904);
+      }
+      .section-btn {
+        @include gridLayout();
+
+        #toggle {
+          padding: 0.3rem;
+          border: none;
+          border-radius: 0.39rem;
+          background: hsla(0, 0%, 85%, 0.726);
+          color: #092c6d;
+          font-weight: 600;
+          font-family: "itim", sans-serif;
+          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+            0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+        }
+        #toggle:focus, :hover {
+          background: #053896;
+          color: hsl(0, 0%, 85%);
+          outline: 1px solid #032b77;
+        }
+      }
+    }
+    .section-scroll {
+      @include flexLayout(column);
+      gap: 1rem;
+      padding: 1.5rem;
+      list-style-type: none;
+      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      border-radius: 0.2rem;
+      background: #0b1524;
+
+      .card {
         @include flexLayout(column);
-        @include col(center);
-        
+        margin-right: 0.5rem;
+        padding: 1.2rem;
+        border-top: 2.2px solid hsla(0, 89%, 48%, 0.726);
+        border-radius: 0.3rem;
+        background-color: #101e3898;
+        box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+          0 3px 4px 0 rgba(1, 10, 39, 0.19);
+
         .note-title {
-            font-size: 10px;
+          color: hsl(0, 0%, 67%);
         }
         .card-tips {
-            margin-top: -1rem;
-            width: 100%;
-        }
+          @include flexLayout(row);
+          gap: 3rem;
+          padding: 0 1.5rem;
+          color: hsla(0, 89%, 48%, 0.726);
 
+          span {
+            margin: auto 0;
+            margin-left: auto;
+
+            button {
+              padding: 0.5rem;
+              border: none;
+              border-radius: 0.39rem;
+              background: hsla(0, 0%, 85%, 0.726);
+              color: #092c6d;
+              font-weight: 600;
+              font-family: "itim", sans-serif;
+              box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+                0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+            }
+            button:focus,
+            :hover {
+              background: #053896;
+              color: hsl(0, 0%, 85%);
+              outline: 1px solid #032b77;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .footer {
+    @include flexLayout(column);
+    padding: 1.5rem 2rem;
+    background: #0f1c35;
+
+    p {
+      text-decoration: none;
+      font-size: 1rem;
+      color: hsl(0, 0%, 67%);
+    }
+    .foot-link {
+      width: 7%;
+      text-decoration: none;
+      color: hsl(0, 0%, 67%);
+    }
+    .foot-link:hover,
+    :active {
+      color: #053896;
+    }
+  }
 }
 
-// Media query for PCs and High-end Tablets
-@media (min-width: 1020px) {
-    .header {
-        @include flexLayout(row);
-        @include row(space-between);
-        padding: .5rem 1rem;
+/* Media query for PCs and High-end Tablets */
+@media (min-width: 1024px) {
+  .header {
+    @include flexLayout(row);
+    @include row(space-between);
+    padding: 0 1rem;
+    background: #0d1b36f6;
 
-        .active-head {
-            @include flexLayout(row);
-            gap: 1rem;
-            
-            .home-btn {
-                display: none;
-            }
-        }
-        .drop-content {
-            @include flexLayout(row);
-            @include col(center);
-            margin-right: 3rem;
-            gap: 1rem;
-        }
+    .active-head {
+      @include flexLayout(row);
+      @include col(center);
+      gap: 1rem;
+
+      img {
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 2.4rem;
+      }
+      img:focus {
+        outline: 1px solid #032b77;
+      }
+      h1 {
+        font-size: 1rem;
+        color: #053896;
+      }
+      .home-btn {
+        display: none;
+      }
     }
+    .drop-content {
+      @include flexLayout(row);
+      @include col(center);
+      margin-right: 3rem;
+      gap: 1.6rem;
 
-    .section {
-        @include flexLayout(row);
-        gap: 2rem;
-        padding: 1rem;
-        border-bottom: 1px solid hsl(0, 0%, 30%);;
-
-        .section-note {
-            width: 20%;
-            height: 30rem;
-            border: 1px solid hsl(0, 0%, 30%);
-            background: hsl(0, 0%, 60%);
-            text-align: center;
-            
-            .section-btn {
-                display: none;
-            }
-        }
-        .section-scroll {
-            @include flexLayout(row wrap);
-            @include row(center);
-            gap: 1.2rem;
-            max-width: 70%;
-            margin: 0 auto;
-            padding: 1.5rem;
-            border: 1px solid hsl(0, 0%, 30%);
-            background: hsl(0, 0%, 60%);
-            list-style-type: none;
-            overflow: auto;
-        }
-        .card {
-            @include flexLayout(column);
-            gap: 2rem;
-            width: 30%;
-            height: 33%;
-            border: 1px solid hsl(0, 0%, 30%);
-            background-color: transparent;
-
-            .note-title  {
-                padding: .3rem;
-                font-size: .8rem;
-            }
-            .card-tips {
-                @include flexLayout(row);
-                @include row(space-around);
-
-                p{
-                    font-size: 14px;
-                }
-                span {
-                    @include gridLayout();
-                }
-            }
-        }
-
+      button {
+        border: none;
+        background: transparent;
+        font-size: 0.73rem;
+        font-weight: bold;
+        color: hsl(0, 0%, 70%);
+      }
+      button:hover {
+        color: #053896;
+      }
+      button:focus {
+        outline: 1px solid #053896;
+        padding: 0.3rem 0.2rem;
+        border-radius: 1rem;
+        color: #032b77;
+      }
+      .home {
+        display: none;
+      }
     }
-    .footer {
-        @include flexLayout(row-reverse);
-        gap: 2rem;
-        padding: .5rem 4rem;
+  }
+
+  .section {
+    @include flexLayout(row);
+    gap: 2rem;
+    padding: 1rem;
+    background: #0f1c35;
+
+    .section-note {
+      width: 20%;
+      height: 30rem;
+      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      border-radius: 0.2rem;
+      background: #0b1524;
+      text-align: center;
+
+      h2 {
+        color: hsl(0, 0%, 55%);
+      }
+      .section-btn {
+        display: none;
+      }
+    }
+    .section-scroll {
+      @include flexLayout(row wrap);
+      @include row(center);
+      gap: 1.2rem;
+      max-width: 70%;
+      margin: 0 auto;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      border-radius: 0.2rem;
+      background: #0b1524;
+      list-style-type: none;
+      overflow: auto;
+    }
+    .card {
+      @include flexLayout(column);
+      gap: 1.5rem;
+      width: 30%;
+      height: 33%;
+      border-bottom: 3px solid hsla(0, 89%, 48%, 0.726);
+      border-radius: 0.23rem;
+      background-color: #101e3865;
+      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+
+      .note-title {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+        color: hsl(0, 0%, 55%);
+      }
+      .card-tips {
+        @include flexLayout(row);
+        @include row(space-around);
 
         p {
-            font-size: .8rem;
+          font-size: 12px;
+          color: hsl(0, 0%, 55%);
         }
+        span {
+          @include gridLayout();
+
+          button {
+            padding: 0.3rem;
+            border: none;
+            border-radius: 0.39rem;
+            background: hsla(0, 0%, 85%, 0.726);
+            color: #092c6d;
+            font-weight: 600;
+            font-family: "itim", sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+              0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+          }
+          button:focus,
+          :hover {
+            background: #053896;
+            color: hsl(0, 0%, 85%);
+          }
+        }
+      }
     }
+  }
+  .footer {
+    @include flexLayout(row-reverse);
+    @include col(center);
+    gap: 2rem;
+    padding: 0.5rem 4rem;
+    background: #0f1c35;
+
+    p {
+      font-size: 0.8rem;
+      color: hsl(0, 0%, 55%);
+    }
+    .foot-link {
+      font-size: 0.8rem;
+      color: hsl(0, 0%, 55%);
+      text-decoration: none;
+    }
+    .foot-link:hover {
+      color: #053896;
+    }
+  }
 }
