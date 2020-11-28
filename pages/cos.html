@@ -13,9 +13,9 @@
   <body>
     <header class="header">
       <nav class="active-head">
-        <img src="../images/Notes_logo.png" alt="Noblenotes logo" />
+        <a class="logo" href=""><img src="../images/Notes-logo.jpg" alt="Noblenotes logo" /> </a>
         <h1>COS NOTES</h1>
-        <button class="home-btn" id="home-btn" onclick="return dropHome()">Hide</button>
+        <button class="home-btn" id="home-btn" onmouseup="return dropHome()">Home</button>
         <!--A button containing hamburger icon goes here-->
       </nav>
       <nav class="drop-content" id="drop-content">
@@ -34,7 +34,7 @@
       <aside class="section-note">
         <h2>COS 201</h2>
         <span class="section-btn">
-          <button id="toggle" onclick="hideFunction()">Toggle Notes</button>
+          <button id="toggle" onmouseup="hideFunction()">Toggle Notes</button>
         </span>
       </aside>
 
@@ -125,7 +125,7 @@
       <aside class="section-note">
         <h2>COS 203</h2>
         <span class="section-btn">
-          <button id="toggle2" onclick="hideFunction()">Toggle Notes</button>
+          <button id="toggle2" onmouseup="hideFunction()">Toggle Notes</button>
         </span>
       </aside>
 
@@ -217,7 +217,7 @@
         <h2>COS 205</h2>
       </aside>
 
-      <ul class="section-scroll">
+      <ul class="section-scroll" id="content3">
         <li class="card card1">
           <h2 class="note-title">
             COMPUTER PROGRAMMING AND VIEW TO JAVA PROGRAMMING
@@ -300,7 +300,7 @@
     </section>
 
     <footer class="footer">
-      <p><a href="">FAQS</a></p>
+      <a href="#" class="foot-link">FAQS</a>
       <p>COPYRIGHT &copy; 2020 Noblenotes - ALL RIGHTS RESERVED</p>
     </footer>
     <script src="../script.js"></script>
