@@ -1,267 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="/styles/pages.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/pages.css" />
     <title>engr-notes</title>
-</head>
-<body>
-    <header class="head">
-        <nav class="logo-info">
-            <div class="logo-img">
-                <a href="#" class="top-logo">
-                    <img src="/images/Notes_logo.png" alt="Logo"/>
-                </a>
-            </div>
-            <h1 class="active-tab">ENGR NOTES</h1>
-        </nav>
-        <nav class="drop-container">
-            <button class="drop-btn">ENGR</button>
-            <div class="panel">
-                <p><a href="#">ENGR211</a></p>
-            </div>
-            <button class="drop-btn">COS</button>
-                <div class="panel">
-                    <p><a href="#">COS201</a></p>
-                    <p><a href="#">COS203</a></p>
-                    <p><a href="#">COS231</a></p>
-                </div>
-            <button class="drop-btn">MTH</button>
-            <div class="panel">
-                <p><a href="#">MTH211</a></p>
-                <p><a href="#">MTH215</a></p>
-                <p><a href="#">MTH221</a></p>
-            </div>
-            <button class="drop-btn">STA</button>
-            <div class="panel">
-                <p><a href="#">STA205</a></p>
-                <!--p><a href="#">STA207</a></p-->
-            </div>
-            <button class="drop-btn">GSP</button>
-            <div class="panel">
-                <p><a href="#">GSP201</a></p>
-                <p><a href="#">GSP207</a></p>
-            </div>
-        </nav>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="active-head">
+        <a class="logo" href="">
+          <img src="/images/Notes-logo.png" alt="Logo" />
+        </a>
+        <h1>ENGR NOTES</h1>
+        <button class="home-btn" id="home-btn" onmouseup="return dropHome()">
+          Home<!--A button containing hamburger icon goes here-->
+        </button>
+      </nav>
+      <nav class="drop-content" id="drop-content">
+        <button>ENGR</button>
+        <button>COS</button>
+        <button>MTH</button>
+        <button>STA</button>
+        <button>GSP</button>
+        <div class="home">
+          <p><a href="">Home</a></p>
+        </div>
+      </nav>
     </header>
-    <main class="main1">
-        <div class="main1-bg">
-            <h2>CURRENT NOTES</h2>
-        </div>
-        <div class="input-field">
-            <input type="text" id="report" class="report" placeholder=" Notes Not Here?">
-            <button type="submit" class="report-btn" id="report2">Tell Us</button>
-        </div>
-        <!--Add an input-submit if button happens to be small-->
-    </main>
-    <section class="section1">
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card1">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div><br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card2">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card3">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card4">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div><br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card4">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div><br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card4">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
+    <!-- The First notes series-->
+    <section class="section sec-1">
+      <aside class="section-note">
+        <h2>COS 201</h2>
+        <span class="section-btn">
+          <button id="toggle" onmouseup="hideFunction()">Toggle Notes</button>
+        </span>
+      </aside>
 
+      <ul class="section-scroll" id="content">
+        <li class="card card1">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card2">
+          <h2 class="note-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card3">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card4">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card5">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card6">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+      </ul>
     </section>
-    <main class="main2">
-        <h2>PREVIOUS NOTES</h2>
-    </main>
-    <br>
-    <section class="section2">
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card5">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">November</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card6">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">October</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card7">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">October</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card8">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div><br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">October</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card8">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div><br>
-        <div class="cards-bg ">
-            <!--The month goes-->
-            <div class="cards-month mnth4">October</div>
-            <!--Here lies the Cards-->
-            <div class="cards-content card8">
-                <div class="first">
-                    <p class="one">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="second">
-                    <p class="two">18th</p>
-                    <p class="three">15kb</p>
-                    <button class="four">DOWNLOAD</button>
-                </div>
-            </div>
-        </div>
+
+    <!-- The Second notes series-->
+    <section class="section sec-2">
+      <aside class="section-note">
+        <h2>COS 203</h2>
+        <span class="section-btn">
+          <button id="toggle2" onmouseup="hideFunction()">Toggle Notes</button>
+        </span>
+      </aside>
+
+      <ul class="section-scroll" id="content2">
+        <li class="card card1">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card2">
+          <h2 class="note-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card3">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card4">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card5">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card6">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+      </ul>
     </section>
+
+    <!-- The Third notes series-->
+    <section class="section sec-3">
+      <aside class="section-note">
+        <h2>COS 205</h2>
+      </aside>
+
+      <ul class="section-scroll" id="content3">
+        <li class="card card1">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card2">
+          <h2 class="note-title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card3">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card4">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card5">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+        <li class="card card6">
+          <h2 class="note-title">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </h2>
+          <div class="card-tips">
+            <p id="date">Mth/day</p>
+            <p id="size">Size</p>
+            <span>
+              <button id="download">Download</button>
+              <!--download icon goes here-->
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <footer class="footer">
-        <div class="footer-wrapper">
-            <div class="footer-icons">
-                <ion-icon name="logo-twitter"></ion-icon>
-                <ion-icon name="logo-whatsapp"></ion-icon>
-            </div>
-            <div class="footer-input">
-                <input type="text" id="report3" class="report" placeholder="Write Us"/>
-                <button type="submit" class="report-btn" id="report4">Tell Us</button>
-            </div>
-        </div>
+      <a href="#" class="foot-link">FAQS</a>
+      <p>COPYRIGHT &copy; 2020 Noblenotes - ALL RIGHTS RESERVED</p>
     </footer>
-    <script src="/script.js"></script>
-</body>
+    <script src="../script.js"></script>
+  </body>
 </html>

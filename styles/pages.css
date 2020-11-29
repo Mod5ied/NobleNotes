@@ -93,15 +93,15 @@ body {
     display: none;
   }
   .header .drop-content {
-    gap: 0.2rem;
-    width: 90%;
+    gap: 0.1rem;
+    width: 93%;
     height: 18rem;
     margin-bottom: 0.8rem;
     border-radius: .4rem;
-    background: rgba(196, 195, 195, 0.925);
+    background: rgba(196, 195, 195, 0.973);
     position: absolute;
-    top: 4.5rem;
-    left: 1.2rem;
+    top: 4rem;
+    left: .8rem;
     border-radius: 0.2rem;
   }
   .header .drop-content button {
@@ -109,7 +109,7 @@ body {
     height: 2.5rem;
     border: none;
     background: transparent;
-    color: #1a1a1a;
+    color: #0d0d0d;
   }
   .header .drop-content button:focus,
   .header .drop-content :hover {
@@ -416,7 +416,8 @@ body {
     display: grid;
     place-items: center;
   }
-  .section .section-note .section-btn #toggle {
+  .section .section-note .section-btn #toggle,
+  .section .section-note .section-btn #toggle2 {
     padding: 0.3rem;
     border: none;
     border-radius: 0.39rem;
@@ -427,10 +428,28 @@ body {
     -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
             box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
-  .section .section-note .section-btn #toggle:focus, .section .section-note .section-btn :hover {
+  .section .section-note .section-btn #toggle:focus, .section .section-note .section-btn :hover,
+  .section .section-note .section-btn #toggle2:focus, .section .section-note .section-btn :hover {
     background: #053896;
     color: #d9d9d9;
     outline: 1px solid #032b77;
+  }
+  .section #content,
+  .section #content2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section #content.show,
+  .section #content2.show {
+    display: none;
   }
   .section .section-scroll {
     display: -webkit-box;
@@ -528,7 +547,7 @@ body {
 }
 
 /* Media query for PCs and High-end Tablets */
-@media (min-width: 1024px) {
+@media (min-width: 1021px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -596,10 +615,11 @@ body {
     color: #053896;
   }
   .header .drop-content button:focus {
-    outline: 1px solid #053896;
-    padding: 0.3rem 0.2rem;
-    border-radius: 1rem;
-    color: #032b77;
+    outline: none;
+    border: 1px solid #053896;
+    border-radius: .3rem;
+    font-weight: 400;
+    color: white;
   }
   .header .drop-content .home {
     display: none;
@@ -614,11 +634,13 @@ body {
             flex-flow: row;
     gap: 2rem;
     padding: 1rem;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.616);
     background: #0f1c35;
   }
   .section .section-note {
     width: 20%;
     height: 30rem;
+    padding-top: rem;
     -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
             box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
     border-radius: 0.2rem;
@@ -644,6 +666,7 @@ body {
             justify-content: center;
     gap: 1.2rem;
     max-width: 70%;
+    height: 30rem;
     margin: 0 auto;
     padding: 1.5rem;
     -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
@@ -661,9 +684,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 30%;
-    height: 33%;
+    height: 35%;
     border-bottom: 3px solid rgba(231, 13, 13, 0.726);
     border-radius: 0.23rem;
     background-color: #101e3865;
@@ -671,7 +694,8 @@ body {
             box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
   }
   .section .card .note-title {
-    padding: 0.3rem;
+    height: 10rem;
+    padding: 0.3rem .7rem;
     font-size: 0.8rem;
     color: #8c8c8c;
   }
@@ -685,6 +709,7 @@ body {
             flex-flow: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding-bottom: .9rem;
   }
   .section .card .card-tips p {
     font-size: 12px;
@@ -708,6 +733,7 @@ body {
   }
   .section .card .card-tips span button:focus,
   .section .card .card-tips span :hover {
+    outline: none;
     background: #053896;
     color: #d9d9d9;
   }
