@@ -448,19 +448,21 @@
     .drop-content {
       @include flexLayout(row);
       @include col(center);
-      margin-right: 20%;
-      gap: 1.3rem;
-      width: 18rem;
+      margin-right: 10%;
+      gap: 1.5rem;
+      width: 18.5rem;
 
       button {
+        padding: auto;
         border: none;
         background: transparent;
         font-family: "itim", sans-serif;
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         font-weight: 480;
         color: #053896;
       }
       button:hover {
+        color: hsl(0, 0%, 40%);
         border-bottom: 2px solid #053896;
       }
       button:focus {
@@ -478,6 +480,7 @@
     #newUser {
       @include gridLayout();
       place-items: center;
+      margin-right: 3rem;
 
       i {
         font-size: 1.4rem;
@@ -523,7 +526,7 @@
       /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
       border-radius: 0.1rem;
-      background: hsl(0, 0%, 80%);
+      background: hsl(0, 0%, 78%);
       list-style-type: none;
       overflow: auto;
     }
@@ -551,6 +554,9 @@
         p {
           font-size: 12px;
           color: hsl(0, 0%, 10%);
+          i {
+            color: #053896;
+          }
         }
         span {
           @include gridLayout();
@@ -560,8 +566,8 @@
             border: 2px solid #053896;
             border-radius: 0.39rem;
             background: hsla(0, 0%, 85%, 0.726);
-            color: #092c6d;
-            font-weight: 600;
+            color: hsl(0, 0%, 30%);
+            font-weight: 400;
             font-family: "itim", sans-serif;
             box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
               0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
