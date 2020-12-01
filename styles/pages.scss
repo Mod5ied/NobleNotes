@@ -419,23 +419,23 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 1rem;
-    background: #0d1b36f6;
+    background: hsl(0, 0%, 97%);
 
     .active-head {
       @include flexLayout(row);
       @include col(center);
-      gap: 1rem;
+      gap: .8rem;
 
       img {
         width: 4.2rem;
-        height: 4.2rem;
-        border-radius: 2.4rem;
+        height: 4rem;
+        border-radius: 50%;
       }
       img:focus {
         outline: 1px solid #032b77;
       }
       h1 {
-        font-size: 1rem;
+        font-size: .8rem;
         color: #053896;
       }
       .home-btn {
@@ -445,25 +445,27 @@
     .drop-content {
       @include flexLayout(row);
       @include col(center);
-      margin-right: 3rem;
-      gap: 1.6rem;
+      margin-right: 30%;
+      gap: 1.3rem;
 
       button {
         border: none;
         background: transparent;
+        font-family: "itim", sans-serif;
         font-size: 0.73rem;
-        font-weight: bold;
-        color: hsl(0, 0%, 70%);
+        font-weight: 480;
+        color: #053896;
       }
       button:hover {
-        color: #053896;
+        border-bottom: 2px solid #053896;
       }
       button:focus {
         outline: none;
-        border: 1px solid #053896;
+        border: 2px solid #053896;
         border-radius: .3rem;
+        background: hsl(0, 0%, 90%);
         font-weight: 400;
-        color: white;
+        color: #053896;
       }
       .home {
         display: none;
@@ -476,16 +478,17 @@
     gap: 2rem;
     padding: 1rem;
     border-bottom: 1px solid hsla(0, 0%, 25%, 0.616);
-    background: #0f1c35;
+    background: hsl(0, 0%, 92%);
 
     .section-note {
       width: 20%;
       height: 30rem;
       padding-top: rem;
-      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      border: 1px solid hsl(0, 0%, 80%);
+      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19); */
       border-radius: 0.2rem;
-      background: #0b1524;
+      background: hsl(0, 0%, 90%);
       text-align: center;
 
       h2 {
@@ -503,10 +506,11 @@
       height: 30rem;
       margin: 0 auto;
       padding: 1.5rem;
-      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);
-      border-radius: 0.2rem;
-      background: #0b1524;
+      border: 1px solid hsl(0, 0%, 80%);
+      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
+      border-radius: 0.1rem;
+      background: hsl(0, 0%, 90%);
       list-style-type: none;
       overflow: auto;
     }
@@ -517,7 +521,7 @@
       height: 35%;
       border-bottom: 3px solid hsla(0, 89%, 48%, 0.726);
       border-radius: 0.23rem;
-      background-color: #101e3865;
+      background-color: hsl(0, 0%, 90%);
       box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19);
 
@@ -525,7 +529,7 @@
         height: 10rem;
         padding: 0.3rem .7rem;
         font-size: 0.8rem;
-        color: hsl(0, 0%, 55%);
+        color: hsl(0, 0%, 10%);
       }
       .card-tips {
         @include flexLayout(row);
