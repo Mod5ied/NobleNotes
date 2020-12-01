@@ -28,7 +28,7 @@
       @include row(space-between);
       @include col(center);
       gap: 1rem;
-      
+
       .logo {
         display: none;
         order: 2;
@@ -57,7 +57,7 @@
         box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
           0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
       }
-      .home-btn:focus, 
+      .home-btn:focus,
       :hover {
         background: #053896;
         color: hsl(0, 0%, 85%);
@@ -76,13 +76,12 @@
       width: 93%;
       height: 18rem;
       margin-bottom: 0.8rem;
-      border-radius: .4rem;
+      border-radius: 0.4rem;
       background: rgba(196, 195, 195, 0.973);
       position: absolute;
       top: 4rem;
-      left: .8rem;
+      left: 0.8rem;
       border-radius: 0.2rem;
-      
 
       button {
         width: 100%;
@@ -98,19 +97,20 @@
         color: hsl(0, 0%, 90%);
       }
 
-      .home a{
+      .home a {
         text-decoration: none;
         color: hsl(0, 0%, 10%);
       }
       .home a:focus,
-      :active, :visited {
+      :active,
+      :visited {
         color: hsl(0, 0%, 90%);
       }
     }
   }
   .section {
     @include flexLayout(column);
-    background: #0c1830;  
+    background: #0c1830;
 
     .section-note {
       @include flexLayout(column);
@@ -120,8 +120,9 @@
       }
       .section-btn {
         @include flexLayout(row);
-        
-        #toggle,#toggle2 {
+
+        #toggle,
+        #toggle2 {
           padding: 0.3rem;
           border: none;
           border-radius: 0.4rem;
@@ -138,7 +139,7 @@
           color: hsl(0, 0%, 85%);
           outline: none;
           border: 1px solid hsla(0, 89%, 48%, 0.726);
-          border-radius: .4rem;
+          border-radius: 0.4rem;
         }
       }
     }
@@ -170,7 +171,7 @@
     padding: 0.9rem 1rem;
     border-radius: 0.25rem;
     list-style-type: none;
-    background: #0b1524;    
+    background: #0b1524;
     overflow: auto;
 
     .card {
@@ -207,7 +208,7 @@
             border-radius: 0.39rem;
             background: hsla(0, 0%, 85%, 0.842);
             color: #092c6d;
-            font-size: .8rem;
+            font-size: 0.8rem;
             font-weight: 600;
             font-family: "itim", sans-serif;
             box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
@@ -219,7 +220,7 @@
             color: hsl(0, 0%, 85%);
             outline: none;
             border: 1px solid hsla(0, 89%, 48%, 0.726);
-            border-radius: .4rem;
+            border-radius: 0.4rem;
           }
         }
       }
@@ -228,7 +229,7 @@
   .footer {
     padding: 1rem 2rem;
     background: #0f1c35;
-    font-size: .8rem;
+    font-size: 0.8rem;
     p {
       color: hsl(0, 0%, 66%);
     }
@@ -316,8 +317,10 @@
           box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
             0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
         }
-        #toggle:focus, :hover,
-        #toggle2:focus, :hover {
+        #toggle:focus,
+        :hover,
+        #toggle2:focus,
+        :hover {
           background: #053896;
           color: hsl(0, 0%, 85%);
           outline: 1px solid #032b77;
@@ -424,7 +427,7 @@
     .active-head {
       @include flexLayout(row);
       @include col(center);
-      gap: .8rem;
+      gap: 0.8rem;
 
       img {
         width: 4.2rem;
@@ -435,7 +438,7 @@
         outline: 1px solid #032b77;
       }
       h1 {
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: #053896;
       }
       .home-btn {
@@ -445,7 +448,7 @@
     .drop-content {
       @include flexLayout(row);
       @include col(center);
-      margin-right: 30%;
+      margin-right: 20%;
       gap: 1.3rem;
       width: 18rem;
 
@@ -453,7 +456,7 @@
         border: none;
         background: transparent;
         font-family: "itim", sans-serif;
-        font-size: 0.73rem;
+        font-size: 0.8rem;
         font-weight: 480;
         color: #053896;
       }
@@ -463,13 +466,22 @@
       button:focus {
         outline: none;
         border: 2px solid #053896;
-        border-radius: .3rem;
+        border-radius: 0.3rem;
         background: hsl(0, 0%, 90%);
         font-weight: 400;
         color: #053896;
       }
       .home {
         display: none;
+      }
+    }
+    #newUser {
+      @include gridLayout();
+      place-items: center;
+
+      i {
+        font-size: 1.4rem;
+        color: #053896;
       }
     }
   }
@@ -528,14 +540,14 @@
 
       .note-title {
         height: 10rem;
-        padding: 0.3rem .7rem;
+        padding: 0.3rem 0.7rem;
         font-size: 0.8rem;
         color: #092c6d;
       }
       .card-tips {
         @include flexLayout(row);
         @include row(space-around);
-        padding-bottom: .9rem;
+        padding-bottom: 0.9rem;
         p {
           font-size: 12px;
           color: hsl(0, 0%, 10%);

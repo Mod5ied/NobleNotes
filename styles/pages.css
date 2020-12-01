@@ -97,11 +97,11 @@ body {
     width: 93%;
     height: 18rem;
     margin-bottom: 0.8rem;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     background: rgba(196, 195, 195, 0.973);
     position: absolute;
     top: 4rem;
-    left: .8rem;
+    left: 0.8rem;
     border-radius: 0.2rem;
   }
   .header .drop-content button {
@@ -122,7 +122,8 @@ body {
     color: #1a1a1a;
   }
   .header .drop-content .home a:focus,
-  .header .drop-content :active, .header .drop-content :visited {
+  .header .drop-content :active,
+  .header .drop-content :visited {
     color: #e6e6e6;
   }
   .section {
@@ -157,7 +158,8 @@ body {
         -ms-flex-flow: row;
             flex-flow: row;
   }
-  .section .section-note .section-btn #toggle, .section .section-note .section-btn #toggle2 {
+  .section .section-note .section-btn #toggle,
+  .section .section-note .section-btn #toggle2 {
     padding: 0.3rem;
     border: none;
     border-radius: 0.4rem;
@@ -174,7 +176,7 @@ body {
     color: #d9d9d9;
     outline: none;
     border: 1px solid rgba(231, 13, 13, 0.726);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
   }
   .section #content,
   .section #content2 {
@@ -286,7 +288,7 @@ body {
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.842);
     color: #092c6d;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 600;
     font-family: "itim", sans-serif;
     -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 30px 1.7px rgba(18, 55, 189, 0.19);
@@ -298,12 +300,12 @@ body {
     color: #d9d9d9;
     outline: none;
     border: 1px solid rgba(231, 13, 13, 0.726);
-    border-radius: .4rem;
+    border-radius: 0.4rem;
   }
   .footer {
     padding: 1rem 2rem;
     background: #0f1c35;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .footer p {
     color: #a8a8a8;
@@ -428,8 +430,10 @@ body {
     -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
             box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
-  .section .section-note .section-btn #toggle:focus, .section .section-note .section-btn :hover,
-  .section .section-note .section-btn #toggle2:focus, .section .section-note .section-btn :hover {
+  .section .section-note .section-btn #toggle:focus,
+  .section .section-note .section-btn :hover,
+  .section .section-note .section-btn #toggle2:focus,
+  .section .section-note .section-btn :hover {
     background: #053896;
     color: #d9d9d9;
     outline: 1px solid #032b77;
@@ -573,7 +577,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: .8rem;
+    gap: 0.8rem;
   }
   .header .active-head img {
     width: 4.2rem;
@@ -584,7 +588,7 @@ body {
     outline: 1px solid #032b77;
   }
   .header .active-head h1 {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: #053896;
   }
   .header .active-head .home-btn {
@@ -601,7 +605,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 30%;
+    margin-right: 20%;
     gap: 1.3rem;
     width: 18rem;
   }
@@ -609,7 +613,7 @@ body {
     border: none;
     background: transparent;
     font-family: "itim", sans-serif;
-    font-size: 0.73rem;
+    font-size: 0.8rem;
     font-weight: 480;
     color: #053896;
   }
@@ -619,13 +623,23 @@ body {
   .header .drop-content button:focus {
     outline: none;
     border: 2px solid #053896;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     background: #e6e6e6;
     font-weight: 400;
     color: #053896;
   }
   .header .drop-content .home {
     display: none;
+  }
+  .header #newUser {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    place-items: center;
+  }
+  .header #newUser i {
+    font-size: 1.4rem;
+    color: #053896;
   }
   .section {
     display: -webkit-box;
@@ -700,7 +714,7 @@ body {
   }
   .section .card .note-title {
     height: 10rem;
-    padding: 0.3rem .7rem;
+    padding: 0.3rem 0.7rem;
     font-size: 0.8rem;
     color: #092c6d;
   }
@@ -714,7 +728,7 @@ body {
             flex-flow: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding-bottom: .9rem;
+    padding-bottom: 0.9rem;
   }
   .section .card .card-tips p {
     font-size: 12px;
