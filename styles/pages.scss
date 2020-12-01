@@ -419,7 +419,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 1rem;
-    background: hsl(0, 0%, 97%);
+    background: hsl(0, 0%, 94%);
 
     .active-head {
       @include flexLayout(row);
@@ -447,6 +447,7 @@
       @include col(center);
       margin-right: 30%;
       gap: 1.3rem;
+      width: 18rem;
 
       button {
         border: none;
@@ -478,7 +479,7 @@
     gap: 2rem;
     padding: 1rem;
     border-bottom: 1px solid hsla(0, 0%, 25%, 0.616);
-    background: hsl(0, 0%, 92%);
+    background: hsl(0, 0%, 88%);
 
     .section-note {
       width: 20%;
@@ -488,11 +489,11 @@
       /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19); */
       border-radius: 0.2rem;
-      background: hsl(0, 0%, 90%);
+      background: hsl(0, 0%, 75%);
       text-align: center;
 
       h2 {
-        color: hsl(0, 0%, 55%);
+        color: hsl(0, 0%, 30%);
       }
       .section-btn {
         display: none;
@@ -506,11 +507,11 @@
       height: 30rem;
       margin: 0 auto;
       padding: 1.5rem;
-      border: 1px solid hsl(0, 0%, 80%);
+      border: 1px solid hsl(0, 0%, 75%);
       /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
       border-radius: 0.1rem;
-      background: hsl(0, 0%, 90%);
+      background: hsl(0, 0%, 80%);
       list-style-type: none;
       overflow: auto;
     }
@@ -519,9 +520,9 @@
       gap: 1rem;
       width: 30%;
       height: 35%;
-      border-bottom: 3px solid hsla(0, 89%, 48%, 0.726);
+      border-bottom: 3px solid rgba(5, 56, 150, 0.74);
       border-radius: 0.23rem;
-      background-color: hsl(0, 0%, 90%);
+      background-color: hsl(0, 0%, 89%);
       box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19);
 
@@ -529,7 +530,7 @@
         height: 10rem;
         padding: 0.3rem .7rem;
         font-size: 0.8rem;
-        color: hsl(0, 0%, 10%);
+        color: #092c6d;
       }
       .card-tips {
         @include flexLayout(row);
@@ -537,14 +538,14 @@
         padding-bottom: .9rem;
         p {
           font-size: 12px;
-          color: hsl(0, 0%, 55%);
+          color: hsl(0, 0%, 10%);
         }
         span {
           @include gridLayout();
 
           button {
-            padding: 0.3rem;
-            border: none;
+            padding: 0.2rem;
+            border: 2px solid #053896;
             border-radius: 0.39rem;
             background: hsla(0, 0%, 85%, 0.726);
             color: #092c6d;

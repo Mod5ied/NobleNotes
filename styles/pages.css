@@ -560,7 +560,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 1rem;
-    background: #f7f7f7;
+    background: #f0f0f0;
   }
   .header .active-head {
     display: -webkit-box;
@@ -603,6 +603,7 @@ body {
             align-items: center;
     margin-right: 30%;
     gap: 1.3rem;
+    width: 18rem;
   }
   .header .drop-content button {
     border: none;
@@ -637,7 +638,7 @@ body {
     gap: 2rem;
     padding: 1rem;
     border-bottom: 1px solid rgba(64, 64, 64, 0.616);
-    background: #ebebeb;
+    background: #e0e0e0;
   }
   .section .section-note {
     width: 20%;
@@ -647,11 +648,11 @@ body {
     /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19); */
     border-radius: 0.2rem;
-    background: #e6e6e6;
+    background: #bfbfbf;
     text-align: center;
   }
   .section .section-note h2 {
-    color: #8c8c8c;
+    color: #4d4d4d;
   }
   .section .section-note .section-btn {
     display: none;
@@ -672,11 +673,11 @@ body {
     height: 30rem;
     margin: 0 auto;
     padding: 1.5rem;
-    border: 1px solid #cccccc;
+    border: 1px solid #bfbfbf;
     /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
         0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
     border-radius: 0.1rem;
-    background: #e6e6e6;
+    background: #cccccc;
     list-style-type: none;
     overflow: auto;
   }
@@ -691,9 +692,9 @@ body {
     gap: 1rem;
     width: 30%;
     height: 35%;
-    border-bottom: 3px solid rgba(231, 13, 13, 0.726);
+    border-bottom: 3px solid rgba(5, 56, 150, 0.74);
     border-radius: 0.23rem;
-    background-color: #e6e6e6;
+    background-color: #e3e3e3;
     -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
             box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
   }
@@ -701,7 +702,7 @@ body {
     height: 10rem;
     padding: 0.3rem .7rem;
     font-size: 0.8rem;
-    color: #1a1a1a;
+    color: #092c6d;
   }
   .section .card .card-tips {
     display: -webkit-box;
@@ -717,7 +718,7 @@ body {
   }
   .section .card .card-tips p {
     font-size: 12px;
-    color: #8c8c8c;
+    color: #1a1a1a;
   }
   .section .card .card-tips span {
     display: -ms-grid;
@@ -725,8 +726,8 @@ body {
     place-items: center;
   }
   .section .card .card-tips span button {
-    padding: 0.3rem;
-    border: none;
+    padding: 0.2rem;
+    border: 2px solid #053896;
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.726);
     color: #092c6d;
