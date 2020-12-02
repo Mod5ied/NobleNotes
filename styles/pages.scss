@@ -480,7 +480,7 @@
     #newUser {
       @include gridLayout();
       place-items: center;
-      margin-right: 3rem;
+      margin-right: 2rem;
 
       i {
         font-size: 1.4rem;
@@ -585,21 +585,28 @@
   .footer {
     @include flexLayout(row-reverse);
     @include col(center);
-    gap: 2rem;
+    gap: 5rem;
     padding: 0.5rem 4rem;
-    background: #0f1c35;
+    background: hsl(0, 0%, 85%);
 
+    .social-icons {
+      @include flexLayout(row);
+      gap: 3rem;
+      color: #053896;
+      font-size: 1.4rem;
+    }
     p {
-      font-size: 0.8rem;
-      color: hsl(0, 0%, 55%);
+      font-size: 0.78rem;
+      color: #053896;
     }
     .foot-link {
-      font-size: 0.8rem;
-      color: hsl(0, 0%, 55%);
+      font-size: 0.78rem;
+      color: #053896;
       text-decoration: none;
     }
     .foot-link:hover {
-      color: #053896;
+      color: hsl(0, 0%, 30%);
+      border-bottom: 2px solid #053896;
     }
   }
 }

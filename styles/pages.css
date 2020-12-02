@@ -638,7 +638,7 @@ body {
     display: grid;
     place-items: center;
     place-items: center;
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
   .header #newUser i {
     font-size: 1.4rem;
@@ -773,21 +773,34 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     padding: 0.5rem 4rem;
-    background: #0f1c35;
+    background: #d9d9d9;
+  }
+  .footer .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 3rem;
+    color: #053896;
+    font-size: 1.4rem;
   }
   .footer p {
-    font-size: 0.8rem;
-    color: #8c8c8c;
+    font-size: 0.78rem;
+    color: #053896;
   }
   .footer .foot-link {
-    font-size: 0.8rem;
-    color: #8c8c8c;
+    font-size: 0.78rem;
+    color: #053896;
     text-decoration: none;
   }
   .footer .foot-link:hover {
-    color: #053896;
+    color: #4d4d4d;
+    border-bottom: 2px solid #053896;
   }
 }
 /*# sourceMappingURL=pages.css.map */
