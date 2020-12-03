@@ -250,7 +250,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 0.3rem;
-    background: #0d1b36f6;
+    background: hsl(0, 0%, 90%);
 
     .active-head {
       @include flexLayout(row);
@@ -259,11 +259,11 @@
 
       img {
         width: 5rem;
-        height: 4.8rem;
+        height: 4.7rem;
         border-radius: 50%;
       }
       h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #053896;
       }
       .home-btn {
@@ -277,21 +277,28 @@
 
       button {
         border: none;
+        border-radius: .1rem;
         background: transparent;
-        color: hsl(0, 0%, 70%);
+        color: #053896;
+        font-family: "itim", sans-serif;
       }
       button:focus {
         color: #053896;
+        border: 1px solid #053896 ;
+        outline: none;
       }
       .home {
         display: none;
       }
     }
+    #newUser {
+      display: none;
+    }
   }
   .section {
     @include flexLayout(column);
     padding: 0.5rem;
-    background: #122241;
+    background: hsl(0, 0%, 80%);
 
     .section-note {
       @include flexLayout(row);
@@ -299,8 +306,8 @@
       padding: 0 2.5rem;
 
       h2 {
-        font-size: 1.5rem;
-        color: hsla(0, 0%, 85%, 0.904);
+        font-size: 1.4rem;
+        color: hsl(0, 0%, 10%);
       }
       .section-btn {
         @include gridLayout();
@@ -308,7 +315,7 @@
         #toggle,
         #toggle2 {
           padding: 0.3rem;
-          border: none;
+          border: 2px solid #053896;
           border-radius: 0.39rem;
           background: hsla(0, 0%, 85%, 0.726);
           color: #092c6d;
@@ -323,7 +330,7 @@
         :hover {
           background: #053896;
           color: hsl(0, 0%, 85%);
-          outline: 1px solid #032b77;
+          outline: none;
         }
       }
     }
@@ -343,29 +350,30 @@
       gap: 1rem;
       padding: 1.5rem;
       list-style-type: none;
-      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      border: 1.3px solid hsl(0, 0%, 60%);
+      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
       border-radius: 0.2rem;
-      background: #0b1524;
+      background: hsl(0, 0%, 70%);
 
       .card {
         @include flexLayout(column);
         margin-right: 0.5rem;
         padding: 1.2rem;
-        border-top: 2.2px solid hsla(0, 89%, 48%, 0.726);
+        border-top: 2.2px solid #053896;
         border-radius: 0.3rem;
-        background-color: #101e3898;
+        background-color: hsl(0, 0%, 80%);
         box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
           0 3px 4px 0 rgba(1, 10, 39, 0.19);
 
         .note-title {
-          color: hsl(0, 0%, 67%);
+          color: hsl(0, 0%, 10%);
         }
         .card-tips {
           @include flexLayout(row);
           gap: 3rem;
           padding: 0 1.5rem;
-          color: hsla(0, 89%, 48%, 0.726);
+          color: hsla(136, 96%, 11%, 0.788);
 
           span {
             margin: auto 0;
@@ -373,7 +381,7 @@
 
             button {
               padding: 0.5rem;
-              border: none;
+              border: .5px solid #053896;
               border-radius: 0.39rem;
               background: hsla(0, 0%, 85%, 0.726);
               color: #092c6d;
@@ -386,7 +394,7 @@
             :hover {
               background: #053896;
               color: hsl(0, 0%, 85%);
-              outline: 1px solid #032b77;
+              outline: none;
             }
           }
         }
@@ -397,20 +405,26 @@
   .footer {
     @include flexLayout(column);
     padding: 1.5rem 2rem;
-    background: #0f1c35;
+    background: hsl(0, 0%, 78%);
 
     p {
       text-decoration: none;
       font-size: 1rem;
-      color: hsl(0, 0%, 67%);
+      color: #053896;
     }
     .foot-link {
       width: 7%;
       text-decoration: none;
-      color: hsl(0, 0%, 67%);
+      color: #053896;
     }
     .foot-link:hover,
     :active {
+      color: #042561;
+    }
+    .social-icons {
+      @include flexLayout(row);
+      gap: 2rem;
+      font-size: 1.2rem;
       color: #053896;
     }
   }
@@ -551,11 +565,10 @@
         @include flexLayout(row);
         @include row(space-around);
         padding-bottom: 0.9rem;
+        color: hsla(136, 96%, 11%, 0.788);
         p {
           font-size: 12px;
-          color: hsl(0, 0%, 10%);
           i {
-            color: #053896;
           }
         }
         span {

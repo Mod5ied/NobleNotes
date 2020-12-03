@@ -334,7 +334,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 0.3rem;
-    background: #0d1b36f6;
+    background: #e6e6e6;
   }
   .header .active-head {
     display: -webkit-box;
@@ -351,11 +351,11 @@ body {
   }
   .header .active-head img {
     width: 5rem;
-    height: 4.8rem;
+    height: 4.7rem;
     border-radius: 50%;
   }
   .header .active-head h1 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #053896;
   }
   .header .active-head .home-btn {
@@ -376,13 +376,20 @@ body {
   }
   .header .drop-content button {
     border: none;
+    border-radius: .1rem;
     background: transparent;
-    color: #b3b3b3;
+    color: #053896;
+    font-family: "itim", sans-serif;
   }
   .header .drop-content button:focus {
     color: #053896;
+    border: 1px solid #053896;
+    outline: none;
   }
   .header .drop-content .home {
+    display: none;
+  }
+  .header #newUser {
     display: none;
   }
   .section {
@@ -394,7 +401,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 0.5rem;
-    background: #122241;
+    background: #cccccc;
   }
   .section .section-note {
     display: -webkit-box;
@@ -410,8 +417,8 @@ body {
     padding: 0 2.5rem;
   }
   .section .section-note h2 {
-    font-size: 1.5rem;
-    color: rgba(217, 217, 217, 0.904);
+    font-size: 1.4rem;
+    color: #1a1a1a;
   }
   .section .section-note .section-btn {
     display: -ms-grid;
@@ -421,7 +428,7 @@ body {
   .section .section-note .section-btn #toggle,
   .section .section-note .section-btn #toggle2 {
     padding: 0.3rem;
-    border: none;
+    border: 2px solid #053896;
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.726);
     color: #092c6d;
@@ -436,7 +443,7 @@ body {
   .section .section-note .section-btn :hover {
     background: #053896;
     color: #d9d9d9;
-    outline: 1px solid #032b77;
+    outline: none;
   }
   .section #content,
   .section #content2 {
@@ -466,10 +473,11 @@ body {
     gap: 1rem;
     padding: 1.5rem;
     list-style-type: none;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
+    border: 1.3px solid #999999;
+    /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
     border-radius: 0.2rem;
-    background: #0b1524;
+    background: #b3b3b3;
   }
   .section .section-scroll .card {
     display: -webkit-box;
@@ -481,14 +489,14 @@ body {
             flex-flow: column;
     margin-right: 0.5rem;
     padding: 1.2rem;
-    border-top: 2.2px solid rgba(231, 13, 13, 0.726);
+    border-top: 2.2px solid #053896;
     border-radius: 0.3rem;
-    background-color: #101e3898;
+    background-color: #cccccc;
     -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
             box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
   }
   .section .section-scroll .card .note-title {
-    color: #ababab;
+    color: #1a1a1a;
   }
   .section .section-scroll .card .card-tips {
     display: -webkit-box;
@@ -500,7 +508,7 @@ body {
             flex-flow: row;
     gap: 3rem;
     padding: 0 1.5rem;
-    color: rgba(231, 13, 13, 0.726);
+    color: rgba(1, 55, 15, 0.788);
   }
   .section .section-scroll .card .card-tips span {
     margin: auto 0;
@@ -508,7 +516,7 @@ body {
   }
   .section .section-scroll .card .card-tips span button {
     padding: 0.5rem;
-    border: none;
+    border: .5px solid #053896;
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.726);
     color: #092c6d;
@@ -521,7 +529,7 @@ body {
   .section .section-scroll .card .card-tips span :hover {
     background: #053896;
     color: #d9d9d9;
-    outline: 1px solid #032b77;
+    outline: none;
   }
   .footer {
     display: -webkit-box;
@@ -532,20 +540,32 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 1.5rem 2rem;
-    background: #0f1c35;
+    background: #c7c7c7;
   }
   .footer p {
     text-decoration: none;
     font-size: 1rem;
-    color: #ababab;
+    color: #053896;
   }
   .footer .foot-link {
     width: 7%;
     text-decoration: none;
-    color: #ababab;
+    color: #053896;
   }
   .footer .foot-link:hover,
   .footer :active {
+    color: #042561;
+  }
+  .footer .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 2rem;
+    font-size: 1.2rem;
     color: #053896;
   }
 }
@@ -732,13 +752,10 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding-bottom: 0.9rem;
+    color: rgba(1, 55, 15, 0.788);
   }
   .section .card .card-tips p {
     font-size: 12px;
-    color: #1a1a1a;
-  }
-  .section .card .card-tips p i {
-    color: #053896;
   }
   .section .card .card-tips span {
     display: -ms-grid;
