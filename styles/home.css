@@ -10,8 +10,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #e6e6e6;
   font-family: "Comfortaa", sans-serif;
+  background: #e6e6e6;
 }
 
 /*Here goes the Media query for Smartphones*/
@@ -280,6 +280,37 @@ body {
 
 /*Here goes Media query for Tablet devices*/
 @media (min-width: 460px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2rem;
+  }
+  header .logo-area img {
+    width: 4.3rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+  header .login-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5rem;
+  }
   main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -288,7 +319,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    padding: 1rem;
+    padding: 2rem;
   }
   .main-area {
     -webkit-box-sizing: border-box;

@@ -14,18 +14,7 @@
     display: grid;
     place-items: center;
 }
-
-* {
-    order: 1px solid red !important;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background: hsl(0, 0%, 90%);
-    font-family: "Comfortaa", sans-serif;
-}
+@import './presets';
 
 /*Here goes the Media query for Smartphones*/
 @media  (max-width: 430px) {
@@ -221,10 +210,27 @@ body {
 
 /*Here goes Media query for Tablet devices*/
 @media (min-width: 460px) {
+    header {
+        @include flexLayout(row);
+        @include row(space-between);
+        padding: 0 2rem;
 
+        .logo-area {
+            img {
+                width: 4.3rem;
+                height: 4rem;
+                border-radius: 50%;
+            }
+        }
+        .login-area {
+            @include flexLayout(row);
+            @include column(center);
+            gap: 1.5rem;
+        }
+    }
     main {
         @include flexLayout(column);
-        padding: 1rem;
+        padding: 2rem;
         
     }
     .main-area {
