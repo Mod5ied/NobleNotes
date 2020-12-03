@@ -25,7 +25,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 0.2rem 0.5rem;
-    background: #0d1b36f6;
+    background: #d1d1d1;
   }
   .header .active-head {
     display: -webkit-box;
@@ -60,7 +60,7 @@ body {
         -ms-flex-order: 1;
             order: 1;
     font-size: 1rem;
-    color: #8c8c8c;
+    color: #053896;
   }
   .header .active-head .home-btn {
     -webkit-box-ordinal-group: 4;
@@ -98,7 +98,7 @@ body {
     height: 18rem;
     margin-bottom: 0.8rem;
     border-radius: 0.4rem;
-    background: rgba(196, 195, 195, 0.973);
+    background: #d1d1d1;
     position: absolute;
     top: 4rem;
     left: 0.8rem;
@@ -109,12 +109,12 @@ body {
     height: 2.5rem;
     border: none;
     background: transparent;
-    color: #0d0d0d;
+    color: black;
   }
   .header .drop-content button:focus,
   .header .drop-content :hover {
     outline: none;
-    background: #040d44ce;
+    background: #020a3bce;
     color: #e6e6e6;
   }
   .header .drop-content .home a {
@@ -126,6 +126,9 @@ body {
   .header .drop-content :visited {
     color: #e6e6e6;
   }
+  .header #newUser {
+    display: none;
+  }
   .section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -134,7 +137,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    background: #0c1830;
+    background: #bfbfbf;
   }
   .section .section-note {
     display: -webkit-box;
@@ -147,7 +150,7 @@ body {
     padding: 1rem;
   }
   .section .section-note h2 {
-    color: #ababab;
+    color: #1a1a1a;
   }
   .section .section-note .section-btn {
     display: -webkit-box;
@@ -161,7 +164,7 @@ body {
   .section .section-note .section-btn #toggle,
   .section .section-note .section-btn #toggle2 {
     padding: 0.3rem;
-    border: none;
+    border: 2px solid #053896;
     border-radius: 0.4rem;
     background: rgba(217, 217, 217, 0.842);
     color: #092c6d;
@@ -172,10 +175,11 @@ body {
   }
   .section .section-note .section-btn #toggle:focus,
   .section .section-note .section-btn #toggle2:focus {
+    padding: 0.3rem;
     background: #053896;
     color: #d9d9d9;
+    font-weight: 400;
     outline: none;
-    border: 1px solid rgba(231, 13, 13, 0.726);
     border-radius: 0.4rem;
   }
   .section #content,
@@ -225,9 +229,10 @@ body {
     max-height: 490px;
     margin: 0 auto;
     padding: 0.9rem 1rem;
+    margin-bottom: 2rem;
     border-radius: 0.25rem;
     list-style-type: none;
-    background: #0b1524;
+    background: #999999;
     overflow: auto;
   }
   .section-scroll .card {
@@ -242,15 +247,15 @@ body {
     width: 100%;
     height: 13rem;
     padding: 0.4rem 1rem;
-    border-bottom: 2.5px solid rgba(231, 13, 13, 0.726);
+    border-bottom: 2.5px solid #053896;
     border-radius: 0.29rem;
-    background-color: #101e38de;
+    background-color: #cccccc;
   }
   .section-scroll .card .note-title {
     height: 90px;
     padding-top: 0.5rem;
     font-size: 1rem;
-    color: #b3b3b3;
+    color: #1a1a1a;
     text-align: left;
   }
   .section-scroll .card .card-tips {
@@ -265,7 +270,7 @@ body {
         justify-content: space-around;
   }
   .section-scroll .card .card-tips p {
-    color: rgba(231, 13, 13, 0.726);
+    color: rgba(1, 55, 15, 0.788);
   }
   .section-scroll .card .card-tips span {
     display: -webkit-box;
@@ -284,7 +289,7 @@ body {
   }
   .section-scroll .card .card-tips span button {
     padding: 0.3rem;
-    border: none;
+    border: .8px solid #053896;
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.842);
     color: #092c6d;
@@ -298,25 +303,37 @@ body {
   .section-scroll .card .card-tips span :hover {
     background: #053896;
     color: #d9d9d9;
+    font-weight: 300;
     outline: none;
-    border: 1px solid rgba(231, 13, 13, 0.726);
     border-radius: 0.4rem;
   }
   .footer {
     padding: 1rem 2rem;
-    background: #0f1c35;
+    background: #c9c9c9;
     font-size: 0.8rem;
   }
   .footer p {
-    color: #a8a8a8;
+    color: #053896;
   }
   .footer a {
-    color: #a8a8a8;
+    color: #032b77;
     text-decoration: none;
   }
   .footer a:hover,
   .footer :active {
-    color: #053896;
+    color: #062152;
+  }
+  .footer .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 2rem;
+    font-size: 1.6rem;
+    color: #092c6d;
   }
 }
 
@@ -376,7 +393,7 @@ body {
   }
   .header .drop-content button {
     border: none;
-    border-radius: .1rem;
+    border-radius: 0.1rem;
     background: transparent;
     color: #053896;
     font-family: "itim", sans-serif;
@@ -516,7 +533,7 @@ body {
   }
   .section .section-scroll .card .card-tips span button {
     padding: 0.5rem;
-    border: .5px solid #053896;
+    border: 0.5px solid #053896;
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.726);
     color: #092c6d;
