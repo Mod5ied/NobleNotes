@@ -214,6 +214,7 @@
         @include flexLayout(row);
         @include row(space-between);
         padding: 0 2rem;
+        background-color: hsl(0, 0%, 98%);
 
         .logo-area {
             img {
@@ -237,7 +238,7 @@
         box-sizing: border-box;
         @include flexLayout(column);
         gap: 2rem;
-        border-bottom: .8px solid #3a3a3a;
+        border-bottom: .8px solid hsl(0, 0%, 70%);
 
         i:not(.far) {
             color: #135bbf;
@@ -252,7 +253,7 @@
             gap: 1rem;
             height: 8rem;
             border-radius: .8rem;
-            background: hsl(0, 0%, 98%);
+            background: transparent;
 
             h2 {
                 @include flexLayout(column);
@@ -313,7 +314,7 @@
     .section1 {
         @include flexLayout(column);
         padding: 1rem;
-        background: hsl(0, 0%, 80%);
+        background: transparent;
 
         .section-head {
             padding: 1rem 0;
@@ -383,7 +384,25 @@
 
 /*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1020px) {
-    
+    header {
+        @include flexLayout(row);
+        @include row(space-between);
+        padding: 0 2rem;
+        background-color: hsl(0, 0%, 98%);
+
+        .logo-area {
+            img {
+                width: 4.3rem;
+                height: 4rem;
+                border-radius: 50%;
+            }
+        }
+        .login-area {
+            @include flexLayout(row);
+            @include column(center);
+            gap: 1.5rem;
+        }
+    }
     .main-area {
         display: flex;
         flex-flow: row;

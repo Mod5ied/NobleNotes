@@ -292,6 +292,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
+    background-color: #fafafa;
   }
   header .logo-area img {
     width: 4.3rem;
@@ -332,7 +333,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     gap: 2rem;
-    border-bottom: .8px solid #3a3a3a;
+    border-bottom: 0.8px solid #b3b3b3;
   }
   .main-area i:not(.far) {
     color: #135bbf;
@@ -353,7 +354,7 @@ body {
     gap: 1rem;
     height: 8rem;
     border-radius: .8rem;
-    background: #fafafa;
+    background: transparent;
   }
   .main-area .cards h2 {
     display: -webkit-box;
@@ -457,7 +458,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 1rem;
-    background: #cccccc;
+    background: transparent;
   }
   .section1 .section-head {
     padding: 1rem 0;
@@ -551,6 +552,38 @@ body {
 
 /*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1020px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #fafafa;
+  }
+  header .logo-area img {
+    width: 4.3rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+  header .login-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5rem;
+  }
   .main-area {
     display: -webkit-box;
     display: -ms-flexbox;
