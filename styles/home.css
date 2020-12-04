@@ -11,11 +11,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Comfortaa", sans-serif;
-  background: #e6e6e6;
+  background: #ebebeb;
 }
 
 /*Here goes the Media query for Smartphones*/
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   main {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -279,7 +279,7 @@ body {
 }
 
 /*Here goes Media query for Tablet devices*/
-@media (min-width: 460px) {
+@media (max-width: 1020px) and (min-width: 501px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -551,7 +551,7 @@ body {
 }
 
 /*Here goes Media query for Laptops and Desktops*/
-@media (min-width: 1020px) {
+@media (min-width: 1021px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -565,6 +565,8 @@ body {
             justify-content: space-between;
     padding: 0 2rem;
     background-color: #fafafa;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   header .logo-area img {
     width: 4.3rem;
@@ -592,12 +594,17 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2rem;
-    padding: 1rem;
+    padding: 4rem 2rem;
   }
   .main-area .cards {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -612,7 +619,10 @@ body {
         -ms-flex: 30%;
             flex: 30%;
     gap: 1rem;
-    height: 15rem;
+    max-width: 30%;
+    height: 13rem;
+    border-radius: .3rem;
+    background: whitesmoke;
   }
   .main-area .cards span {
     max-height: 50px;
@@ -638,6 +648,11 @@ body {
     display: -ms-grid;
     display: grid;
     place-items: center;
+    color: #135bbf;
+    font-size: .8rem;
+  }
+  .main-area .card-info p {
+    font-size: .7rem;
   }
   .main-area .card-tips {
     display: -webkit-box;
@@ -664,6 +679,7 @@ body {
     gap: 4px;
     height: 1rem;
     padding-left: 3px;
+    padding-top: .1rem;
     border-radius: 1rem;
     background: #093777;
     font-size: .5rem;
@@ -674,7 +690,8 @@ body {
             box-sizing: border-box;
     height: 1rem;
     width: 1.4rem;
-    padding: .2rem;
+    padding: .25rem;
+    margin-bottom: .1rem;
     border-radius: 1rem;
     background: #001133;
     font-size: .5rem;
@@ -693,15 +710,17 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 2rem;
-    padding: 1rem;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 0 2rem;
+    background: #f0f0f0;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .section1 .section-head h3 {
+    color: #093777;
   }
   .section1 .section-head span {
     display: -webkit-box;
@@ -711,34 +730,70 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    gap: .1rem;
     text-align: center;
   }
   .section1 .section-head span i {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    font-size: 1.1rem;
+    font-size: .8rem;
+    color: #e79908;
   }
   .section1 .section-head span p {
     font-family: 'itim', cursive;
+    font-size: .8rem;
   }
   .section1 .section-scroll {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #999999;
+    background: #cccccc;
   }
   .section1 .section-scroll .section-card {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -ms-grid;
     display: grid;
     place-items: center;
     -webkit-box-flex: 20%;
         -ms-flex: 20%;
             flex: 20%;
+    padding-top: .5rem;
+    border-radius: .3rem;
+    background: #e6e6e6;
+  }
+  .section1 .section-scroll .section-card i {
+    color: #135bbf;
   }
   .section1 .section-scroll .section-card p {
     font-family: 'itim', cursive;
+  }
+  .section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .section2 .main-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 5rem;
   }
   footer {
     display: -webkit-box;
@@ -749,6 +804,7 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: .8rem 2rem;
+    border-top: 1px solid #cccccc;
     gap: 2rem;
   }
   footer p {
@@ -766,6 +822,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 2rem;
+    color: #135bbf;
   }
 }
 /*# sourceMappingURL=home.css.map */
