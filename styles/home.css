@@ -192,7 +192,7 @@ body {
             flex-direction: row;
     gap: 1.5rem;
     padding: .8rem;
-    overflow-y: scroll;
+    overflow-x: scroll;
     white-space: nowrap;
   }
   .section1 .section-scroll .section-card {
@@ -498,7 +498,7 @@ body {
     gap: 2rem;
     padding: .7rem;
     white-space: nowrap;
-    overflow: auto;
+    overflow-x: auto;
   }
   .section1 .section-card {
     display: -ms-grid;
@@ -565,13 +565,25 @@ body {
             justify-content: space-between;
     padding: 0 2rem;
     background-color: #fafafa;
-    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  }
+  header .logo-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
   }
   header .logo-area img {
     width: 4.3rem;
     height: 4rem;
     border-radius: 50%;
+  }
+  header .logo-area h1 a {
+    color: #135bbf;
+    text-decoration: none;
   }
   header .login-area {
     display: -webkit-box;
@@ -585,6 +597,37 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 1.5rem;
+  }
+  header .login-area .login-area-btn {
+    border: 2px solid #135bbf;
+    border-radius: .4rem;
+    padding: .2rem .4rem;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  header .login-area .login-area-btn:focus {
+    outline: none;
+    background: #135bbf;
+  }
+  header .login-area .login-area-btn:focus a {
+    color: whitesmoke;
+  }
+  header .login-area .login-area-btn:hover {
+    outline: none;
+    background: #135bbf;
+  }
+  header .login-area .login-area-btn:hover a {
+    color: whitesmoke;
+  }
+  header .login-area .login-area-btn a {
+    text-decoration: none;
+    color: #135bbf;
+  }
+  header .login-area .login-area-btn a:focus {
+    outline: none;
+    background: none;
+    color: none;
   }
   .main-area {
     display: -webkit-box;
@@ -621,11 +664,22 @@ body {
     gap: 1rem;
     max-width: 30%;
     height: 13rem;
-    border-radius: .3rem;
+    border-radius: .4rem;
     background: whitesmoke;
+  }
+  .main-area .cards h2 {
+    color: #093777;
+    font-size: 1.3rem;
   }
   .main-area .cards span {
     max-height: 50px;
+  }
+  .main-area .cards:hover {
+    border: 0px solid #135bbf;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
   }
   .main-area .card1 h2 {
     text-align: left;
@@ -714,13 +768,14 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    padding: 0 2rem;
+    padding: 0 6rem;
     background: #f0f0f0;
+    line-height: .7;
     -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .section1 .section-head h3 {
-    color: #093777;
+    color: #135bbf;
   }
   .section1 .section-head span {
     display: -webkit-box;
@@ -730,13 +785,24 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: .1rem;
     text-align: center;
   }
   .section1 .section-head span i {
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
     font-size: .8rem;
     color: #e79908;
   }
@@ -755,7 +821,7 @@ body {
     gap: 1rem;
     padding: 2rem 1rem;
     border-bottom: 1px solid #999999;
-    background: #cccccc;
+    background: #b3b3b3;
   }
   .section1 .section-scroll .section-card {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -770,11 +836,22 @@ body {
     border-radius: .3rem;
     background: #e6e6e6;
   }
+  .section1 .section-scroll .section-card h4 {
+    font-size: 1rem;
+    color: #093777;
+  }
   .section1 .section-scroll .section-card i {
     color: #135bbf;
   }
   .section1 .section-scroll .section-card p {
     font-family: 'itim', cursive;
+    color: #1a1a1a;
+  }
+  .section1 .section-scroll .section-card:hover {
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
   }
   .section2 {
     display: -webkit-box;

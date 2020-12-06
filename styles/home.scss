@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
+@import './presets';
 
 @mixin flexLayout($direction) {
     display: flex;
@@ -14,7 +15,6 @@
     display: grid;
     place-items: center;
 }
-@import './presets';
 
 /*Here goes the Media query for Smartphones*/
 @media  (max-width: 500px) {
@@ -135,7 +135,7 @@
             flex-direction: row;
             gap: 1.5rem;
             padding: .8rem;
-            overflow-y: scroll;
+            overflow-x: scroll;
             white-space: nowrap;
             
             .section-card {
@@ -342,7 +342,7 @@
             gap: 2rem;
             padding: .7rem;
             white-space: nowrap;
-            overflow: auto;
+            overflow-x: auto;
         }
         .section-card {
             @include gridCenter();
@@ -389,19 +389,57 @@
         @include row(space-between);
         padding: 0 2rem;
         background-color: hsl(0, 0%, 98%);
-        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 
         .logo-area {
+            @include flexLayout(row);
             img {
                 width: 4.3rem;
                 height: 4rem;
                 border-radius: 50%;
+            }
+            h1 a{
+                color: #135bbf;
+                text-decoration: none;
             }
         }
         .login-area {
             @include flexLayout(row);
             @include column(center);
             gap: 1.5rem;
+            
+            .login-area-btn {
+                border: 2px solid #135bbf;
+                border-radius: .4rem;
+                padding: .2rem .4rem;
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+            }
+            .login-area-btn:focus {
+                outline: none;
+                background: #135bbf;
+            }
+            .login-area-btn:focus a{
+                color: hsl(0, 0%, 96%);
+            }
+            .login-area-btn:hover {
+                outline: none;
+                background: #135bbf;
+            }
+            .login-area-btn:hover a{
+                color: hsl(0, 0%, 96%);
+            }
+            //Specifically for the links(Don't tamper!)
+            .login-area-btn a {
+                text-decoration: none;
+                color: #135bbf;
+            }
+            .login-area-btn a:focus {
+                outline: none;
+                background: none;
+                color: none;
+            }
         }
     }
     .main-area {
@@ -420,12 +458,21 @@
             gap: 1rem;
             max-width: 30%;
             height: 13rem;
-            border-radius: .3rem;
+            border-radius: .4rem;
             background: hsl(0, 0%, 96%);
 
+            h2 {
+                color: #093777;
+                font-size: 1.3rem;
+            }
             span {
                 max-height: 50px;
             }
+        }
+        .cards:hover {
+            border: 0px solid #135bbf;
+            transition: .5s;
+            transform: scale(.98);
         }
         .card1 h2 {
             text-align: left;
@@ -484,20 +531,25 @@
 
         .section-head {
             @include flexLayout(column);
-            padding: 0 2rem;
+            padding: 0 6rem;
             background: hsl(0, 0%, 94%);
+            line-height: .7;
             box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
             h3 {
-                color: #093777;
+                color: #135bbf;
+                
             }
             span {
                 @include flexLayout(row);
+                @include column(center);
                 gap: .1rem;
                 text-align: center;
                 
                 i {
-                    display: grid;
-                    place-items: center;
+                    @include flexLayout(row);
+                    @include column(center);
+                    height: auto;
                     font-size: .8rem;
                     color: #e79908;
                 }
@@ -512,7 +564,7 @@
             gap: 1rem;
             padding: 2rem 1rem;
             border-bottom: 1px solid hsl(0, 0%, 60%);
-            background: hsl(0, 0%, 80%);
+            background: hsl(0, 0%, 70%);
 
             .section-card {
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -522,12 +574,21 @@
                 border-radius: .3rem;
                 background: hsl(0, 0%, 90%);
 
+                h4 {
+                    font-size: 1rem;
+                    color: #093777;  
+                }
                 i {
                     color: #135bbf;
                 }
                 p {
                     font-family: 'itim', cursive;
+                    color: hsl(0, 0%, 10%);
                 }
+            }
+            .section-card:hover {
+                transition: .5s;
+                transform: scale(.98);
             }
         }
     }
