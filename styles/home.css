@@ -708,6 +708,20 @@ body {
   .main-area .card-info p {
     font-size: .7rem;
   }
+  .main-area .card-tips2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    gap: 5rem;
+  }
+  .main-area .card-tips2 i {
+    color: #093777;
+    font-size: 1.3rem;
+  }
   .main-area .card-tips {
     display: -webkit-box;
     display: -ms-flexbox;

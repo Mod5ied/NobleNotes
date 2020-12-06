@@ -492,10 +492,17 @@
             }
             p{ font-size: .7rem;}
         }
+        .card-tips2 {
+            @include flexLayout(row);
+            gap: 5rem;
+            i{
+                color: #093777;
+                font-size: 1.3rem;
+            }
+        }
         .card-tips {
             display: flex;
             gap: 1.5rem;
-
             //The card-tips styling
             p {
                 box-sizing: border-box;
