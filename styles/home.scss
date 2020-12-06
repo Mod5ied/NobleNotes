@@ -1,628 +1,639 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
-@import './presets';
+@import "./presets";
 
 @mixin flexLayout($direction) {
-    display: flex;
-    flex-flow: $direction;
+  display: flex;
+  flex-flow: $direction;
 }
 @mixin row($direction) {
-    justify-content: $direction;
+  justify-content: $direction;
 }
 @mixin column($direction) {
-    align-items: $direction;
+  align-items: $direction;
 }
 @mixin gridCenter {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 /*Here goes the Media query for Smartphones*/
-@media  (max-width: 500px) {
-    
-    main {
+@media (max-width: 500px) {
+  main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cards {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      width: 95%;
+      height: 10rem;
+      max-height: 20%;
+      margin: 0.5rem 0;
+      border-radius: 0.5rem;
+      background: hsl(0, 0%, 97%);
+      line-height: 0.7;
+    }
+    h2,
+    .card-info {
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    .card-info {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      gap: 5px;
+      font-size: 0.8rem;
+
+      i:not(.far) {
+        font-size: 1rem;
+        color: #135bbf;
+      }
+      .far {
+        font-size: 1rem;
+        color: #e79908;
+      }
+      p {
+        font-size: 0.8rem;
+        font-weight: 550;
+      }
+    }
+    .card-tips2 {
+      @include flexLayout(row);
+      @include row(center);
+      @include column(center);
+      padding: 1rem 0;
+      gap: 3.5rem;
+      i {
+        font-size: 1.2rem;
+        color: #093777;
+      }
+    }
+    .card-tips {
+      box-sizing: border-box;
+      @include flexLayout(row);
+      @include row(center);
+      margin-top: 1.5rem;
+      overflow: hidden;
+      gap: 1rem;
+
+      //The card-tips styling
+      p {
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
+        @include flexLayout(row);
+        @include column(center);
+        @include row(center);
+        gap: 4px;
+        height: 1rem;
+        padding-left: 3px;
+        border-radius: 1rem;
+        background: #093777;
+        font-size: 0.5rem;
+        color: white;
+      }
+      p span {
+        box-sizing: border-box;
+        height: 1rem;
+        width: 1.4rem;
+        padding: 0.35rem;
+        border-radius: 1rem;
+        background: #001133;
+        font-size: 0.5rem;
+        font-weight: bold;
+        color: hsl(0, 0%, 80%);
+      }
     }
-    .main-area {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    background: hsl(0, 0%, 20%);
+    padding: 2rem;
 
-        .cards {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            width: 95%;
-            height: 10rem;
-            max-height: 20%;
-            margin: .5rem 0;
-            border-radius: .5rem;
-            background: hsl(0, 0%, 97%);
-            line-height: .7;
-        }
-        h2, .card-info {
-            display: grid;
-            place-items: center;
-            text-align: center;
-            
-        }
-        .card-info {
-            display: flex;
-            flex-flow: row;
-            justify-content: center;
-            gap: 5px;
-            font-size: .8rem;
-            
-            i:not(.far) {
-                font-size: 1rem;
-                color: #135bbf;
-            }
-            .far {
-                font-size: 1rem;
-                color: #e79908;
-            }
-            p { 
-                font-size: .8rem;
-                font-weight: 550;
-            }
-        }
-        .card-tips {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 1.5rem;
-            overflow: hidden;
-            gap: 1rem;
-            
-            //The card-tips styling
-            p {
-                box-sizing: border-box;
-                @include flexLayout(row);
-                @include column(center);
-                @include row(center);
-                gap: 4px;
-                height: 1rem;
-                padding-left: 3px;
-                border-radius: 1rem;
-                background: #093777;
-                font-size: .5rem;
-                color: white;
-            }
-            p span{
-                box-sizing: border-box;
-                height: 1rem;
-                width: 1.4rem;
-                padding: .35rem;
-                border-radius: 1rem;
-                background: #001133;
-                font-size: .5rem;
-                font-weight: bold;
-                color: hsl(0, 0%, 80%);
-            }
-        }
-    }
-    .section1 {
-        display: flex;
-        flex-direction: column;
-        background: hsl(0, 0%, 20%);
-        padding: 2rem;
-        
-        .section-head {
-            display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            line-height: .2;
-            
-            h3 {
-                font-size: 1.4rem;
-            }
-            span {
-                @include flexLayout(row);
-                gap: 3px;
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      line-height: 0.2;
 
-                i {
-                    @include gridCenter();
-                    color: #e79908;
-                }
-                p {
-                    font-size: .9rem;
-                }
-            }
-        }
-        .section-scroll {
-            display: flex;
-            flex-direction: row;
-            gap: 1.5rem;
-            padding: .8rem;
-            overflow-x: scroll;
-            white-space: nowrap;
-            
-            .section-card {
-                box-sizing: border-box;
-                display: grid;
-                place-items: center;
-                border-radius: .3rem;
-                max-width: 200px;
-                min-width: 200px;
-                height: 10rem;
-                padding: .4rem;
-                background: hsl(0, 0%, 97%);
+      h3 {
+        font-size: 1.4rem;
+      }
+      span {
+        @include flexLayout(row);
+        gap: 3px;
 
-                span {
-                    font-size: 2rem;
-                    color: #135bbf;
-                    background: hsl(0, 0%, 90%);
-                    border-radius: 50%;
-                }
-                p { font-family: 'itim', cursive;}
-            }
+        i {
+          @include gridCenter();
+          color: #e79908;
         }
-
-    }
-    .section2 {
-        padding: 2rem 0;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        border-top: 1px dotted black;
-        
         p {
-            text-align: center;
-            font-family: 'itim', cursive;
+          font-size: 0.9rem;
         }
-        span {
-            display: flex;
-            flex-flow: row;
-            gap: 1.2rem;
-            font-size: 1.5rem;
-            color: #135bbf;
-        }
+      }
     }
+    .section-scroll {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      padding: 0.8rem;
+      overflow-x: scroll;
+      white-space: nowrap;
+
+      .section-card {
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;
+        border-radius: 0.3rem;
+        max-width: 200px;
+        min-width: 200px;
+        height: 10rem;
+        padding: 0.4rem;
+        background: hsl(0, 0%, 97%);
+
+        span {
+          font-size: 2rem;
+          color: #135bbf;
+          background: hsl(0, 0%, 90%);
+          border-radius: 50%;
+        }
+        p {
+          font-family: "itim", cursive;
+        }
+      }
+    }
+  }
+  .section2 {
+    padding: 2rem 0;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px dotted black;
+
+    p {
+      text-align: center;
+      font-family: "itim", cursive;
+    }
+    span {
+      display: flex;
+      flex-flow: row;
+      gap: 1.2rem;
+      font-size: 1.5rem;
+      color: #135bbf;
+    }
+  }
 }
 
 /*Here Goes Media-Queries for iPhone4, 4-plus and other punishments*/
 @media (max-width: 320px) {
-    
-    .card-info p {
-        font-size: 10px;
-    }
-    
-    .section-head {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        line-height: .2;
-        
-        h3 {
-            font-size: 8px;
-        }
-        p {
-            font-size: .8rem;
-        }
-    }
+  .card-info p {
+    font-size: 10px;
+  }
 
+  .section-head {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 0.2;
+
+    h3 {
+      font-size: 8px;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
 
 /*Here goes Media query for Tablet devices*/
 @media (max-width: 1020px) and (min-width: 501px) {
-    header {
-        @include flexLayout(row);
-        @include row(space-between);
-        padding: 0 2rem;
-        background-color: hsl(0, 0%, 98%);
+  header {
+    @include flexLayout(row);
+    @include row(space-between);
+    padding: 0 2rem;
+    background-color: hsl(0, 0%, 98%);
 
-        .logo-area {
-            img {
-                width: 4.3rem;
-                height: 4rem;
-                border-radius: 50%;
-            }
-        }
-        .login-area {
-            @include flexLayout(row);
-            @include column(center);
-            gap: 1.5rem;
-        }
+    .logo-area {
+      img {
+        width: 4.3rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
     }
-    main {
+    .login-area {
+      @include flexLayout(row);
+      @include column(center);
+      gap: 1.5rem;
+    }
+  }
+  main {
+    @include flexLayout(column);
+    padding: 2rem;
+  }
+  .main-area {
+    box-sizing: border-box;
+    @include flexLayout(column);
+    gap: 2rem;
+    border-bottom: 0.8px solid hsl(0, 0%, 70%);
+
+    i:not(.far) {
+      color: #135bbf;
+    }
+    .far {
+      color: #e79908;
+    }
+
+    .cards {
+      box-sizing: border-box;
+      @include flexLayout(row);
+      gap: 1rem;
+      height: 8rem;
+      border-radius: 0.8rem;
+      background: transparent;
+
+      h2 {
         @include flexLayout(column);
-        padding: 2rem;
-        
+        @include column(center);
+        @include row(center);
+        max-width: 200px;
+        min-width: 200px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: "itim", cursive;
+        font-weight: 450;
+      }
     }
-    .main-area {
+    .card-info {
+      flex: 45%;
+      @include flexLayout(row);
+      @include column(center);
+      gap: 5px;
+      font-size: 0.9rem;
+      i {
+        font-size: 1rem;
+      }
+    }
+    .card-tips {
+      flex: 25%;
+      @include flexLayout(row);
+      @include column(center);
+      gap: 8px;
+      font-size: 0.8rem;
+
+      //The card-tips styling
+      p {
         box-sizing: border-box;
-        @include flexLayout(column);
-        gap: 2rem;
-        border-bottom: .8px solid hsl(0, 0%, 70%);
-
-        i:not(.far) {
-            color: #135bbf;
-        }
-        .far {
-            color: #e79908;
-        }
-
-        .cards {
-            box-sizing: border-box;
-            @include flexLayout(row);
-            gap: 1rem;
-            height: 8rem;
-            border-radius: .8rem;
-            background: transparent;
-
-            h2 {
-                @include flexLayout(column);
-                @include column(center);
-                @include row(center);
-                max-width: 200px;
-                min-width: 200px;
-                text-align: center;
-                font-size: 1.3rem;
-                font-family: 'itim', cursive;
-                font-weight: 450;
-            }
-        }
-        .card-info {
-            flex: 45%;
-            @include flexLayout(row);
-            @include column(center);
-            gap: 5px;
-            font-size: .9rem;
-            i {
-                font-size: 1rem;
-            }
-        }
-        .card-tips {
-            flex: 25%;
-            @include flexLayout(row);
-            @include column(center);
-            gap: 8px;
-            font-size: .8rem;
-
-            //The card-tips styling
-            p {
-                box-sizing: border-box;
-                @include flexLayout(row);
-                @include column(center);
-                @include row(center);
-                gap: 4px;
-                height: 1rem;
-                padding: .4rem 0;
-                border-radius: 1rem;
-                background: #093777;
-                font-size: .5rem;
-                color: white;
-            }
-            p span{
-                box-sizing: border-box;
-                height: 1rem;
-                width: 1.4rem;
-                padding: .2rem .2rem;
-                border-radius: 1rem;
-                background: #001133;
-                font-size: .5rem;
-                color: hsl(0, 0%, 80%);
-            }
-        }
-    }
-    
-    .section1 {
-        @include flexLayout(column);
-        padding: 1rem;
-        background: transparent;
-
-        .section-head {
-            padding: 1rem 0;
-
-            h3 {
-                font-size: 1.8rem;
-                font-weight: 700;
-            }
-            span {
-                @include flexLayout(row);
-                @include column(center);
-                gap: 4px;
-                
-                .far {
-                    color: #e79908;
-                }
-                p {
-                    font-family: 'itim', cursive;
-                    font-size: 1.1rem;
-                }
-            }
-        }
-        .section-scroll {
-            @include flexLayout(row);
-            gap: 2rem;
-            padding: .7rem;
-            white-space: nowrap;
-            overflow-x: auto;
-        }
-        .section-card {
-            @include gridCenter();
-            min-width: 220px;
-            height: 180px;
-            border-radius: 1rem;
-            background: hsl(0, 0%, 100%);
-
-            i {
-                font-size: 1.3rem;
-                color: #135bbf;
-            }
-            p {
-                font-family: 'itim', cursive;
-            }
-        }
-    }
-    footer {
         @include flexLayout(row);
-        gap: 2rem;
-        padding: 1rem;
-
-        span {
-            @include flexLayout(row);
-            @include column(center);
-            gap: 2rem;
-
-            i{
-                color: #135bbf;
-                font-size: 1.4rem;
-            }
-            i:hover,
-            i:focus {
-                color: #093777;
-            }
-        }
+        @include column(center);
+        @include row(center);
+        gap: 4px;
+        height: 1rem;
+        padding: 0.4rem 0;
+        border-radius: 1rem;
+        background: #093777;
+        font-size: 0.5rem;
+        color: white;
+      }
+      p span {
+        box-sizing: border-box;
+        height: 1rem;
+        width: 1.4rem;
+        padding: 0.2rem 0.2rem;
+        border-radius: 1rem;
+        background: #001133;
+        font-size: 0.5rem;
+        color: hsl(0, 0%, 80%);
+      }
     }
+  }
+
+  .section1 {
+    @include flexLayout(column);
+    padding: 1rem;
+    background: transparent;
+
+    .section-head {
+      padding: 1rem 0;
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      span {
+        @include flexLayout(row);
+        @include column(center);
+        gap: 4px;
+
+        .far {
+          color: #e79908;
+        }
+        p {
+          font-family: "itim", cursive;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .section-scroll {
+      @include flexLayout(row);
+      gap: 2rem;
+      padding: 0.7rem;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    .section-card {
+      @include gridCenter();
+      min-width: 220px;
+      height: 180px;
+      border-radius: 1rem;
+      background: hsl(0, 0%, 100%);
+
+      i {
+        font-size: 1.3rem;
+        color: #135bbf;
+      }
+      p {
+        font-family: "itim", cursive;
+      }
+    }
+  }
+  footer {
+    @include flexLayout(row);
+    gap: 2rem;
+    padding: 1rem;
+
+    span {
+      @include flexLayout(row);
+      @include column(center);
+      gap: 2rem;
+
+      i {
+        color: #135bbf;
+        font-size: 1.4rem;
+      }
+      i:hover,
+      i:focus {
+        color: #093777;
+      }
+    }
+  }
 }
 
 /*Here goes Media query for Laptops and Desktops*/
 @media (min-width: 1021px) {
-    header {
+  header {
+    @include flexLayout(row);
+    @include row(space-between);
+    padding: 0 2rem;
+    background-color: hsl(0, 0%, 98%);
+    /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+
+    .logo-area {
+      @include flexLayout(row);
+      img {
+        width: 4.3rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+      h1 a {
+        color: #135bbf;
+        text-decoration: none;
+      }
+    }
+    .login-area {
+      @include flexLayout(row);
+      @include column(center);
+      gap: 1.5rem;
+
+      .login-area-btn {
+        border: 2px solid #135bbf;
+        border-radius: 0.4rem;
+        padding: 0.2rem 0.4rem;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      .login-area-btn:focus {
+        outline: none;
+        background: #135bbf;
+      }
+      .login-area-btn:focus a {
+        color: hsl(0, 0%, 96%);
+      }
+      .login-area-btn:hover {
+        outline: none;
+        background: #135bbf;
+      }
+      .login-area-btn:hover a {
+        color: hsl(0, 0%, 96%);
+      }
+      //Specifically for the links(Don't tamper!)
+      .login-area-btn a {
+        text-decoration: none;
+        color: #135bbf;
+      }
+      .login-area-btn a:focus {
+        outline: none;
+        background: none;
+        color: none;
+      }
+    }
+  }
+  .main-area {
+    display: flex;
+    flex-flow: row;
+    @include row(center);
+    gap: 2rem;
+    padding: 4rem 2rem;
+
+    .cards {
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      @include flexLayout(column);
+      @include column(center);
+      flex: 30%;
+      gap: 1rem;
+      max-width: 30%;
+      height: 13rem;
+      border-radius: 0.4rem;
+      background: hsl(0, 0%, 96%);
+
+      h2 {
+        color: #093777;
+        font-size: 1.3rem;
+      }
+      span {
+        max-height: 50px;
+      }
+    }
+    .cards:hover {
+      border: 0px solid #135bbf;
+      transition: 0.5s;
+      transform: scale(0.98);
+    }
+    .card1 h2 {
+      text-align: left;
+      white-space: nowrap;
+    }
+    .card-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.4rem;
+
+      i {
+        display: grid;
+        place-items: center;
+        color: #135bbf;
+        font-size: 0.8rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+    .card-tips2 {
+      @include flexLayout(row);
+      gap: 5rem;
+      i {
+        color: #093777;
+        font-size: 1.3rem;
+      }
+    }
+    .card-tips {
+      display: flex;
+      gap: 1.5rem;
+      //The card-tips styling
+      p {
+        box-sizing: border-box;
         @include flexLayout(row);
-        @include row(space-between);
-        padding: 0 2rem;
-        background-color: hsl(0, 0%, 98%);
-        /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-
-        .logo-area {
-            @include flexLayout(row);
-            img {
-                width: 4.3rem;
-                height: 4rem;
-                border-radius: 50%;
-            }
-            h1 a{
-                color: #135bbf;
-                text-decoration: none;
-            }
-        }
-        .login-area {
-            @include flexLayout(row);
-            @include column(center);
-            gap: 1.5rem;
-            
-            .login-area-btn {
-                border: 2px solid #135bbf;
-                border-radius: .4rem;
-                padding: .2rem .4rem;
-                outline: none;
-                background: transparent;
-                cursor: pointer;
-            }
-            .login-area-btn:focus {
-                outline: none;
-                background: #135bbf;
-            }
-            .login-area-btn:focus a{
-                color: hsl(0, 0%, 96%);
-            }
-            .login-area-btn:hover {
-                outline: none;
-                background: #135bbf;
-            }
-            .login-area-btn:hover a{
-                color: hsl(0, 0%, 96%);
-            }
-            //Specifically for the links(Don't tamper!)
-            .login-area-btn a {
-                text-decoration: none;
-                color: #135bbf;
-            }
-            .login-area-btn a:focus {
-                outline: none;
-                background: none;
-                color: none;
-            }
-        }
-    }
-    .main-area {
-        display: flex;
-        flex-flow: row;
+        @include column(center);
         @include row(center);
-        gap: 2rem;
-        padding: 4rem 2rem;
-
-        .cards {
-            box-sizing: border-box;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            @include flexLayout(column);
-            @include column(center);
-            flex: 30%;
-            gap: 1rem;
-            max-width: 30%;
-            height: 13rem;
-            border-radius: .4rem;
-            background: hsl(0, 0%, 96%);
-
-            h2 {
-                color: #093777;
-                font-size: 1.3rem;
-            }
-            span {
-                max-height: 50px;
-            }
-        }
-        .cards:hover {
-            border: 0px solid #135bbf;
-            transition: .5s;
-            transform: scale(.98);
-        }
-        .card1 h2 {
-            text-align: left;
-            white-space: nowrap;
-        }
-        .card-info {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: .4rem;
-
-            i {
-                display: grid;
-                place-items: center;
-                color: #135bbf;
-                font-size: .8rem;
-            }
-            p{ font-size: .7rem;}
-        }
-        .card-tips2 {
-            @include flexLayout(row);
-            gap: 5rem;
-            i{
-                color: #093777;
-                font-size: 1.3rem;
-            }
-        }
-        .card-tips {
-            display: flex;
-            gap: 1.5rem;
-            //The card-tips styling
-            p {
-                box-sizing: border-box;
-                @include flexLayout(row);
-                @include column(center);
-                @include row(center);
-                gap: 4px;
-                height: 1rem;
-                padding-left: 3px;
-                padding-top: .1rem;
-                border-radius: 1rem;
-                background: #093777;
-                font-size: .5rem;
-                color: white;
-            }
-            p span{
-                box-sizing: border-box;
-                height: 1rem;
-                width: 1.4rem;
-                padding: .25rem;
-                margin-bottom: .1rem;
-                border-radius: 1rem;
-                background: #001133;
-                font-size: .5rem;
-                color: hsl(0, 0%, 80%);
-            }
-            
-        }
+        gap: 4px;
+        height: 1rem;
+        padding-left: 3px;
+        padding-top: 0.1rem;
+        border-radius: 1rem;
+        background: #093777;
+        font-size: 0.5rem;
+        color: white;
+      }
+      p span {
+        box-sizing: border-box;
+        height: 1rem;
+        width: 1.4rem;
+        padding: 0.25rem;
+        margin-bottom: 0.1rem;
+        border-radius: 1rem;
+        background: #001133;
+        font-size: 0.5rem;
+        color: hsl(0, 0%, 80%);
+      }
     }
-    .section1 {
-        display: flex;
-        flex-flow: column;
+  }
+  .section1 {
+    display: flex;
+    flex-flow: column;
 
-        .section-head {
-            @include flexLayout(column);
-            padding: 0 6rem;
-            background: hsl(0, 0%, 94%);
-            line-height: .7;
-            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            
-            h3 {
-                color: #135bbf;
-                
-            }
-            span {
-                @include flexLayout(row);
-                @include column(center);
-                gap: .1rem;
-                text-align: center;
-                
-                i {
-                    @include flexLayout(row);
-                    @include column(center);
-                    height: auto;
-                    font-size: .8rem;
-                    color: #e79908;
-                }
-                p {
-                    font-family: 'itim', cursive;
-                    font-size: .8rem;
-                }
-            }
+    .section-head {
+      @include flexLayout(column);
+      padding: 0 6rem;
+      background: hsl(0, 0%, 94%);
+      line-height: 0.7;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      h3 {
+        color: #135bbf;
+      }
+      span {
+        @include flexLayout(row);
+        @include column(center);
+        gap: 0.1rem;
+        text-align: center;
+
+        i {
+          @include flexLayout(row);
+          @include column(center);
+          height: auto;
+          font-size: 0.8rem;
+          color: #e79908;
         }
-        .section-scroll {
-            @include flexLayout(row);
-            gap: 1rem;
-            padding: 2rem 1rem;
-            border-bottom: 1px solid hsl(0, 0%, 60%);
-            background: hsl(0, 0%, 70%);
-
-            .section-card {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                @include gridCenter();
-                flex: 20%;
-                padding-top: .5rem;
-                border-radius: .3rem;
-                background: hsl(0, 0%, 90%);
-
-                h4 {
-                    font-size: 1rem;
-                    color: #093777;  
-                }
-                i {
-                    color: #135bbf;
-                }
-                p {
-                    font-family: 'itim', cursive;
-                    color: hsl(0, 0%, 10%);
-                }
-            }
-            .section-card:hover {
-                transition: .5s;
-                transform: scale(.98);
-            }
-        }
-    }
-    .section2 {
-        @include flexLayout(column);
-        .main-area {
-            @include flexLayout(row);
-            gap: 5rem;
-        }
-    }
-    footer {
-        display: flex;
-        flex-direction: row;
-        padding: .8rem 2rem;
-        border-top: 1px solid hsl(0, 0%, 80%);
-        gap: 2rem;
-
         p {
-            font-family: 'itim', cursive;
+          font-family: "itim", cursive;
+          font-size: 0.8rem;
         }
-
-        span {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-            color: #135bbf;
-        }
+      }
     }
+    .section-scroll {
+      @include flexLayout(row);
+      gap: 1rem;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid hsl(0, 0%, 60%);
+      background: hsl(0, 0%, 70%);
+
+      .section-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        @include gridCenter();
+        flex: 20%;
+        padding-top: 0.5rem;
+        border-radius: 0.3rem;
+        background: hsl(0, 0%, 90%);
+
+        h4 {
+          font-size: 1rem;
+          color: #093777;
+        }
+        i {
+          color: #135bbf;
+        }
+        p {
+          font-family: "itim", cursive;
+          color: hsl(0, 0%, 10%);
+        }
+      }
+      .section-card:hover {
+        transition: 0.5s;
+        transform: scale(0.98);
+      }
+    }
+  }
+  .section2 {
+    @include flexLayout(column);
+    .main-area {
+      @include flexLayout(row);
+      gap: 5rem;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem 2rem;
+    border-top: 1px solid hsl(0, 0%, 80%);
+    gap: 2rem;
+
+    p {
+      font-family: "itim", cursive;
+    }
+
+    span {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      color: #135bbf;
+    }
+  }
 }
