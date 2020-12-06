@@ -18,10 +18,51 @@
 
 /*Here goes the Media query for Smartphones*/
 @media (max-width: 500px) {
+  header {
+    @include flexLayout(row);
+    @include row(space-between);
+    padding: .3rem;
+    background: hsl(0, 0%, 98%);
+
+    .logo-area {
+        @include flexLayout(row);
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 25rem;
+        }
+        h1 {
+            font-size: 1.19rem;
+            a {
+                color: #135bbf;
+                text-decoration: none;
+            }
+        }
+    }
+    .login-area {
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+        position: absolute;
+        top: 4.5rem;
+        left: 1rem;
+        width: 90%;
+        height: 9rem;
+        padding: 2rem 0;
+        border-radius: .36rem;
+        background: hsl(0, 11%, 96%);
+        
+        .login-area-btn {
+            background: none;
+            border: none;
+        }
+    }
+  }
+
   main {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    @include flexLayout(column);
+    padding: .8rem 0;
   }
   .main-area {
     display: flex;

@@ -16,6 +16,61 @@ body {
 
 /*Here goes the Media query for Smartphones*/
 @media (max-width: 500px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: .3rem;
+    background: #fafafa;
+  }
+  header .logo-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+  header .logo-area img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 25rem;
+  }
+  header .logo-area h1 {
+    font-size: 1.19rem;
+  }
+  header .logo-area h1 a {
+    color: #135bbf;
+    text-decoration: none;
+  }
+  header .login-area {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 1rem;
+    width: 90%;
+    height: 9rem;
+    padding: 2rem 0;
+    border-radius: .36rem;
+    background: #f6f4f4;
+  }
+  header .login-area .login-area-btn {
+    background: none;
+    border: none;
+  }
   main {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -24,8 +79,9 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: .8rem 0;
   }
   .main-area {
     display: -webkit-box;
