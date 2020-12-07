@@ -21,48 +21,48 @@
   header {
     @include flexLayout(row);
     @include row(space-between);
-    padding: .3rem;
+    padding: 0.3rem;
     background: hsl(0, 0%, 98%);
 
     .logo-area {
-        @include flexLayout(row);
-        img {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 25rem;
+      @include flexLayout(row);
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 25rem;
+      }
+      h1 {
+        font-size: 1.19rem;
+        a {
+          color: #135bbf;
+          text-decoration: none;
         }
-        h1 {
-            font-size: 1.19rem;
-            a {
-                color: #135bbf;
-                text-decoration: none;
-            }
-        }
+      }
     }
     .login-area {
-        display: none;
-        flex-direction: column;
-        gap: 2rem;
-        position: absolute;
-        top: 4.5rem;
-        left: 1rem;
-        width: 90%;
-        height: 9rem;
-        padding: 2rem 0;
-        border-radius: .36rem;
-        background: hsl(0, 11%, 96%);
-        
-        .login-area-btn {
-            background: none;
-            border: none;
-        }
+      display: none;
+      flex-direction: column;
+      gap: 2rem;
+      position: absolute;
+      top: 4.5rem;
+      left: 1rem;
+      width: 90%;
+      height: 9rem;
+      padding: 2rem 0;
+      border-radius: 0.36rem;
+      background: hsl(0, 11%, 96%);
+
+      .login-area-btn {
+        background: none;
+        border: none;
+      }
     }
   }
 
   main {
     box-sizing: border-box;
     @include flexLayout(column);
-    padding: .8rem 0;
+    padding: 0.8rem 0;
   }
   .main-area {
     display: flex;
@@ -267,16 +267,54 @@
     background-color: hsl(0, 0%, 98%);
 
     .logo-area {
+      @include flexLayout(row);
       img {
         width: 4.3rem;
         height: 4rem;
         border-radius: 50%;
+      }
+      h1 a {
+        font-size: 1.3rem;
+        color: #135bbf;
+        text-decoration: none;
       }
     }
     .login-area {
       @include flexLayout(row);
       @include column(center);
       gap: 1.5rem;
+      .login-area-btn {
+        border: 2px solid #135bbf;
+        border-radius: 0.4rem;
+        padding: 0.2rem 0.4rem;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      .login-area-btn:focus {
+        outline: none;
+        background: #135bbf;
+      }
+      .login-area-btn:focus a {
+        color: hsl(0, 0%, 96%);
+      }
+      .login-area-btn:hover {
+        outline: none;
+        background: #135bbf;
+      }
+      .login-area-btn:hover a {
+        color: hsl(0, 0%, 96%);
+      }
+      //Specifically for the links(Don't tamper!)
+      .login-area-btn a {
+        text-decoration: none;
+        color: #135bbf;
+      }
+      .login-area-btn a:focus {
+        outline: none;
+        background: none;
+        color: none;
+      }
     }
   }
   main {
@@ -322,12 +360,13 @@
         border-right: 1px dotted hsl(0, 0%, 20%);
       }
     }
-    
+
     .card-info {
       flex: 40%;
       @include flexLayout(row);
       @include column(center);
       gap: 5px;
+      border-right: 1px dotted hsl(0, 0%, 20%);
       font-size: 0.9rem;
 
       i {
@@ -373,7 +412,7 @@
       @include flexLayout(row);
       @include column(center);
       flex: 25%;
-      gap: 2rem;
+      gap: 3.5rem;
       padding: 0 1rem;
       i {
         font-size: 1.4rem;
@@ -384,14 +423,15 @@
   .section1 {
     @include flexLayout(column);
     padding: 1rem;
-    background: transparent;
+    background: hsl(0, 0%, 96%);
 
     .section-head {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
 
       h3 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 700;
+        color: #135bbf;
       }
       span {
         @include flexLayout(row);
@@ -404,6 +444,7 @@
         p {
           font-family: "itim", cursive;
           font-size: 1.1rem;
+          color: hsl(0, 0%, 20%);
         }
       }
     }
@@ -416,10 +457,13 @@
     }
     .section-card {
       @include gridCenter();
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
       min-width: 220px;
       height: 180px;
       border-radius: 1rem;
       background: hsl(0, 0%, 100%);
+      transition: .5s;
 
       i {
         font-size: 1.3rem;
@@ -429,11 +473,21 @@
         font-family: "itim", cursive;
       }
     }
+    .section-card:hover {
+      border: 1px solid hsla(216, 26%, 42%, 0.568);
+      transform: scale(.99);
+    }
+  }
+  .section2 {
+    margin-top: 1rem;
+    padding: 2rem;
   }
   footer {
     @include flexLayout(row);
     gap: 2rem;
-    padding: 1rem;
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+    background: hsl(0, 0%, 97%);
 
     span {
       @include flexLayout(row);
@@ -569,7 +623,7 @@
       @include flexLayout(row);
       gap: 5rem;
       i {
-        color: #093777;
+        color: #135bbf;
         font-size: 1.3rem;
       }
     }

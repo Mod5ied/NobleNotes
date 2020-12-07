@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -25,7 +27,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: .3rem;
+    padding: 0.3rem;
     background: #fafafa;
   }
   header .logo-area {
@@ -62,7 +64,7 @@ body {
     width: 90%;
     height: 9rem;
     padding: 2rem 0;
-    border-radius: .36rem;
+    border-radius: 0.36rem;
     background: #f6f4f4;
   }
   header .login-area .login-area-btn {
@@ -79,7 +81,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
   }
   .main-area {
     display: -webkit-box;
@@ -370,10 +372,24 @@ body {
     padding: 0 2rem;
     background-color: #fafafa;
   }
+  header .logo-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
   header .logo-area img {
     width: 4.3rem;
     height: 4rem;
     border-radius: 50%;
+  }
+  header .logo-area h1 a {
+    font-size: 1.3rem;
+    color: #135bbf;
+    text-decoration: none;
   }
   header .login-area {
     display: -webkit-box;
@@ -387,6 +403,37 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 1.5rem;
+  }
+  header .login-area .login-area-btn {
+    border: 2px solid #135bbf;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.4rem;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  header .login-area .login-area-btn:focus {
+    outline: none;
+    background: #135bbf;
+  }
+  header .login-area .login-area-btn:focus a {
+    color: whitesmoke;
+  }
+  header .login-area .login-area-btn:hover {
+    outline: none;
+    background: #135bbf;
+  }
+  header .login-area .login-area-btn:hover a {
+    color: whitesmoke;
+  }
+  header .login-area .login-area-btn a {
+    text-decoration: none;
+    color: #135bbf;
+  }
+  header .login-area .login-area-btn a:focus {
+    outline: none;
+    background: none;
+    color: none;
   }
   main {
     display: -webkit-box;
@@ -474,6 +521,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 5px;
+    border-right: 1px dotted #333333;
     font-size: 0.9rem;
   }
   .main-area .card-info i {
@@ -548,7 +596,7 @@ body {
     -webkit-box-flex: 25%;
         -ms-flex: 25%;
             flex: 25%;
-    gap: 2rem;
+    gap: 3.5rem;
     padding: 0 1rem;
   }
   .main-area .card-tips2 i {
@@ -563,14 +611,15 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 1rem;
-    background: transparent;
+    background: whitesmoke;
   }
   .section1 .section-head {
-    padding: 1rem 0;
+    padding: 1rem 2rem;
   }
   .section1 .section-head h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
+    color: #135bbf;
   }
   .section1 .section-head span {
     display: -webkit-box;
@@ -591,6 +640,7 @@ body {
   .section1 .section-head span p {
     font-family: "itim", cursive;
     font-size: 1.1rem;
+    color: #333333;
   }
   .section1 .section-scroll {
     display: -webkit-box;
@@ -609,10 +659,14 @@ body {
     display: -ms-grid;
     display: grid;
     place-items: center;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-width: 220px;
     height: 180px;
     border-radius: 1rem;
     background: white;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   .section1 .section-card i {
     font-size: 1.3rem;
@@ -620,6 +674,15 @@ body {
   }
   .section1 .section-card p {
     font-family: "itim", cursive;
+  }
+  .section1 .section-card:hover {
+    border: 1px solid rgba(79, 102, 135, 0.568);
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+  }
+  .section2 {
+    margin-top: 1rem;
+    padding: 2rem;
   }
   footer {
     display: -webkit-box;
@@ -630,7 +693,9 @@ body {
         -ms-flex-flow: row;
             flex-flow: row;
     gap: 2rem;
-    padding: 1rem;
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+    background: #f7f7f7;
   }
   footer span {
     display: -webkit-box;
@@ -824,7 +889,7 @@ body {
     gap: 5rem;
   }
   .main-area .card-tips2 i {
-    color: #093777;
+    color: #135bbf;
     font-size: 1.3rem;
   }
   .main-area .card-tips {
