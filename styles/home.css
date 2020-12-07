@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  -webkit-box-ordinal-group: 2 !important;
-      -ms-flex-order: 1px solid red !important;
-          order: 1px solid red !important;
+  border: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -411,7 +409,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     gap: 2rem;
-    border-bottom: 0.8px solid #b3b3b3;
+    /*border-bottom: 0.8px solid hsl(0, 0%, 70%);*/
   }
   .main-area i:not(.far) {
     color: #135bbf;
@@ -419,9 +417,14 @@ body {
   .main-area .far {
     color: #e79908;
   }
+  .main-area .cards:hover {
+    border: 1px solid rgba(82, 101, 128, 0.555);
+  }
   .main-area .cards {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -432,7 +435,7 @@ body {
     gap: 1rem;
     height: 8rem;
     border-radius: 0.8rem;
-    background: transparent;
+    background: #f2f2f2;
   }
   .main-area .cards h2 {
     display: -webkit-box;
@@ -454,11 +457,12 @@ body {
     font-size: 1.3rem;
     font-family: "itim", cursive;
     font-weight: 450;
+    border-right: 1px dotted #333333;
   }
   .main-area .card-info {
-    -webkit-box-flex: 45%;
-        -ms-flex: 45%;
-            flex: 45%;
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -474,6 +478,9 @@ body {
   }
   .main-area .card-info i {
     font-size: 1rem;
+  }
+  .main-area .card-info p {
+    word-wrap: normal;
   }
   .main-area .card-tips {
     -webkit-box-flex: 25%;
@@ -526,6 +533,26 @@ body {
     background: #001133;
     font-size: 0.5rem;
     color: #cccccc;
+  }
+  .main-area .card-tips2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .main-area .card-tips2 i {
+    font-size: 1.4rem;
   }
   .section1 {
     display: -webkit-box;

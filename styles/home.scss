@@ -287,7 +287,7 @@
     box-sizing: border-box;
     @include flexLayout(column);
     gap: 2rem;
-    border-bottom: 0.8px solid hsl(0, 0%, 70%);
+    /*border-bottom: 0.8px solid hsl(0, 0%, 70%);*/
 
     i:not(.far) {
       color: #135bbf;
@@ -295,14 +295,19 @@
     .far {
       color: #e79908;
     }
-
+    //styling for the cards
+    .cards:hover {
+      border: 1px solid hsla(215, 22%, 41%, 0.555);
+    }
     .cards {
       box-sizing: border-box;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
       @include flexLayout(row);
       gap: 1rem;
       height: 8rem;
       border-radius: 0.8rem;
-      background: transparent;
+      background: hsl(0, 0%, 95%);
 
       h2 {
         @include flexLayout(column);
@@ -314,16 +319,22 @@
         font-size: 1.3rem;
         font-family: "itim", cursive;
         font-weight: 450;
+        border-right: 1px dotted hsl(0, 0%, 20%);
       }
     }
+    
     .card-info {
-      flex: 45%;
+      flex: 40%;
       @include flexLayout(row);
       @include column(center);
       gap: 5px;
       font-size: 0.9rem;
+
       i {
         font-size: 1rem;
+      }
+      p {
+        word-wrap: normal;
       }
     }
     .card-tips {
@@ -356,6 +367,16 @@
         background: #001133;
         font-size: 0.5rem;
         color: hsl(0, 0%, 80%);
+      }
+    }
+    .card-tips2 {
+      @include flexLayout(row);
+      @include column(center);
+      flex: 25%;
+      gap: 2rem;
+      padding: 0 1rem;
+      i {
+        font-size: 1.4rem;
       }
     }
   }

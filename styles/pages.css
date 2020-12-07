@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  -webkit-box-ordinal-group: 2 !important;
-      -ms-flex-order: 1px solid red !important;
-          order: 1px solid red !important;
+  border: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
