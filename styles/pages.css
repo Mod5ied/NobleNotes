@@ -69,17 +69,24 @@ body {
     margin-left: 8rem;
     padding: 0.3rem;
     border: none;
-    border-radius: 0.39rem;
+    border-radius: 0.2rem;
     background: rgba(217, 217, 217, 0.822);
-    color: #092c6d;
+    color: #08255a;
     font-weight: 600;
     font-family: "itim", sans-serif;
     -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
             box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
+  .header .active-head .home-btn i.fas {
+    width: 1.5rem;
+  }
+  .header .active-head .home-btn i:focus,
+  .header .active-head .home-btn :hover {
+    background: none;
+  }
   .header .active-head .home-btn:focus,
   .header .active-head :hover {
-    background: #053896;
+    background: rgba(33, 86, 145, 0.726);
     color: #d9d9d9;
     outline: 1px solid transparent;
   }
@@ -163,23 +170,25 @@ body {
   }
   .section .section-note .section-btn #toggle,
   .section .section-note .section-btn #toggle2 {
-    padding: 0.3rem;
-    border: 2px solid #053896;
+    padding: 0.4rem;
+    border: 2px solid rgba(33, 86, 145, 0.726);
     border-radius: 0.4rem;
     background: rgba(217, 217, 217, 0.842);
     color: #092c6d;
     font-weight: 600;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
   }
   .section .section-note .section-btn #toggle:focus,
   .section .section-note .section-btn #toggle2:focus {
-    padding: 0.3rem;
-    background: #053896;
+    padding: 0.55rem;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(33, 86, 145, 0.726)), to(rgba(121, 9, 144, 0.918)));
+    background: linear-gradient(to left, rgba(33, 86, 145, 0.726), rgba(121, 9, 144, 0.918));
     color: #d9d9d9;
     font-weight: 400;
     outline: none;
+    border: none;
     border-radius: 0.4rem;
   }
   .section #content,
@@ -249,6 +258,7 @@ body {
     padding: 0.4rem 1rem;
     border-bottom: 2.5px solid #053896;
     border-radius: 0.29rem;
+    position: relative;
     background-color: #cccccc;
   }
   .section-scroll .card .note-title {
@@ -289,19 +299,20 @@ body {
   }
   .section-scroll .card .card-tips span button {
     padding: 0.3rem;
-    border: .8px solid #053896;
+    border: 0.8px solid rgba(33, 86, 145, 0.726);
     border-radius: 0.39rem;
     background: rgba(217, 217, 217, 0.842);
     color: #092c6d;
     font-size: 0.8rem;
     font-weight: 600;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 30px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 30px 1.7px rgba(18, 55, 189, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
   }
   .section-scroll .card .card-tips span button:focus,
   .section-scroll .card .card-tips span :hover {
-    background: #053896;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(27, 71, 121, 0.726)), to(rgba(9, 144, 70, 0.918)));
+    background: linear-gradient(to left, rgba(27, 71, 121, 0.726), rgba(9, 144, 70, 0.918));
     color: #d9d9d9;
     font-weight: 300;
     outline: none;
@@ -748,9 +759,10 @@ body {
     height: 35%;
     border-bottom: 3px solid rgba(5, 56, 150, 0.74);
     border-radius: 0.23rem;
+    position: relative;
     background-color: #e3e3e3;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
+    /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        80 3px 4px 0 rgba(1, 10, 39, 0.19);*/
   }
   .section .card .note-title {
     height: 10rem;
@@ -781,20 +793,38 @@ body {
   }
   .section .card .card-tips span button {
     padding: 0.2rem;
-    border: 2px solid #053896;
+    border: transparent;
     border-radius: 0.39rem;
-    background: rgba(217, 217, 217, 0.726);
-    color: #4d4d4d;
+    background: rgba(33, 86, 145, 0.726);
+    color: #1a1a1a;
     font-weight: 400;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+    -webkit-box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
   }
-  .section .card .card-tips span button:focus,
-  .section .card .card-tips span :hover {
+  .section .card .card-tips span button:focus {
     outline: none;
     background: #053896;
     color: #d9d9d9;
+    font-weight: 100;
+  }
+  .section .card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    -webkit-box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.3);
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+  }
+  .section .card:hover::after {
+    opacity: 1;
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
   }
   .footer {
     display: -webkit-box;

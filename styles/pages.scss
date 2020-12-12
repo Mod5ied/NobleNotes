@@ -49,17 +49,25 @@
         margin-left: 8rem;
         padding: 0.3rem;
         border: none;
-        border-radius: 0.39rem;
+        border-radius: 0.2rem;
         background: hsla(0, 0%, 85%, 0.822);
-        color: #092c6d;
+        color: #08255a;
         font-weight: 600;
         font-family: "itim", sans-serif;
         box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
           0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+
+        i.fas {
+          width: 1.5rem;
+        }
+        i:focus,
+        :hover {
+          background: none;
+        }
       }
       .home-btn:focus,
       :hover {
-        background: #053896;
+        background: hsla(212, 63%, 35%, 0.726);
         color: hsl(0, 0%, 85%);
         outline: 1px solid transparent;
       }
@@ -126,23 +134,27 @@
 
         #toggle,
         #toggle2 {
-          padding: 0.3rem;
-          border: 2px solid #053896;
+          padding: 0.4rem;
+          border: 2px solid hsla(212, 63%, 35%, 0.726);
           border-radius: 0.4rem;
           background: hsla(0, 0%, 85%, 0.842);
           color: #092c6d;
           font-weight: 600;
           font-family: "itim", sans-serif;
-          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-            0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2); //
         }
         #toggle:focus,
         #toggle2:focus {
-          padding: 0.3rem;
-          background: #053896;
+          padding: 0.55rem;
+          background: linear-gradient(
+            to left,
+            hsla(212, 63%, 35%, 0.726),
+            hsla(290, 88%, 30%, 0.918)
+          );
           color: hsl(0, 0%, 85%);
           font-weight: 400;
           outline: none;
+          border: none;
           border-radius: 0.4rem;
         }
       }
@@ -187,6 +199,7 @@
       padding: 0.4rem 1rem;
       border-bottom: 2.5px solid #053896;
       border-radius: 0.29rem;
+      position: relative;
       background-color: hsl(0, 0%, 80%);
 
       .note-title {
@@ -207,21 +220,25 @@
           @include flexLayout(column);
           @include col(center);
           @include row(center);
+
           button {
             padding: 0.3rem;
-            border: .8px solid #053896;
+            border: 0.8px solid hsla(212, 63%, 35%, 0.726);
             border-radius: 0.39rem;
             background: hsla(0, 0%, 85%, 0.842);
             color: #092c6d;
             font-size: 0.8rem;
             font-weight: 600;
             font-family: "itim", sans-serif;
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-              0 6px 30px 1.7px rgba(18, 55, 189, 0.19);
+            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
           }
           button:focus,
           :hover {
-            background: #053896;
+            background: linear-gradient(
+              to left,
+              hsla(212, 64%, 29%, 0.726),
+              hsla(147, 88%, 30%, 0.918)
+            );
             color: hsl(0, 0%, 85%);
             font-weight: 300;
             outline: none;
@@ -562,9 +579,10 @@
       height: 35%;
       border-bottom: 3px solid rgba(5, 56, 150, 0.74);
       border-radius: 0.23rem;
+      position: relative;
       background-color: hsl(0, 0%, 89%);
-      box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);
+      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
+        80 3px 4px 0 rgba(1, 10, 39, 0.19);*/
 
       .note-title {
         height: 10rem;
@@ -585,23 +603,37 @@
 
           button {
             padding: 0.2rem;
-            border: 2px solid #053896;
+            border: transparent;
             border-radius: 0.39rem;
-            background: hsla(0, 0%, 85%, 0.726);
-            color: hsl(0, 0%, 30%);
+            background: hsla(212, 63%, 35%, 0.726);
+            color: hsl(0, 0%, 10%);
             font-weight: 400;
             font-family: "itim", sans-serif;
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-              0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+            box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
           }
-          button:focus,
-          :hover {
+          button:focus {
             outline: none;
             background: #053896;
             color: hsl(0, 0%, 85%);
+            font-weight: 100;
           }
         }
       }
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.1;
+      box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.3);
+      transition: opacity 1s ease;
+    }
+    .card:hover::after {
+      opacity: 1;
+      transform: scale(0.98);
     }
   }
   .footer {
