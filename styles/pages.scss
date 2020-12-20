@@ -491,7 +491,11 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 1rem;
-    background: hsl(0, 0%, 94%);
+    background: linear-gradient(
+      to left,
+      hsla(212, 64%, 12%, 0.877),
+      hsla(229, 78%, 34%, 0.747)
+    );
 
     .active-head {
       @include flexLayout(row);
@@ -508,7 +512,7 @@
       }
       h1 {
         font-size: 0.8rem;
-        color: #053896;
+        color: hsl(0, 0%, 90%);
       }
       .home-btn {
         display: none;
@@ -518,25 +522,22 @@
       @include flexLayout(row);
       @include col(center);
       margin-right: 10%;
-      gap: 1.5rem;
+      gap: 2.5rem;
 
       .links {
         background: transparent;
         font-family: "itim", sans-serif;
         font-size: 0.78rem;
         font-weight: 480;
-        color: #053896;
+        color: hsl(0, 0%, 90%);
         text-decoration: none;
       }
       .links:hover {
-        color: hsl(0, 0%, 40%);
+        color: hsl(0, 0%, 50%);
       }
       .links:focus {
         outline: none;
-        border: 1.8px solid #053896;
-        border-radius: 0.3rem;
-        background: hsl(0, 0%, 90%);
-        color: #053896;
+        color: hsl(0, 0%, 45%);
       }
       .home {
         display: none;
@@ -545,11 +546,15 @@
     #newUser {
       @include gridLayout();
       place-items: center;
-      margin-right: 2rem;
+      margin-right: 2.5rem;
 
+      a:hover i,
+      a:focus i {
+        color: #063ea7b2;
+      }
       i {
         font-size: 1.5rem;
-        color: #053896;
+        color: #0744b4;
       }
     }
   }
@@ -558,22 +563,24 @@
     @include flexLayout(row);
     gap: 2rem;
     padding: 1rem;
-    border-bottom: 1px solid hsla(0, 0%, 25%, 0.616);
-    background: hsl(0, 0%, 88%);
+    border-bottom: 1px solid hsla(224, 95%, 8%, 0.616);
+    background: hsl(229, 85%, 3%);
 
     .section-note {
       width: 20%;
       height: 30rem;
       padding-top: rem;
-      border: 1px solid hsl(0, 0%, 80%);
-      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19); */
+      border: 1px solid hsl(229, 85%, 3%);
       border-radius: 0.2rem;
-      background: hsl(0, 0%, 75%);
+      background: linear-gradient(
+        to left,
+        hsla(212, 77%, 26%, 0.555),
+        hsla(211, 76%, 13%, 0.555)
+      );
       text-align: center;
 
       h2 {
-        color: hsl(0, 0%, 30%);
+        color: hsl(0, 0%, 55%);
       }
       .section-btn {
         display: none;
@@ -587,11 +594,13 @@
       height: 30rem;
       margin: 0 auto;
       padding: 1.5rem;
-      border: 1px solid hsl(0, 0%, 75%);
-      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
-      border-radius: 0.1rem;
-      background: hsl(0, 0%, 78%);
+      border: 1px solid hsl(229, 85%, 3%);
+      border-radius: 0.2rem;
+      background: linear-gradient(
+        to left,
+        hsla(212, 77%, 26%, 0.555),
+        hsla(211, 76%, 13%, 0.555)
+      );
       list-style-type: none;
       overflow: auto;
     }
@@ -603,9 +612,8 @@
       border-bottom: 3px solid rgba(5, 56, 150, 0.74);
       border-radius: 0.23rem;
       position: relative;
-      background-color: hsl(0, 0%, 89%);
-      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        80 3px 4px 0 rgba(1, 10, 39, 0.19);*/
+      background-color: hsl(0, 0%, 80%);
+      opacity: 0.8;
 
       .note-title {
         height: 10rem;
@@ -630,20 +638,25 @@
             border-radius: 0.39rem;
             background: hsla(212, 63%, 35%, 0.726);
             color: hsl(0, 0%, 10%);
-            font-weight: 400;
+            font-weight: 300;
             font-family: "itim", sans-serif;
             box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
           }
-          button:focus {
+          button:focus,
+          button:hover {
             outline: none;
-            background: #053896;
+            background: linear-gradient(
+              to left,
+              hsla(212, 64%, 29%, 0.726),
+              hsla(147, 88%, 30%, 0.918)
+            );
             color: hsl(0, 0%, 85%);
             font-weight: 100;
           }
         }
       }
     }
-    .card::after {
+    /*.card::after {
       content: "";
       position: absolute;
       top: 0;
@@ -651,39 +664,41 @@
       right: 0;
       bottom: 0;
       opacity: 0.1;
+      transition: all 1s ease;
       box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.3);
-      transition: opacity 1s ease;
     }
     .card:hover::after {
       opacity: 1;
-      transform: scale(0.98);
-    }
+      transform: scale(0.99);
+    }*/
   }
   .footer {
     @include flexLayout(row-reverse);
     @include col(center);
     gap: 5rem;
     padding: 0.5rem 4rem;
-    background: hsl(0, 0%, 85%);
+    background: hsla(222, 92%, 5%, 0.904);
 
     .social-icons {
       @include flexLayout(row);
       gap: 3rem;
-      color: #053896;
+      color: #073fa7;
       font-size: 1.4rem;
+    }
+    .fab:hover {
+      opacity: 0.8;
     }
     p {
       font-size: 0.78rem;
-      color: #053896;
+      color: #073fa8;
     }
     .foot-link {
       font-size: 0.78rem;
-      color: #053896;
+      color: #073ea5;
       text-decoration: none;
     }
     .foot-link:hover {
       color: hsl(0, 0%, 30%);
-      border-bottom: 2px solid #053896;
     }
   }
 }
