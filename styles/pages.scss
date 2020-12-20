@@ -22,6 +22,11 @@
     @include flexLayout(column);
     padding: 0.2rem 0.5rem;
     background: hsl(0, 0%, 82%);
+    background: linear-gradient(
+      to left,
+      hsla(212, 64%, 12%, 0.877),
+      hsla(229, 78%, 34%, 0.747)
+    );
 
     .active-head {
       @include flexLayout(row);
@@ -42,7 +47,7 @@
       h1 {
         order: 1;
         font-size: 1rem;
-        color: #053896;
+        color: hsl(0, 0%, 80%);
       }
       .home-btn {
         order: 3;
@@ -59,6 +64,9 @@
 
         i.fas {
           width: 1.5rem;
+          color: #08255a;
+          font-size: 1rem;
+          font-weight: 700;
         }
         i:focus,
         :hover {
@@ -66,7 +74,7 @@
         }
       }
       .home-btn:focus,
-      :hover {
+      .home-btn:hover {
         background: hsla(212, 63%, 35%, 0.726);
         color: hsl(0, 0%, 85%);
         outline: 1px solid transparent;
@@ -84,36 +92,46 @@
       width: 93%;
       height: 18rem;
       margin-bottom: 0.8rem;
+      border-radius: 0.2rem;
       border-radius: 0.4rem;
-      background: hsl(0, 0%, 82%);
+      background: #cccccc;
+      box-shadow: 0 0.3rem 0.5rem 0 rgba(0, 0, 0, 0.3);
       position: absolute;
       top: 4rem;
       left: 0.8rem;
-      border-radius: 0.2rem;
       z-index: 2;
 
-      button {
+      a.links {
         width: 100%;
         height: 2.5rem;
-        border: none;
+        padding: 0.7rem;
         background: transparent;
-        color: hsl(0, 0%, 0%);
+        color: #08255a;
+        font-size: 0.8rem;
+        text-align: center;
+        text-decoration: none;
       }
-      button:focus,
-      :hover {
+      a.links:hover,
+      a.links:focus {
         outline: none;
-        background: #020a3bce;
+        background: linear-gradient(
+          to left,
+          hsla(212, 64%, 12%, 0.877),
+          hsla(229, 78%, 34%, 0.747)
+        );
         color: hsl(0, 0%, 90%);
       }
 
       .home a {
+        padding: 0 6rem;
         text-decoration: none;
-        color: hsl(0, 0%, 10%);
+        color: #08255a;
       }
       .home a:focus,
-      :active,
-      :visited {
-        color: hsl(0, 0%, 90%);
+      .home a:active,
+      .home a:visited {
+        outline: transparent;
+        background: #08255a54;
       }
     }
     #newUser {
@@ -122,13 +140,13 @@
   }
   .section {
     @include flexLayout(column);
-    background: hsl(0, 0%, 75%);
+    background: hsl(229, 85%, 3%);
 
     .section-note {
       @include flexLayout(column);
       padding: 1rem;
       h2 {
-        color: hsl(0, 0%, 10%);
+        color: #053896;
       }
       .section-btn {
         @include flexLayout(row);
@@ -177,6 +195,7 @@
       }
     }
   }
+
   /* This is styling for the scrollable section and cards*/
   .section-scroll {
     @include flexLayout(column);
@@ -190,6 +209,11 @@
     border-radius: 0.25rem;
     list-style-type: none;
     background: hsl(0, 0%, 60%);
+    background: linear-gradient(
+      to left,
+      hsla(212, 77%, 26%, 0.555),
+      hsla(211, 76%, 13%, 0.555)
+    );
     overflow: auto;
 
     .card {
@@ -198,11 +222,12 @@
       width: 100%;
       height: 13rem;
       padding: 0.4rem 1rem;
-      border-bottom: 2.5px solid #053896;
+      border-bottom: 3px solid #053896;
       border-radius: 0.29rem;
       position: relative;
       background-color: hsl(0, 0%, 80%);
-      z-index: 0 ;
+      opacity: 0.8;
+      z-index: 0;
 
       .note-title {
         height: 90px;
@@ -252,7 +277,7 @@
   }
   .footer {
     padding: 1rem 2rem;
-    background: hsl(0, 0%, 79%);
+    background: linear-gradient(left top, hsl(229, 85%, 3%), hsl(228, 86%, 5%));
     font-size: 0.8rem;
     p {
       color: #053896;
@@ -269,7 +294,7 @@
       @include flexLayout(row);
       gap: 2rem;
       font-size: 1.6rem;
-      color: #092c6d;
+      color: #1145a7;
     }
   }
 }
@@ -494,27 +519,23 @@
       @include col(center);
       margin-right: 10%;
       gap: 1.5rem;
-      width: 18.5rem;
 
-      button {
-        padding: auto;
-        border: none;
+      .links {
         background: transparent;
         font-family: "itim", sans-serif;
         font-size: 0.78rem;
         font-weight: 480;
         color: #053896;
+        text-decoration: none;
       }
-      button:hover {
+      .links:hover {
         color: hsl(0, 0%, 40%);
-        border-bottom: 2px solid #053896;
       }
-      button:focus {
+      .links:focus {
         outline: none;
-        border: 2px solid #053896;
+        border: 1.8px solid #053896;
         border-radius: 0.3rem;
         background: hsl(0, 0%, 90%);
-        font-weight: 400;
         color: #053896;
       }
       .home {
