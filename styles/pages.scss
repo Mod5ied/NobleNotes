@@ -160,7 +160,7 @@
           color: #092c6d;
           font-weight: 600;
           font-family: "itim", sans-serif;
-          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2); //
+          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2);
         }
         #toggle:focus,
         #toggle2:focus {
@@ -280,10 +280,10 @@
     background: linear-gradient(left top, hsl(229, 85%, 3%), hsl(228, 86%, 5%));
     font-size: 0.8rem;
     p {
-      color: #053896;
+      color: hsl(0, 0%, 65%);
     }
     a {
-      color: #032b77;
+      color: hsl(0, 0%, 70%);
       text-decoration: none;
     }
     a:hover,
@@ -330,14 +330,14 @@
       @include col(center);
       gap: 0.8rem;
 
-      button {
+      .links {
         border: none;
         border-radius: 0.1rem;
         background: transparent;
         color: #053896;
         font-family: "itim", sans-serif;
       }
-      button:focus {
+      .links:focus {
         color: #053896;
         border: 1px solid #053896;
         outline: none;
@@ -383,9 +383,14 @@
         :hover,
         #toggle2:focus,
         :hover {
-          background: #053896;
-          color: hsl(0, 0%, 85%);
+          border: 1px solid #053896;
           outline: none;
+          background: linear-gradient(
+            to left,
+            hsla(212, 63%, 35%, 0.726),
+            hsla(290, 88%, 30%, 0.918)
+          );
+          color: hsl(0, 0%, 85%);
         }
       }
     }
@@ -528,16 +533,16 @@
         background: transparent;
         font-family: "itim", sans-serif;
         font-size: 0.78rem;
-        font-weight: 480;
+        font-weight: 350;
         color: hsl(0, 0%, 90%);
         text-decoration: none;
       }
       .links:hover {
-        color: hsl(0, 0%, 50%);
+        color: #08255a;
       }
       .links:focus {
         outline: none;
-        color: hsl(0, 0%, 45%);
+        color: #08255a;
       }
       .home {
         display: none;
@@ -690,15 +695,15 @@
     }
     p {
       font-size: 0.78rem;
-      color: #073fa8;
+      color: hsl(0, 0%, 65%);
     }
     .foot-link {
       font-size: 0.78rem;
-      color: #073ea5;
+      color: hsl(0, 0%, 65%);
       text-decoration: none;
     }
     .foot-link:hover {
-      color: hsl(0, 0%, 30%);
+      color: #073ea5;
     }
   }
 }

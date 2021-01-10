@@ -343,10 +343,10 @@ body {
     font-size: 0.8rem;
   }
   .footer p {
-    color: #053896;
+    color: #a6a6a6;
   }
   .footer a {
-    color: #032b77;
+    color: #b3b3b3;
     text-decoration: none;
   }
   .footer a:hover,
@@ -421,14 +421,14 @@ body {
             align-items: center;
     gap: 0.8rem;
   }
-  .header .drop-content button {
+  .header .drop-content .links {
     border: none;
     border-radius: 0.1rem;
     background: transparent;
     color: #053896;
     font-family: "itim", sans-serif;
   }
-  .header .drop-content button:focus {
+  .header .drop-content .links:focus {
     color: #053896;
     border: 1px solid #053896;
     outline: none;
@@ -488,9 +488,11 @@ body {
   .section .section-note .section-btn :hover,
   .section .section-note .section-btn #toggle2:focus,
   .section .section-note .section-btn :hover {
-    background: #053896;
-    color: #d9d9d9;
+    border: 1px solid #053896;
     outline: none;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(33, 86, 145, 0.726)), to(rgba(121, 9, 144, 0.918)));
+    background: linear-gradient(to left, rgba(33, 86, 145, 0.726), rgba(121, 9, 144, 0.918));
+    color: #d9d9d9;
   }
   .section #content,
   .section #content2 {
@@ -680,16 +682,16 @@ body {
     background: transparent;
     font-family: "itim", sans-serif;
     font-size: 0.78rem;
-    font-weight: 480;
+    font-weight: 350;
     color: #e6e6e6;
     text-decoration: none;
   }
   .header .drop-content .links:hover {
-    color: gray;
+    color: #08255a;
   }
   .header .drop-content .links:focus {
     outline: none;
-    color: #737373;
+    color: #08255a;
   }
   .header .drop-content .home {
     display: none;
@@ -871,15 +873,15 @@ body {
   }
   .footer p {
     font-size: 0.78rem;
-    color: #073fa8;
+    color: #a6a6a6;
   }
   .footer .foot-link {
     font-size: 0.78rem;
-    color: #073ea5;
+    color: #a6a6a6;
     text-decoration: none;
   }
   .footer .foot-link:hover {
-    color: #4d4d4d;
+    color: #073ea5;
   }
 }
 /*# sourceMappingURL=pages.css.map */
