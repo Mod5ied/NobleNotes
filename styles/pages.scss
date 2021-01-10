@@ -329,17 +329,17 @@
       @include flexLayout(row);
       @include col(center);
       gap: 0.8rem;
+      padding: 2rem;
 
       .links {
-        border: none;
-        border-radius: 0.1rem;
+        padding: 0.2rem;
+        text-decoration: none;
         background: transparent;
         color: #053896;
         font-family: "itim", sans-serif;
       }
       .links:focus {
         color: #053896;
-        border: 1px solid #053896;
         outline: none;
       }
       .home {

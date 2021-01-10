@@ -420,17 +420,17 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 0.8rem;
+    padding: 2rem;
   }
   .header .drop-content .links {
-    border: none;
-    border-radius: 0.1rem;
+    padding: 0.2rem;
+    text-decoration: none;
     background: transparent;
     color: #053896;
     font-family: "itim", sans-serif;
   }
   .header .drop-content .links:focus {
     color: #053896;
-    border: 1px solid #053896;
     outline: none;
   }
   .header .drop-content .home {
