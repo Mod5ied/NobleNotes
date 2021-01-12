@@ -264,7 +264,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 2rem;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 12%);
 
     .logo-area {
       @include flexLayout(row);
@@ -339,11 +339,12 @@
     }
     .cards {
       box-sizing: border-box;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      //  0 6px 20px 0 rgba(0, 0, 0, 0.19);
       @include flexLayout(row);
       gap: 1rem;
       height: 8rem;
+      border: 1px solid hsl(0, 0%, 80%);
       border-radius: 0.8rem;
       background: hsl(0, 0%, 95%);
 
@@ -354,10 +355,10 @@
         max-width: 200px;
         min-width: 200px;
         text-align: center;
-        font-size: 1.3rem;
-        font-family: "itim", cursive;
-        font-weight: 450;
-        border-right: 1px dotted hsl(0, 0%, 20%);
+        font-size: 0.85rem;
+        font-family: "Comfortaa" sans-serif;
+        font-weight: 600;
+        border-right: 1px dotted hsl(0, 0%, 50%);
       }
     }
 
@@ -366,13 +367,14 @@
       @include flexLayout(row);
       @include column(center);
       gap: 5px;
-      border-right: 1px dotted hsl(0, 0%, 20%);
+      border-right: 1px dotted hsl(0, 0%, 50%);
       font-size: 0.9rem;
 
       i {
         font-size: 1rem;
       }
       p {
+        font-size: 0.7rem;
         word-wrap: normal;
       }
     }
@@ -391,7 +393,8 @@
         @include row(center);
         gap: 4px;
         height: 1rem;
-        padding: 0.4rem 0;
+        padding-left: 3px;
+        padding-top: 0.1rem;
         border-radius: 1rem;
         background: #093777;
         font-size: 0.5rem;
@@ -401,7 +404,8 @@
         box-sizing: border-box;
         height: 1rem;
         width: 1.4rem;
-        padding: 0.2rem 0.2rem;
+        padding: 0.25rem;
+        margin-bottom: 0.1rem;
         border-radius: 1rem;
         background: #001133;
         font-size: 0.5rem;
@@ -429,7 +433,7 @@
       padding: 1rem 2rem;
 
       h3 {
-        font-size: 1.4rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #135bbf;
       }
@@ -443,7 +447,7 @@
         }
         p {
           font-family: "itim", cursive;
-          font-size: 1.1rem;
+          font-size: 0.85rem;
           color: hsl(0, 0%, 20%);
         }
       }
@@ -457,25 +461,31 @@
     }
     .section-card {
       @include gridCenter();
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      //  0 6px 20px 0 rgba(0, 0, 0, 0.19);
       min-width: 220px;
       height: 180px;
+      border: 1px solid hsl(0, 0%, 80%);
       border-radius: 1rem;
       background: hsl(0, 0%, 100%);
-      transition: .5s;
 
+      h4 {
+        font-size: 0.9rem;
+        color: #093777;
+      }
       i {
         font-size: 1.3rem;
         color: #135bbf;
       }
       p {
         font-family: "itim", cursive;
+        font-size: 14px;
+        color: hsl(0, 0%, 10%);
       }
     }
     .section-card:hover {
-      border: 1px solid hsla(216, 26%, 42%, 0.568);
-      transform: scale(.99);
+      border: 1.2px solid hsla(215, 22%, 41%, 0.555);
+      background: hsla(0, 0%, 100%, 0.87);
     }
   }
   .section2 {
@@ -489,17 +499,22 @@
     padding: 2rem 1rem;
     background: hsl(0, 0%, 97%);
 
-    span {
+    p {
+      color: hsl(0, 0%, 20%);
+      font-size: 0.7rem;
+    }
+
+    nav {
       @include flexLayout(row);
       @include column(center);
-      gap: 2rem;
+      gap: 3rem;
 
       i {
         color: #135bbf;
         font-size: 1.4rem;
       }
-      i:hover,
-      i:focus {
+      .fab:hover,
+      .fab:focus {
         color: #093777;
       }
     }
@@ -512,8 +527,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 2rem;
-    background-color: hsl(0, 0%, 98%);
-    /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    background-color: hsl(0, 0%, 12%);
 
     .logo-area {
       @include flexLayout(row);
@@ -575,29 +589,27 @@
 
     .cards {
       box-sizing: border-box;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
       @include flexLayout(column);
       @include column(center);
       flex: 30%;
       gap: 1rem;
       max-width: 30%;
-      height: 13rem;
-      border-radius: 0.4rem;
+      height: 12rem;
+      padding: 0.5rem 0;
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 0.5rem;
       background: hsl(0, 0%, 96%);
 
       h2 {
         color: #093777;
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
       span {
         max-height: 50px;
       }
     }
     .cards:hover {
-      border: 0px solid #135bbf;
-      transition: 0.5s;
-      transform: scale(0.98);
+      border: 1px solid hsla(215, 22%, 41%, 0.555);
     }
     .card1 h2 {
       text-align: left;
@@ -664,11 +676,11 @@
 
     .section-head {
       @include flexLayout(column);
-      padding: 0 6rem;
-      background: hsl(0, 0%, 94%);
+      padding: 0 2rem;
+      //background: hsl(0, 0%, 94%);
       line-height: 0.7;
-      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      //box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
+      //0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       h3 {
         color: #135bbf;
@@ -696,33 +708,34 @@
       @include flexLayout(row);
       gap: 1rem;
       padding: 2rem 1rem;
-      border-bottom: 1px solid hsl(0, 0%, 60%);
-      background: hsl(0, 0%, 70%);
+      border-bottom: 1px solid hsl(0, 0%, 80%);
+      background: hsl(0, 0%, 90%);
 
       .section-card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         @include gridCenter();
         flex: 20%;
         padding-top: 0.5rem;
-        border-radius: 0.3rem;
-        background: hsl(0, 0%, 90%);
+        border: 1px solid hsl(0, 0%, 80%);
+        border-radius: 0.5rem;
+        background: hsl(0, 0%, 95%);
 
         h4 {
-          font-size: 1rem;
+          font-size: 0.9rem;
           color: #093777;
         }
         i {
           color: #135bbf;
         }
         p {
-          font-family: "itim", cursive;
+          font-family: "itim", sans-serif;
+          font-size: 14px;
           color: hsl(0, 0%, 10%);
         }
       }
       .section-card:hover {
         transition: 0.5s;
-        transform: scale(0.98);
+        background: hsl(0, 0%, 90%);
       }
     }
   }
@@ -738,18 +751,25 @@
     flex-direction: row;
     padding: 0.8rem 2rem;
     border-top: 1px solid hsl(0, 0%, 80%);
-    gap: 2rem;
+    gap: 6rem;
 
     p {
-      font-family: "itim", cursive;
+      color: hsl(0, 0%, 20%);
+      font-size: 0.6rem;
+      word-spacing: 3px;
     }
 
-    span {
+    nav {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 2rem;
+      gap: 4rem;
       color: #135bbf;
+
+      .fab:hover,
+      .fab:focus {
+        color: #135bbfb9;
+      }
     }
   }
 }

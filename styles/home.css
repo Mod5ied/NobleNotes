@@ -370,7 +370,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
-    background-color: #fafafa;
+    background-color: #1f1f1f;
   }
   header .logo-area {
     display: -webkit-box;
@@ -470,8 +470,6 @@ body {
   .main-area .cards {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -481,6 +479,7 @@ body {
             flex-flow: row;
     gap: 1rem;
     height: 8rem;
+    border: 1px solid #cccccc;
     border-radius: 0.8rem;
     background: #f2f2f2;
   }
@@ -501,10 +500,10 @@ body {
     max-width: 200px;
     min-width: 200px;
     text-align: center;
-    font-size: 1.3rem;
-    font-family: "itim", cursive;
-    font-weight: 450;
-    border-right: 1px dotted #333333;
+    font-size: 0.85rem;
+    font-family: "Comfortaa" sans-serif;
+    font-weight: 600;
+    border-right: 1px dotted gray;
   }
   .main-area .card-info {
     -webkit-box-flex: 40%;
@@ -521,13 +520,14 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 5px;
-    border-right: 1px dotted #333333;
+    border-right: 1px dotted gray;
     font-size: 0.9rem;
   }
   .main-area .card-info i {
     font-size: 1rem;
   }
   .main-area .card-info p {
+    font-size: 0.7rem;
     word-wrap: normal;
   }
   .main-area .card-tips {
@@ -565,7 +565,8 @@ body {
             justify-content: center;
     gap: 4px;
     height: 1rem;
-    padding: 0.4rem 0;
+    padding-left: 3px;
+    padding-top: 0.1rem;
     border-radius: 1rem;
     background: #093777;
     font-size: 0.5rem;
@@ -576,7 +577,8 @@ body {
             box-sizing: border-box;
     height: 1rem;
     width: 1.4rem;
-    padding: 0.2rem 0.2rem;
+    padding: 0.25rem;
+    margin-bottom: 0.1rem;
     border-radius: 1rem;
     background: #001133;
     font-size: 0.5rem;
@@ -617,7 +619,7 @@ body {
     padding: 1rem 2rem;
   }
   .section1 .section-head h3 {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #135bbf;
   }
@@ -639,7 +641,7 @@ body {
   }
   .section1 .section-head span p {
     font-family: "itim", cursive;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     color: #333333;
   }
   .section1 .section-scroll {
@@ -659,14 +661,15 @@ body {
     display: -ms-grid;
     display: grid;
     place-items: center;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-width: 220px;
     height: 180px;
+    border: 1px solid #cccccc;
     border-radius: 1rem;
     background: white;
-    -webkit-transition: .5s;
-    transition: .5s;
+  }
+  .section1 .section-card h4 {
+    font-size: 0.9rem;
+    color: #093777;
   }
   .section1 .section-card i {
     font-size: 1.3rem;
@@ -674,11 +677,12 @@ body {
   }
   .section1 .section-card p {
     font-family: "itim", cursive;
+    font-size: 14px;
+    color: #1a1a1a;
   }
   .section1 .section-card:hover {
-    border: 1px solid rgba(79, 102, 135, 0.568);
-    -webkit-transform: scale(0.99);
-            transform: scale(0.99);
+    border: 1.2px solid rgba(82, 101, 128, 0.555);
+    background: rgba(255, 255, 255, 0.87);
   }
   .section2 {
     margin-top: 1rem;
@@ -697,7 +701,11 @@ body {
     padding: 2rem 1rem;
     background: #f7f7f7;
   }
-  footer span {
+  footer p {
+    color: #333333;
+    font-size: 0.7rem;
+  }
+  footer nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -708,14 +716,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
+    gap: 3rem;
   }
-  footer span i {
+  footer nav i {
     color: #135bbf;
     font-size: 1.4rem;
   }
-  footer span i:hover,
-  footer span i:focus {
+  footer nav .fab:hover,
+  footer nav .fab:focus {
     color: #093777;
   }
 }
@@ -734,8 +742,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
-    background-color: #fafafa;
-    /*box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    background-color: #1f1f1f;
   }
   header .logo-area {
     display: -webkit-box;
@@ -816,8 +823,6 @@ body {
   .main-area .cards {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -833,23 +838,21 @@ body {
             flex: 30%;
     gap: 1rem;
     max-width: 30%;
-    height: 13rem;
-    border-radius: 0.4rem;
+    height: 12rem;
+    padding: 0.5rem 0;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
     background: whitesmoke;
   }
   .main-area .cards h2 {
     color: #093777;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .main-area .cards span {
     max-height: 50px;
   }
   .main-area .cards:hover {
-    border: 0px solid #135bbf;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    border: 1px solid rgba(82, 101, 128, 0.555);
   }
   .main-area .card1 h2 {
     text-align: left;
@@ -952,11 +955,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    padding: 0 6rem;
-    background: #f0f0f0;
+    padding: 0 2rem;
     line-height: 0.7;
-    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .section1 .section-head h3 {
     color: #135bbf;
@@ -1004,12 +1004,10 @@ body {
             flex-flow: row;
     gap: 1rem;
     padding: 2rem 1rem;
-    border-bottom: 1px solid #999999;
-    background: #b3b3b3;
+    border-bottom: 1px solid #cccccc;
+    background: #e6e6e6;
   }
   .section1 .section-scroll .section-card {
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: -ms-grid;
     display: grid;
     place-items: center;
@@ -1017,25 +1015,26 @@ body {
         -ms-flex: 20%;
             flex: 20%;
     padding-top: 0.5rem;
-    border-radius: 0.3rem;
-    background: #e6e6e6;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    background: #f2f2f2;
   }
   .section1 .section-scroll .section-card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #093777;
   }
   .section1 .section-scroll .section-card i {
     color: #135bbf;
   }
   .section1 .section-scroll .section-card p {
-    font-family: "itim", cursive;
+    font-family: "itim", sans-serif;
+    font-size: 14px;
     color: #1a1a1a;
   }
   .section1 .section-scroll .section-card:hover {
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    background: #e6e6e6;
   }
   .section2 {
     display: -webkit-box;
@@ -1066,12 +1065,14 @@ body {
             flex-direction: row;
     padding: 0.8rem 2rem;
     border-top: 1px solid #cccccc;
-    gap: 2rem;
+    gap: 6rem;
   }
   footer p {
-    font-family: "itim", cursive;
+    color: #333333;
+    font-size: 0.6rem;
+    word-spacing: 3px;
   }
-  footer span {
+  footer nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1082,8 +1083,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     color: #135bbf;
+  }
+  footer nav .fab:hover,
+  footer nav .fab:focus {
+    color: #135bbfb9;
   }
 }
 /*# sourceMappingURL=home.css.map */
