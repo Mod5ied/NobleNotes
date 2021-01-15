@@ -496,11 +496,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 1rem;
-    background: linear-gradient(
-      to left,
-      hsla(212, 64%, 12%, 0.877),
-      hsla(229, 78%, 34%, 0.747)
-    );
+    background: hsl(0, 0%, 12%);
 
     .active-head {
       @include flexLayout(row);
@@ -508,7 +504,7 @@
       gap: 0.8rem;
 
       img {
-        width: 4.2rem;
+        width: 4.3rem;
         height: 4rem;
         border-radius: 50%;
       }
@@ -531,18 +527,17 @@
 
       .links {
         background: transparent;
-        font-family: "itim", sans-serif;
-        font-size: 0.78rem;
+        font-size: 0.7rem;
         font-weight: 350;
         color: hsl(0, 0%, 90%);
         text-decoration: none;
       }
       .links:hover {
-        color: #08255a;
+        color: #073ea5;
       }
       .links:focus {
         outline: none;
-        color: #08255a;
+        color: #073ea5;
       }
       .home {
         display: none;
@@ -568,24 +563,20 @@
     @include flexLayout(row);
     gap: 2rem;
     padding: 1rem;
-    border-bottom: 1px solid hsla(224, 95%, 8%, 0.616);
-    background: hsl(229, 85%, 3%);
+    border-bottom: 1px solid hsla(215, 22%, 41%, 0.555);
+    background: hsl(0, 0%, 92%);
 
     .section-note {
       width: 20%;
       height: 30rem;
       padding-top: rem;
-      border: 1px solid hsl(229, 85%, 3%);
-      border-radius: 0.2rem;
-      background: linear-gradient(
-        to left,
-        hsla(212, 77%, 26%, 0.555),
-        hsla(211, 76%, 13%, 0.555)
-      );
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 0.4rem;
+      background: hsl(0, 0%, 90%);
       text-align: center;
 
       h2 {
-        color: hsl(0, 0%, 55%);
+        color: hsl(0, 0%, 45%);
       }
       .section-btn {
         display: none;
@@ -599,13 +590,9 @@
       height: 30rem;
       margin: 0 auto;
       padding: 1.5rem;
-      border: 1px solid hsl(229, 85%, 3%);
-      border-radius: 0.2rem;
-      background: linear-gradient(
-        to left,
-        hsla(212, 77%, 26%, 0.555),
-        hsla(211, 76%, 13%, 0.555)
-      );
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 0.4rem;
+      background: hsl(0, 0%, 90%);
       list-style-type: none;
       overflow: auto;
     }
@@ -614,17 +601,26 @@
       gap: 1rem;
       width: 30%;
       height: 35%;
+      border: 1px solid hsl(0, 0%, 80%);
       border-bottom: 3px solid rgba(5, 56, 150, 0.74);
       border-radius: 0.23rem;
       position: relative;
-      background-color: hsl(0, 0%, 80%);
-      opacity: 0.8;
+      background-color: hsl(0, 0%, 95%);
+      opacity: 0.95;
 
       .note-title {
         height: 10rem;
         padding: 0.3rem 0.7rem;
         font-size: 0.8rem;
-        color: #092c6d;
+        
+        a{
+          text-decoration: none;
+          color: #092c6d;
+        }
+        a:hover{
+          color: #0f3f99;
+          text-decoration: underline;
+        }
       }
       .card-tips {
         @include flexLayout(row);
@@ -646,6 +642,7 @@
             font-weight: 300;
             font-family: "itim", sans-serif;
             box-shadow: 0 0.5rem 2rem -0.25rem rgba(0, 0, 0, 0.3);
+            cursor: pointer;
           }
           button:focus,
           button:hover {
@@ -661,22 +658,12 @@
         }
       }
     }
-    /*.card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0.1;
-      transition: all 1s ease;
-      box-shadow: 0 0.5rem 2rem 0.25rem rgba(0, 0, 0, 0.3);
-    }
-    .card:hover::after {
+    .card:hover {
+      background: hsla(0, 0%, 92%, 0.801);
       opacity: 1;
-      transform: scale(0.99);
-    }*/
+    }
   }
+
   .footer {
     @include flexLayout(row-reverse);
     @include col(center);
@@ -694,7 +681,7 @@
       opacity: 0.8;
     }
     p {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: hsl(0, 0%, 65%);
     }
     .foot-link {
