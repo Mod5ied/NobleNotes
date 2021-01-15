@@ -757,7 +757,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1rem;
     background-color: #1f1f1f;
   }
   header .logo-area {
@@ -773,6 +773,9 @@ body {
     width: 4.3rem;
     height: 4rem;
     border-radius: 50%;
+  }
+  header .logo-area img:focus {
+    outline: 1px solid #032b77;
   }
   header .logo-area h1 a {
     color: #135bbf;
@@ -861,8 +864,14 @@ body {
     background: whitesmoke;
   }
   .main-area .cards h2 {
-    color: #093777;
     font-size: 1rem;
+  }
+  .main-area .cards h2 a {
+    color: #093777;
+    text-decoration: none;
+  }
+  .main-area .cards h2:hover {
+    text-decoration: underline;
   }
   .main-area .cards span {
     max-height: 50px;
@@ -1018,7 +1027,10 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     gap: 1rem;
+    height: 200px;
     padding: 2rem 1rem;
     border-bottom: 1px solid #cccccc;
     background: #e6e6e6;
@@ -1039,6 +1051,14 @@ body {
     font-size: 0.9rem;
     color: #093777;
   }
+  .section1 .section-scroll .section-card h4 a {
+    color: #093777;
+    text-decoration: none;
+  }
+  .section1 .section-scroll .section-card h4:hover {
+    text-decoration: underline;
+    color: #1356b4;
+  }
   .section1 .section-scroll .section-card i {
     color: #135bbf;
   }
@@ -1048,9 +1068,10 @@ body {
     color: #1a1a1a;
   }
   .section1 .section-scroll .section-card:hover {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     background: #e6e6e6;
+    border: 1.5px solid #1356b486;
   }
   .section2 {
     display: -webkit-box;

@@ -177,7 +177,7 @@
 
       h3 {
         font-size: 1.1rem;
-        color: #082d61
+        color: #082d61;
       }
       span {
         @include flexLayout(row);
@@ -275,7 +275,6 @@
       font-size: 0.8rem;
     }
   }
-  
 }
 
 /*Here goes Media query for Tablet devices*/
@@ -482,8 +481,6 @@
     }
     .section-card {
       @include gridCenter();
-      //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      //  0 6px 20px 0 rgba(0, 0, 0, 0.19);
       min-width: 220px;
       height: 180px;
       border: 1px solid hsl(0, 0%, 80%);
@@ -547,7 +544,7 @@
   header {
     @include flexLayout(row);
     @include row(space-between);
-    padding: 0 2rem;
+    padding: 0 1rem;
     background-color: hsl(0, 0%, 12%);
 
     .logo-area {
@@ -556,6 +553,9 @@
         width: 4.3rem;
         height: 4rem;
         border-radius: 50%;
+      }
+      img:focus {
+        outline: 1px solid #032b77;
       }
       h1 a {
         color: #135bbf;
@@ -622,8 +622,16 @@
       background: hsl(0, 0%, 96%);
 
       h2 {
-        color: #093777;
+        //color: #093777;
         font-size: 1rem;
+
+        a{
+          color: #093777;
+          text-decoration: none;
+        }
+      }
+      h2:hover {
+        text-decoration: underline;
       }
       span {
         max-height: 50px;
@@ -698,10 +706,7 @@
     .section-head {
       @include flexLayout(column);
       padding: 0 2rem;
-      //background: hsl(0, 0%, 94%);
       line-height: 0.7;
-      //box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
-      //0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       h3 {
         color: #135bbf;
@@ -727,7 +732,9 @@
     }
     .section-scroll {
       @include flexLayout(row);
+      box-sizing: border-box;
       gap: 1rem;
+      height: 200px;
       padding: 2rem 1rem;
       border-bottom: 1px solid hsl(0, 0%, 80%);
       background: hsl(0, 0%, 90%);
@@ -744,6 +751,15 @@
         h4 {
           font-size: 0.9rem;
           color: #093777;
+
+          a {
+            color: #093777;
+            text-decoration: none
+          }
+        }
+        h4:hover {
+          text-decoration: underline;
+          color: #1356b4;
         }
         i {
           color: #135bbf;
@@ -755,8 +771,9 @@
         }
       }
       .section-card:hover {
-        transition: 0.5s;
+        transition: 0.3s;
         background: hsl(0, 0%, 90%);
+        border: 1.5px solid #1356b486;
       }
     }
   }
