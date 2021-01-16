@@ -179,7 +179,8 @@
     .section-head {
       display: flex;
       flex-direction: column;
-      padding: 1rem;
+      margin: 0 -2rem;
+      padding: 1rem 1rem;
       line-height: 0.2;
 
       h3 {
@@ -358,7 +359,6 @@
     box-sizing: border-box;
     @include flexLayout(column);
     gap: 2rem;
-    //border-bottom: 0.8px solid hsl(0, 0%, 70%);*/
 
     i:not(.far) {
       color: #135bbf;
@@ -371,10 +371,8 @@
       border: 1px solid hsla(215, 22%, 41%, 0.555);
     }
     .cards {
-      box-sizing: border-box;
-      //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      //  0 6px 20px 0 rgba(0, 0, 0, 0.19);
       @include flexLayout(row);
+      box-sizing: border-box;
       gap: 1rem;
       height: 8rem;
       border: 1px solid hsl(0, 0%, 80%);
@@ -392,7 +390,15 @@
         font-family: "Comfortaa" sans-serif;
         font-weight: 600;
         border-right: 1px dotted hsl(0, 0%, 50%);
-        color: #093777;
+
+        a {
+          text-decoration: none;
+          color: #093777;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: #093777;
+        }
       }
     }
 
@@ -464,7 +470,7 @@
     background: hsl(0, 0%, 96%);
 
     .section-head {
-      padding: 1rem 2rem;
+      padding: 1rem 1rem;
 
       h3 {
         font-size: 1rem;
@@ -497,6 +503,7 @@
       @include gridCenter();
       min-width: 220px;
       height: 180px;
+      padding: 1rem 0;
       border: 1px solid hsl(0, 0%, 80%);
       border-radius: 1rem;
       background: hsl(0, 0%, 100%);
@@ -504,6 +511,16 @@
       h4 {
         font-size: 0.9rem;
         color: #093777;
+
+        a {
+          text-decoration: none;
+          color: #093777;
+        }
+        a:hover,
+        a:active {
+          text-decoration: underline;
+          color: #093777;
+        }
       }
       i {
         font-size: 1.3rem;
@@ -516,8 +533,10 @@
       }
     }
     .section-card:hover {
-      border: 1.2px solid hsla(215, 22%, 41%, 0.555);
+      //border: 1.2px solid hsla(215, 22%, 41%, 0.555);
+      border: 1.5px solid #1356b486;
       background: hsla(0, 0%, 100%, 0.87);
+      transition: 0.3s;
     }
   }
   .section2 {

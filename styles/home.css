@@ -250,7 +250,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 1rem;
+    margin: 0 -2rem;
+    padding: 1rem 1rem;
     line-height: 0.2;
   }
   .section1 .section-head h3 {
@@ -497,8 +498,6 @@ body {
     border: 1px solid rgba(82, 101, 128, 0.555);
   }
   .main-area .cards {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -506,6 +505,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     gap: 1rem;
     height: 8rem;
     border: 1px solid #cccccc;
@@ -533,6 +534,13 @@ body {
     font-family: "Comfortaa" sans-serif;
     font-weight: 600;
     border-right: 1px dotted gray;
+  }
+  .main-area .cards h2 a {
+    text-decoration: none;
+    color: #093777;
+  }
+  .main-area .cards h2 a:hover {
+    text-decoration: underline;
     color: #093777;
   }
   .main-area .card-info {
@@ -646,7 +654,7 @@ body {
     background: whitesmoke;
   }
   .section1 .section-head {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
   .section1 .section-head h3 {
     font-size: 1rem;
@@ -693,12 +701,22 @@ body {
     place-items: center;
     min-width: 220px;
     height: 180px;
+    padding: 1rem 0;
     border: 1px solid #cccccc;
     border-radius: 1rem;
     background: white;
   }
   .section1 .section-card h4 {
     font-size: 0.9rem;
+    color: #093777;
+  }
+  .section1 .section-card h4 a {
+    text-decoration: none;
+    color: #093777;
+  }
+  .section1 .section-card h4 a:hover,
+  .section1 .section-card h4 a:active {
+    text-decoration: underline;
     color: #093777;
   }
   .section1 .section-card i {
@@ -711,8 +729,10 @@ body {
     color: #1a1a1a;
   }
   .section1 .section-card:hover {
-    border: 1.2px solid rgba(82, 101, 128, 0.555);
+    border: 1.5px solid #1356b486;
     background: rgba(255, 255, 255, 0.87);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .section2 {
     margin-top: 1rem;
