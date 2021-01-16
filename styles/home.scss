@@ -71,8 +71,6 @@
     align-items: center;
 
     .cards {
-      //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      //  0 6px 20px 0 rgba(0, 0, 0, 0.19);
       border: 1px solid hsl(0, 0%, 80%);
       width: 95%;
       height: 10rem;
@@ -84,7 +82,16 @@
       line-height: 0.7;
       h2 {
         font-size: 1rem;
-        color: #09326b;
+
+        a {
+          text-decoration: none;
+          color: #09326b;
+        }
+        a:hover,
+        a:active {
+          text-decoration: underline;
+          color: #093777;
+        }
       }
     }
     .cards:hover {
@@ -202,7 +209,9 @@
       white-space: nowrap;
 
       .section-card:hover {
-        border: 1px solid hsla(215, 22%, 41%, 0.555);
+        //border: 1px solid hsla(215, 22%, 41%, 0.555);
+        transition: 0.3s;
+        border: 1.5px solid #1356b486;
         background: hsla(0, 0%, 97%, 0.699);
       }
       .section-card {
@@ -223,6 +232,11 @@
         }
         h4 {
           color: #001133;
+
+          a {
+            text-decoration: none;
+            color: #001133;
+          }
         }
         p {
           font-family: "itim", cursive;
@@ -625,7 +639,7 @@
         //color: #093777;
         font-size: 1rem;
 
-        a{
+        a {
           color: #093777;
           text-decoration: none;
         }
@@ -754,7 +768,7 @@
 
           a {
             color: #093777;
-            text-decoration: none
+            text-decoration: none;
           }
         }
         h4:hover {

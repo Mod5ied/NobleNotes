@@ -111,7 +111,15 @@ body {
   }
   .main-area .cards h2 {
     font-size: 1rem;
+  }
+  .main-area .cards h2 a {
+    text-decoration: none;
     color: #09326b;
+  }
+  .main-area .cards h2 a:hover,
+  .main-area .cards h2 a:active {
+    text-decoration: underline;
+    color: #093777;
   }
   .main-area .cards:hover {
     border: 1px solid rgba(82, 101, 128, 0.555);
@@ -283,7 +291,9 @@ body {
     white-space: nowrap;
   }
   .section1 .section-scroll .section-card:hover {
-    border: 1px solid rgba(82, 101, 128, 0.555);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 1.5px solid #1356b486;
     background: rgba(247, 247, 247, 0.699);
   }
   .section1 .section-scroll .section-card {
@@ -305,6 +315,10 @@ body {
     color: #1356b4;
   }
   .section1 .section-scroll .section-card h4 {
+    color: #001133;
+  }
+  .section1 .section-scroll .section-card h4 a {
+    text-decoration: none;
     color: #001133;
   }
   .section1 .section-scroll .section-card p {
