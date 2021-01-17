@@ -340,7 +340,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem;
-    border-top: 1px dotted gray;
+    border-top: 1px dotted rgba(128, 128, 128, 0.918);
   }
   footer p {
     text-align: center;
