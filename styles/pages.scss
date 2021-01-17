@@ -21,12 +21,7 @@
   .header {
     @include flexLayout(column);
     padding: 0.2rem 0.5rem;
-    background: hsl(0, 0%, 82%);
-    background: linear-gradient(
-      to left,
-      hsla(212, 64%, 12%, 0.877),
-      hsla(229, 78%, 34%, 0.747)
-    );
+    background: hsl(0, 0%, 12%);
 
     .active-head {
       @include flexLayout(row);
@@ -59,8 +54,6 @@
         color: #08255a;
         font-weight: 600;
         font-family: "itim", sans-serif;
-        box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-          0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
 
         i.fas {
           width: 1.5rem;
@@ -76,8 +69,12 @@
       .home-btn:focus,
       .home-btn:hover {
         background: hsla(212, 63%, 35%, 0.726);
-        color: hsl(0, 0%, 85%);
+        //color: hsl(0, 0%, 85%);
         outline: 1px solid transparent;
+
+        i.fas {
+          color: hsl(0, 0%, 70%);
+        }
       }
     }
     #drop-content.hide {
@@ -140,7 +137,8 @@
   }
   .section {
     @include flexLayout(column);
-    background: hsl(229, 85%, 3%);
+    background: hsl(0, 0%, 92%);
+    //background: hsl(229, 85%, 3%);
 
     .section-note {
       @include flexLayout(column);
@@ -171,7 +169,7 @@
             hsla(290, 88%, 30%, 0.918)
           );
           color: hsl(0, 0%, 85%);
-          font-weight: 400;
+          //font-weight: 400;
           outline: none;
           border: none;
           border-radius: 0.4rem;
@@ -208,13 +206,14 @@
     margin-bottom: 2rem;
     border-radius: 0.25rem;
     list-style-type: none;
-    background: hsl(0, 0%, 60%);
-    background: linear-gradient(
+    background: hsl(0, 0%, 88%);
+    /*background: linear-gradient(
       to left,
       hsla(212, 77%, 26%, 0.555),
       hsla(211, 76%, 13%, 0.555)
-    );
-    overflow: auto;
+    );*/
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .card {
       @include flexLayout(column);
@@ -222,19 +221,28 @@
       width: 100%;
       height: 13rem;
       padding: 0.4rem 1rem;
+      border: 1px solid hsl(0, 0%, 80%);
       border-bottom: 3px solid #053896;
       border-radius: 0.29rem;
       position: relative;
-      background-color: hsl(0, 0%, 80%);
-      opacity: 0.8;
+      background-color: hsl(0, 0%, 95%);
+      opacity: 0.95;
       z-index: 0;
 
       .note-title {
         height: 90px;
         padding-top: 0.5rem;
         font-size: 1rem;
-        color: hsl(0, 0%, 10%);
         text-align: left;
+
+        a {
+          text-decoration: none;
+          color: hsl(0, 0%, 10%);
+        }
+        a:active {
+          text-decoration: none;
+          color: hsl(0, 0%, 12%);
+        }
       }
       .card-tips {
         @include flexLayout(row);
@@ -274,27 +282,45 @@
         }
       }
     }
+    .card:hover {
+      background: hsla(0, 0%, 94%, 0.836);
+      border: 1px solid hsl(0, 0%, 80%);
+      border-bottom: 3px solid #053896;
+    }
   }
   .footer {
     padding: 1rem 2rem;
-    background: linear-gradient(left top, hsl(229, 85%, 3%), hsl(228, 86%, 5%));
+    border-top: 1px dotted hsla(0, 0%, 50%, 0.918);
     font-size: 0.8rem;
+
     p {
-      color: hsl(0, 0%, 65%);
+      font-size: 0.75rem;
+      line-height: 1.5;
     }
-    a {
-      color: hsl(0, 0%, 70%);
+    .foot-link {
+      font-size: 0.75rem;
+      color:  #062152;
       text-decoration: none;
     }
-    a:hover,
-    :active {
+    .foot-link:hover,
+    .foot-link:active {
       color: #062152;
+      text-decoration: none;
     }
     .social-icons {
       @include flexLayout(row);
-      gap: 2rem;
+      @include row(center);
+      gap: 3rem;
       font-size: 1.6rem;
       color: #1145a7;
+
+      #what {
+        color:  rgb(50, 205, 50);
+      }
+    }
+    .social-icons i:hover,
+    .social-icons i:focus{
+      opacity: .7;
     }
   }
 }
@@ -305,7 +331,7 @@
     @include flexLayout(row);
     @include row(space-between);
     padding: 0 0.3rem;
-    background: hsl(0, 0%, 90%);
+    background: hsl(0, 0%, 12%);
 
     .active-head {
       @include flexLayout(row);
@@ -319,7 +345,7 @@
       }
       h1 {
         font-size: 1rem;
-        color: #053896;
+        color: hsl(0, 0%, 90%);
       }
       .home-btn {
         display: none;
@@ -335,7 +361,7 @@
         padding: 0.2rem;
         text-decoration: none;
         background: transparent;
-        color: #053896;
+        color: hsl(0, 0%, 90%);
         font-family: "itim", sans-serif;
       }
       .links:focus {
@@ -353,7 +379,7 @@
   .section {
     @include flexLayout(column);
     padding: 0.5rem;
-    background: hsl(0, 0%, 80%);
+    background: hsl(0, 0%, 92%);
 
     .section-note {
       @include flexLayout(row);
@@ -362,7 +388,7 @@
 
       h2 {
         font-size: 1.4rem;
-        color: hsl(0, 0%, 10%);
+        color: hsl(0, 0%, 40%);
       }
       .section-btn {
         @include gridLayout();
@@ -370,14 +396,12 @@
         #toggle,
         #toggle2 {
           padding: 0.3rem;
-          border: 2px solid #053896;
+          border: 1.5px solid #053896;
           border-radius: 0.39rem;
-          background: hsla(0, 0%, 85%, 0.726);
+          background: hsl(0, 0%, 92%);
           color: #092c6d;
           font-weight: 600;
           font-family: "itim", sans-serif;
-          box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-            0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
         }
         #toggle:focus,
         :hover,
@@ -410,23 +434,29 @@
       gap: 1rem;
       padding: 1.5rem;
       list-style-type: none;
-      border: 1.3px solid hsl(0, 0%, 60%);
-      /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
+      border: 1.3px solid hsl(0, 0%, 80%);
       border-radius: 0.2rem;
-      background: hsl(0, 0%, 70%);
+      background: hsl(0, 0%, 88%);
 
       .card {
         @include flexLayout(column);
         margin-right: 0.5rem;
         padding: 1.2rem;
+        border: 1px solid hsl(0, 0%, 77%);
         border-top: 2.2px solid #053896;
-        border-radius: 0.3rem;
-        background-color: hsl(0, 0%, 80%);
-        box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-          0 3px 4px 0 rgba(1, 10, 39, 0.19);
+        border-radius: 0.5rem;
+        background-color: hsl(0, 0%, 95%);
 
         .note-title {
+          color: hsl(0, 0%, 10%);
+
+          a {
+            text-decoration: none;
+            color: hsl(0, 0%, 10%);
+          }
+        }
+        .note-title:hover a {
+          text-decoration: underline;
           color: hsl(0, 0%, 10%);
         }
         .card-tips {
@@ -443,12 +473,12 @@
               padding: 0.5rem;
               border: 0.5px solid #053896;
               border-radius: 0.39rem;
-              background: hsla(0, 0%, 85%, 0.726);
+              background: hsl(0, 0%, 92%);
               color: #092c6d;
               font-weight: 600;
               font-family: "itim", sans-serif;
-              box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
-                0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
+              //box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2),
+              //  0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
             }
             button:focus,
             :hover {
@@ -458,6 +488,10 @@
             }
           }
         }
+      }
+      .card:hover {
+        background: hsla(0, 0%, 92%, 0.801);
+        opacity: 1;
       }
     }
   }
@@ -602,7 +636,7 @@
       width: 30%;
       height: 35%;
       border: 1px solid hsl(0, 0%, 80%);
-      border-bottom: 3px solid rgba(5, 56, 150, 0.74);
+      border-bottom: 3px solid #053896bd;
       border-radius: 0.23rem;
       position: relative;
       background-color: hsl(0, 0%, 95%);
@@ -612,12 +646,12 @@
         height: 10rem;
         padding: 0.3rem 0.7rem;
         font-size: 0.8rem;
-        
-        a{
+
+        a {
           text-decoration: none;
           color: #092c6d;
         }
-        a:hover{
+        a:hover {
           color: #0f3f99;
           text-decoration: underline;
         }
@@ -676,6 +710,10 @@
       gap: 3rem;
       color: #073fa7;
       font-size: 1.4rem;
+
+      #what {
+        color:  rgb(50, 205, 50);
+      }
     }
     .fab:hover {
       opacity: 0.8;

@@ -25,9 +25,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 0.2rem 0.5rem;
-    background: #d1d1d1;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(11, 29, 50, 0.877)), to(rgba(19, 44, 154, 0.747)));
-    background: linear-gradient(to left, rgba(11, 29, 50, 0.877), rgba(19, 44, 154, 0.747));
+    background: #1f1f1f;
   }
   .header .active-head {
     display: -webkit-box;
@@ -76,8 +74,6 @@ body {
     color: #08255a;
     font-weight: 600;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
   .header .active-head .home-btn i.fas {
     width: 1.5rem;
@@ -92,8 +88,11 @@ body {
   .header .active-head .home-btn:focus,
   .header .active-head .home-btn:hover {
     background: rgba(33, 86, 145, 0.726);
-    color: #d9d9d9;
     outline: 1px solid transparent;
+  }
+  .header .active-head .home-btn:focus i.fas,
+  .header .active-head .home-btn:hover i.fas {
+    color: #b3b3b3;
   }
   .header #drop-content.hide {
     display: block;
@@ -158,7 +157,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    background: #01040e;
+    background: #ebebeb;
   }
   .section .section-note {
     display: -webkit-box;
@@ -200,7 +199,6 @@ body {
     background: -webkit-gradient(linear, right top, left top, from(rgba(33, 86, 145, 0.726)), to(rgba(121, 9, 144, 0.918)));
     background: linear-gradient(to left, rgba(33, 86, 145, 0.726), rgba(121, 9, 144, 0.918));
     color: #d9d9d9;
-    font-weight: 400;
     outline: none;
     border: none;
     border-radius: 0.4rem;
@@ -255,10 +253,14 @@ body {
     margin-bottom: 2rem;
     border-radius: 0.25rem;
     list-style-type: none;
-    background: #999999;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(15, 63, 117, 0.555)), to(rgba(8, 32, 58, 0.555)));
-    background: linear-gradient(to left, rgba(15, 63, 117, 0.555), rgba(8, 32, 58, 0.555));
-    overflow: auto;
+    background: #e0e0e0;
+    /*background: linear-gradient(
+      to left,
+      hsla(212, 77%, 26%, 0.555),
+      hsla(211, 76%, 13%, 0.555)
+    );*/
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .section-scroll .card {
     display: -webkit-box;
@@ -272,19 +274,27 @@ body {
     width: 100%;
     height: 13rem;
     padding: 0.4rem 1rem;
+    border: 1px solid #cccccc;
     border-bottom: 3px solid #053896;
     border-radius: 0.29rem;
     position: relative;
-    background-color: #cccccc;
-    opacity: 0.8;
+    background-color: #f2f2f2;
+    opacity: 0.95;
     z-index: 0;
   }
   .section-scroll .card .note-title {
     height: 90px;
     padding-top: 0.5rem;
     font-size: 1rem;
-    color: #1a1a1a;
     text-align: left;
+  }
+  .section-scroll .card .note-title a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+  .section-scroll .card .note-title a:active {
+    text-decoration: none;
+    color: #1f1f1f;
   }
   .section-scroll .card .card-tips {
     display: -webkit-box;
@@ -336,22 +346,29 @@ body {
     outline: none;
     border-radius: 0.4rem;
   }
+  .section-scroll .card:hover {
+    background: rgba(240, 240, 240, 0.836);
+    border: 1px solid #cccccc;
+    border-bottom: 3px solid #053896;
+  }
   .footer {
     padding: 1rem 2rem;
-    background: -webkit-gradient(linear, left top, right bottom, from(#01040e), to(#020618));
-    background: linear-gradient(left top, #01040e, #020618);
+    border-top: 1px dotted rgba(128, 128, 128, 0.918);
     font-size: 0.8rem;
   }
   .footer p {
-    color: #a6a6a6;
+    font-size: 0.75rem;
+    line-height: 1.5;
   }
-  .footer a {
-    color: #b3b3b3;
+  .footer .foot-link {
+    font-size: 0.75rem;
+    color: #062152;
     text-decoration: none;
   }
-  .footer a:hover,
-  .footer :active {
+  .footer .foot-link:hover,
+  .footer .foot-link:active {
     color: #062152;
+    text-decoration: none;
   }
   .footer .social-icons {
     display: -webkit-box;
@@ -361,9 +378,19 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row;
             flex-flow: row;
-    gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 3rem;
     font-size: 1.6rem;
     color: #1145a7;
+  }
+  .footer .social-icons #what {
+    color: limegreen;
+  }
+  .footer .social-icons i:hover,
+  .footer .social-icons i:focus {
+    opacity: .7;
   }
 }
 
@@ -381,7 +408,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 0.3rem;
-    background: #e6e6e6;
+    background: #1f1f1f;
   }
   .header .active-head {
     display: -webkit-box;
@@ -403,7 +430,7 @@ body {
   }
   .header .active-head h1 {
     font-size: 1rem;
-    color: #053896;
+    color: #e6e6e6;
   }
   .header .active-head .home-btn {
     display: none;
@@ -426,7 +453,7 @@ body {
     padding: 0.2rem;
     text-decoration: none;
     background: transparent;
-    color: #053896;
+    color: #e6e6e6;
     font-family: "itim", sans-serif;
   }
   .header .drop-content .links:focus {
@@ -448,7 +475,7 @@ body {
         -ms-flex-flow: column;
             flex-flow: column;
     padding: 0.5rem;
-    background: #cccccc;
+    background: #ebebeb;
   }
   .section .section-note {
     display: -webkit-box;
@@ -465,7 +492,7 @@ body {
   }
   .section .section-note h2 {
     font-size: 1.4rem;
-    color: #1a1a1a;
+    color: #666666;
   }
   .section .section-note .section-btn {
     display: -ms-grid;
@@ -475,14 +502,12 @@ body {
   .section .section-note .section-btn #toggle,
   .section .section-note .section-btn #toggle2 {
     padding: 0.3rem;
-    border: 2px solid #053896;
+    border: 1.5px solid #053896;
     border-radius: 0.39rem;
-    background: rgba(217, 217, 217, 0.726);
+    background: #ebebeb;
     color: #092c6d;
     font-weight: 600;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
   .section .section-note .section-btn #toggle:focus,
   .section .section-note .section-btn :hover,
@@ -522,11 +547,9 @@ body {
     gap: 1rem;
     padding: 1.5rem;
     list-style-type: none;
-    border: 1.3px solid #999999;
-    /*box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2),
-        0 3px 4px 0 rgba(1, 10, 39, 0.19);*/
+    border: 1.3px solid #cccccc;
     border-radius: 0.2rem;
-    background: #b3b3b3;
+    background: #e0e0e0;
   }
   .section .section-scroll .card {
     display: -webkit-box;
@@ -538,13 +561,20 @@ body {
             flex-flow: column;
     margin-right: 0.5rem;
     padding: 1.2rem;
+    border: 1px solid #c4c4c4;
     border-top: 2.2px solid #053896;
-    border-radius: 0.3rem;
-    background-color: #cccccc;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(2, 12, 70, 0.2), 0 3px 4px 0 rgba(1, 10, 39, 0.19);
+    border-radius: 0.5rem;
+    background-color: #f2f2f2;
   }
   .section .section-scroll .card .note-title {
+    color: #1a1a1a;
+  }
+  .section .section-scroll .card .note-title a {
+    text-decoration: none;
+    color: #1a1a1a;
+  }
+  .section .section-scroll .card .note-title:hover a {
+    text-decoration: underline;
     color: #1a1a1a;
   }
   .section .section-scroll .card .card-tips {
@@ -567,18 +597,20 @@ body {
     padding: 0.5rem;
     border: 0.5px solid #053896;
     border-radius: 0.39rem;
-    background: rgba(217, 217, 217, 0.726);
+    background: #ebebeb;
     color: #092c6d;
     font-weight: 600;
     font-family: "itim", sans-serif;
-    -webkit-box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
-            box-shadow: 0 4px 8px 0 rgba(20, 46, 192, 0.2), 0 6px 20px 1.7px rgba(18, 55, 189, 0.19);
   }
   .section .section-scroll .card .card-tips span button:focus,
   .section .section-scroll .card .card-tips span :hover {
     background: #053896;
     color: #d9d9d9;
     outline: none;
+  }
+  .section .section-scroll .card:hover {
+    background: rgba(235, 235, 235, 0.801);
+    opacity: 1;
   }
   .footer {
     display: -webkit-box;
@@ -771,7 +803,7 @@ body {
     width: 30%;
     height: 35%;
     border: 1px solid #cccccc;
-    border-bottom: 3px solid rgba(5, 56, 150, 0.74);
+    border-bottom: 3px solid #053896bd;
     border-radius: 0.23rem;
     position: relative;
     background-color: #f2f2f2;
@@ -861,6 +893,9 @@ body {
     gap: 3rem;
     color: #073fa7;
     font-size: 1.4rem;
+  }
+  .footer .social-icons #what {
+    color: limegreen;
   }
   .footer .fab:hover {
     opacity: 0.8;
