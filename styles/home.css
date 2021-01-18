@@ -1140,7 +1140,7 @@ body {
   }
   footer p {
     color: #333333;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     word-spacing: 3px;
   }
   footer nav {
@@ -1155,11 +1155,18 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 4rem;
+  }
+  footer nav a {
+    text-decoration: none;
     color: #135bbf;
   }
-  footer nav .fab:hover,
-  footer nav .fab:focus {
-    color: #135bbfb9;
+  footer nav a .fab {
+    font-size: 1.2rem;
+    color: #073fa7;
+  }
+  footer nav a .fab:active,
+  footer nav a .fab:visited {
+    color: #0c4ba3;
   }
 }
 /*# sourceMappingURL=home.css.map */
