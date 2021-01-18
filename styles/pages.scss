@@ -560,6 +560,7 @@
       gap: 2.5rem;
 
       .links {
+        padding: .3rem;
         background: transparent;
         font-size: 0.7rem;
         font-weight: 350;
@@ -597,7 +598,6 @@
     @include flexLayout(row);
     gap: 2rem;
     padding: 1rem;
-    border-bottom: 1px solid hsla(215, 22%, 41%, 0.555);
     background: hsl(0, 0%, 92%);
 
     .section-note {
@@ -702,14 +702,15 @@
     @include flexLayout(row-reverse);
     @include col(center);
     gap: 5rem;
-    padding: 0.5rem 4rem;
-    background: hsla(222, 92%, 5%, 0.904);
+    margin-top: 1rem;
+    padding: 0.8rem 4rem;
+    border: 1px solid hsl(0, 0%, 80%);
 
     .social-icons {
       @include flexLayout(row);
       gap: 3rem;
       color: #073fa7;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
 
       #what {
         color:  rgb(50, 205, 50);
@@ -720,11 +721,11 @@
     }
     p {
       font-size: 0.75rem;
-      color: hsl(0, 0%, 65%);
+      color: hsl(0, 0%, 20%);
     }
     .foot-link {
       font-size: 0.78rem;
-      color: hsl(0, 0%, 65%);
+      color: hsl(0, 0%, 20%);
       text-decoration: none;
     }
     .foot-link:hover {

@@ -710,6 +710,7 @@ body {
     gap: 2.5rem;
   }
   .header .drop-content .links {
+    padding: .3rem;
     background: transparent;
     font-size: 0.7rem;
     font-weight: 350;
@@ -751,7 +752,6 @@ body {
             flex-flow: row;
     gap: 2rem;
     padding: 1rem;
-    border-bottom: 1px solid rgba(82, 101, 128, 0.555);
     background: #ebebeb;
   }
   .section .section-note {
@@ -879,8 +879,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 5rem;
-    padding: 0.5rem 4rem;
-    background: rgba(1, 8, 24, 0.904);
+    margin-top: 1rem;
+    padding: 0.8rem 4rem;
+    border: 1px solid #cccccc;
   }
   .footer .social-icons {
     display: -webkit-box;
@@ -892,7 +893,7 @@ body {
             flex-flow: row;
     gap: 3rem;
     color: #073fa7;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .footer .social-icons #what {
     color: limegreen;
@@ -902,11 +903,11 @@ body {
   }
   .footer p {
     font-size: 0.75rem;
-    color: #a6a6a6;
+    color: #333333;
   }
   .footer .foot-link {
     font-size: 0.78rem;
-    color: #a6a6a6;
+    color: #333333;
     text-decoration: none;
   }
   .footer .foot-link:hover {
