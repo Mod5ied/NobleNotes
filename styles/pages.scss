@@ -188,6 +188,8 @@
     #content3 {
       @include flexLayout(row);
       gap: 1.5rem;
+      overflow-x: scroll;
+
       .card {
         min-width: 18rem;
       }
@@ -287,6 +289,7 @@
       border: 1px solid hsl(0, 0%, 80%);
       border-bottom: 3px solid #053896;
     }
+    
   }
   .footer {
     padding: 1rem 2rem;
@@ -315,7 +318,7 @@
       color: #1145a7;
 
       #what {
-        color:  rgb(50, 205, 50);
+        color: rgb(50, 205, 50);
       }
     }
     .social-icons i:hover,
@@ -703,7 +706,7 @@
     @include col(center);
     gap: 5rem;
     margin-top: 1rem;
-    padding: 0.8rem 4rem;
+    padding: 0.7rem 4rem;
     border: 1px solid hsl(0, 0%, 80%);
 
     .social-icons {

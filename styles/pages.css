@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  -webkit-box-ordinal-group: 2 !important;
-      -ms-flex-order: 1px solid red !important;
-          order: 1px solid red !important;
+  border: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -229,6 +227,7 @@ body {
         -ms-flex-flow: row;
             flex-flow: row;
     gap: 1.5rem;
+    overflow-x: scroll;
   }
   .section #content3 .card {
     min-width: 18rem;
@@ -880,7 +879,7 @@ body {
             align-items: center;
     gap: 5rem;
     margin-top: 1rem;
-    padding: 0.8rem 4rem;
+    padding: 0.7rem 4rem;
     border: 1px solid #cccccc;
   }
   .footer .social-icons {
