@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  -webkit-box-ordinal-group: 2 !important;
-      -ms-flex-order: 1px solid red !important;
-          order: 1px solid red !important;
+  border: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -70,6 +68,10 @@ body {
   header .login-area .login-area-btn {
     background: none;
     border: none;
+  }
+  header ion-icon {
+    font-size: 1rem;
+    color: red;
   }
   main {
     -webkit-box-sizing: border-box;
@@ -357,7 +359,13 @@ body {
             flex-flow: row;
     gap: 3rem;
     font-size: 1.5rem;
-    color: #135bbf;
+  }
+  footer nav .fab {
+    color: #1145a7;
+  }
+  footer nav .fab:hover,
+  footer nav .fab:focus {
+    opacity: 0.7;
   }
 }
 
