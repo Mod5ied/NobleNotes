@@ -25,28 +25,3 @@ let dropHome = () => {
     content.classList.toggle("hide");
   });
 };
-
-
-//Toggle "show/hide" component
-Vue.component("toggler", {
-  methods: {
-    
-  }
-});
-//Vue instance one
-const App1 = new Vue({
-  el: "#Vueapp1",
-  methods: {},
-});
-
-//Vue instance two
-const App1 = new Vue({
-  el: "#Vueapp1",
-  methods: {},
-});
-
-//Vue instance three
-const App1 = new Vue({
-  el: "#Vueapp1",
-  methods: {},
-});
