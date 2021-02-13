@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Itim&display=swap");
 * {
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -625,12 +627,12 @@ body {
   .footer p {
     text-decoration: none;
     font-size: 1rem;
-    color: #053896;
+    color: #333333;
   }
   .footer .foot-link {
     width: 7%;
     text-decoration: none;
-    color: #053896;
+    color: #333333;
   }
   .footer .foot-link:hover,
   .footer :active {
@@ -645,8 +647,11 @@ body {
         -ms-flex-flow: row;
             flex-flow: row;
     gap: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #053896;
+  }
+  .footer .social-icons #what {
+    color: limegreen;
   }
 }
 
