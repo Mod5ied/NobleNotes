@@ -7,6 +7,11 @@
           box-sizing: border-box;
 }
 
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -51,6 +56,16 @@ body {
     color: #135bbf;
     text-decoration: none;
   }
+  header .far {
+    margin: auto 0;
+    padding: 0 .5rem;
+    font-size: 1.3rem;
+    color: #135bbf;
+    visibility: visible;
+  }
+  header .far:hover {
+    color: rgba(255, 255, 255, 0.836);
+  }
   header .login-area {
     display: none;
     -webkit-box-orient: vertical;
@@ -70,10 +85,6 @@ body {
   header .login-area .login-area-btn {
     background: none;
     border: none;
-  }
-  header ion-icon {
-    font-size: 1rem;
-    color: red;
   }
   main {
     -webkit-box-sizing: border-box;
@@ -126,7 +137,7 @@ body {
     color: #093777;
   }
   .main-area .cards:hover {
-    border: 1px solid rgba(82, 101, 128, 0.555);
+    border: 1px solid rgba(55, 79, 114, 0.555);
   }
   .main-area h2,
   .main-area .card-info {
@@ -410,7 +421,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 .5rem;
     background-color: #1f1f1f;
   }
   header .logo-area {
@@ -431,6 +442,9 @@ body {
     font-size: 1.3rem;
     color: #135bbf;
     text-decoration: none;
+  }
+  header .far {
+    visibility: hidden;
   }
   header .login-area {
     display: -webkit-box;
@@ -505,7 +519,7 @@ body {
     color: #e79908;
   }
   .main-area .cards:hover {
-    border: 1px solid rgba(82, 101, 128, 0.555);
+    border: 2px solid rgba(82, 101, 128, 0.555);
   }
   .main-area .cards {
     display: -webkit-box;
@@ -824,6 +838,9 @@ body {
   header .logo-area h1 a {
     color: #135bbf;
     text-decoration: none;
+  }
+  header .far {
+    visibility: hidden;
   }
   header .login-area {
     display: -webkit-box;

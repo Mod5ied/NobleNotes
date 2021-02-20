@@ -39,6 +39,17 @@
         }
       }
     }
+    .far {
+      margin: auto 0;
+      padding: 0 .5rem;
+      font-size: 1.3rem;
+      color: #135bbf;
+      visibility: visible;
+    }
+    .far:hover {
+      color: rgba(255, 255, 255, 0.836);
+    }
+
     .login-area {
       display: none;
       flex-direction: column;
@@ -56,10 +67,6 @@
         background: none;
         border: none;
       }
-    }
-    ion-icon {
-      font-size: 1rem;
-      color: red;
     }
   }
 
@@ -99,7 +106,7 @@
       }
     }
     .cards:hover {
-      border: 1px solid hsla(215, 22%, 41%, 0.555);
+      border: 1px solid hsla(215, 35%, 33%, 0.555);
     }
 
     h2,
@@ -308,7 +315,7 @@
   header {
     @include flexLayout(row);
     @include row(space-between);
-    padding: 0 2rem;
+    padding: 0 .5rem;
     background-color: hsl(0, 0%, 12%);
 
     .logo-area {
@@ -324,6 +331,11 @@
         text-decoration: none;
       }
     }
+
+    .far {
+      visibility: hidden;
+    }
+
     .login-area {
       @include flexLayout(row);
       @include column(center);
@@ -379,7 +391,7 @@
     }
     //styling for the cards
     .cards:hover {
-      border: 1px solid hsla(215, 22%, 41%, 0.555);
+      border: 2px solid hsla(215, 22%, 41%, 0.555);
     }
     .cards {
       @include flexLayout(row);
@@ -606,6 +618,10 @@
         text-decoration: none;
       }
     }
+    .far {
+      visibility: hidden;
+    }
+
     .login-area {
       @include flexLayout(row);
       @include column(center);
