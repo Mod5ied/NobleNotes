@@ -2,6 +2,10 @@
     order: 1px solid red!important;
     box-sizing: border-box;
 }
+html {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
 
 body {
     margin: 0;
